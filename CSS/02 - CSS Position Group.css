@@ -1,0 +1,95 @@
+#block{
+    width: 400px;
+    height: 400px;
+    margin: 30px auto;
+    border: 3px solid black;
+    position: relative;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+.A{
+    background-color: yellow;
+    left: 50px;
+    bottom: 150px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+.B{
+    background-color: red;
+    left: 100px;
+    bottom: 90px;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.C{
+    background-color: green;
+    left: 170px;
+    bottom: 70px;
+    position: absolute;
+    z-index: 2;
+}
+
+
+.D{
+    background-color: blue;
+    left: 230px;
+    bottom: 130px;
+    position: absolute;
+    z-index: 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

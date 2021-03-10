@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Opacity</title>
+    <style media="screen">
+    #synopsis{
+      display: none;; /* Change to 'flow-root' to show the form*/
+      height: 440px;
+      border: solid yellow;
+      background-color: white;
+    }
+
+    .description{
+      float: left;
+      width: 49%;
+      height: 330px;
+      /* border: solid red; */
+    }
+
+    .description h1{
+      display: inline-block;
+    }
+
+    .description h1, .description h2, .description h3, .description p {
+      margin-left: 30px;
+    }
+
+    .description h2{
+      float: right;
+      margin-right: 30px;
+    }
+
+    .video{
+      float: left;
+      width: 50%;
+      height: 330px;
+      /* border: solid green; */
+    }
+
+    .video video{
+      float: left;
+      width: 500px;
+      height: 300px;
+    }
+
+    .clr{
+      clear: both;
+    }
+
+    .showtime{
+      float: left;
+      /* border: solid blue; */
+      width: 100%;
+    }
+
+    .showtime h3{
+      float: left;
+      margin: 35px;
+      display: inline-block;
+    }
+
+    .btn-booking{
+      float: left;
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    </style>
+  </head>
+  <body>
+
+    <input type="button" name="generate" value="Generate" onclick="clickme(this.name);">
+    <input type="button" name="delete" value="Delete" onclick="clickme(this.name);">
+
+    <!-- <section id='synopsis'>
+      <div class="description">
+        <h1>Fast and Furious</h1>
+        <h2>6.0</h2>
+        <h3>Plot description</h3>
+        <p>WEnfwfw wefwenfkwlef wefnwlef wef wenfwe gntgu ef iuwbew
+          efbwif uwefbwefn qwerqwr werqwerw werer re</p>
+      </div>
+      <div class="video">
+        <video src="Lecture1.mp4" controls poster="posterimage.jpg"></video>
+      </div>
+      <div class="showtime">
+        <h3>Make a Bookinh</h3>
+        <input class='btn-booking' type="button" value='Thrusday - 9PM'>
+        <input class='btn-booking' type="button" value='Wednesday - 9PM'>
+        <input class='btn-booking' type="button" value='Friday - 9PM'>
+      </div>
+    </section> -->
+
+    <section id='synopsis'>
+
+    </section>
+
+    <script type="text/javascript">
+      var film = [
+        {
+          name: 'Fast and Furious 7',
+          rating: 7.0
+        },
+        {
+          name: 'Avengers 4',
+          rating: 7.5
+        }
+      ]
+
+      function clickme(clicked_id){
+        if(clicked_id == 'generate'){
+          generate();
+        } else if (clicked_id == 'delete') {
+          delete1();
+        }
+      }
+
+      function generate(){
+        var div1 = document.createElement('div');
+        div1.setAttribute('class', 'description');
+
+        let list_element = ['h1', 'h2', 'h3', 'p'];
+        let content = [film[0].name, film[1].rating, 'Plot description', 'qwejkbqwe qwe rqwef wefrqwfq wqeqwefqwe'];
+        for(var i = 0; i < list_element.length; i++){
+          let element = document.createElement(list_element[i]);
+          let text = document.createTextNode(content[i]);
+          element.appendChild(text);
+          div1.appendChild(element);
+        }
+
+        ///////////////////////////////////////////////////////////////
+        let div2 = document.createElement('div');
+        div2.setAttribute('class', 'video');
+
+        let video = document.createElement('video');
+        video.setAttribute('src', 'Lecture1.mp4');
+        video.setAttribute('controls', 'controls');
+        div2.appendChild(video);
+
+        //////////////////////////////////////////////////////////////////////////
+        let div3 = document.createElement('div');
+        div3.setAttribute('class','showtime');
+
+        let h33 = document.createElement('h3');
+        let booking = document.createTextNode('Make a Booking');
+        h33.appendChild(booking);
+        div3.appendChild(h33);
+
+
+        let time = ['Thrusday - 9PM', 'Wednesday - 9PM', 'Friday - 9PM'];
+        for(var i = 0; i< time.length; i++){
+          let input = document.createElement('input');
+          input.setAttribute('class', 'btn-booking');
+          input.setAttribute('type' , 'button');
+          input.setAttribute('value', time[i]);
+          div3.appendChild(input);
+        }
+
+        let div = [div1, div2, div3];
+        var result = document.getElementById('synopsis');
+        for(var i = 0; i < div.length; i++){
+          result.appendChild(div[i]);
+        }
+
+        result.style.display = 'flow-root';
+      }
+
+      function delete1(){
+        let parent = document.getElementById('synopsis');
+        removeAllChildNodes(parent);
+        parent.style.display = 'none';
+      }
+
+      function removeAllChildNodes(parent) {
+        while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+        }
+      }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Side bar</title>
+    <link rel="stylesheet" href="../CSS/sidebar.css">
+  </head>
+  <body>
+    <div id="sidebar">
+          <div class="arrow-icon">
+            <span class="left-bar"></span>
+            <span class="right-bar"></span>
+          </div>
+
+
+        <div class="list">
+          <div class="item">Home</div>
+          <div class="item">About us</div>
+          <div class="item">Contact us</div>
+        </div>
+    </div>
+
+  <script type="text/javascript">
+  var parrent = document.querySelector(".arrow-icon")
+      parrent.addEventListener("click", event => {
+        parrent.classList.toggle('open');
+        document.getElementById("sidebar").classList.toggle('active');
+  });
+  </script>
+  </body>
+</html>

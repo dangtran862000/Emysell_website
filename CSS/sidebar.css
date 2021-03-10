@@ -1,0 +1,75 @@
+* {
+  box-sizing:border-box;
+}
+
+#sidebar {
+  position:absolute;
+  top:0px;
+  left:-200px;
+  width:200px;
+  height:50%;
+  background:#151719;
+  transition:all 300ms linear;
+}
+
+#sidebar.active {
+  left:0px;
+}
+
+#sidebar div.list div.item {
+  padding:15px 10px;
+  border-bottom:1px solid #444;
+  color:#fcfcfc;
+  text-transform:uppercase;
+  font-size:15px;
+}
+
+
+
+
+
+
+
+.arrow-icon {
+  background-color: lightcoral;
+  height: 2.8em;
+  width: 2.8em;
+  padding: 33px;
+  position: absolute;
+  left: 230px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.left-bar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 40px;
+  height: 10px;
+  transform: rotate(35deg);
+  border-radius: 6px 10px 10px 6px;
+  background-color: blue;
+  transition: all 0.4s;
+}
+
+.right-bar {
+  position: absolute;
+  top: 20px;
+  left: 26px;
+  width: 40px;
+  height: 10px;
+  transform: rotate(-35deg);
+  border-radius: 10px 6px 6px 10px;
+  background-color: red;
+  transition: all 0.4s;
+}
+
+.open .left-bar {
+  transform-origin: center center;
+  transform: rotate(-35deg);
+}
+.open .right-bar {
+  transform-origin: center center;
+  transform: rotate(35deg);
+}
