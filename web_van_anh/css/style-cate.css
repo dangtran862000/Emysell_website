@@ -20,11 +20,11 @@ body{
     background-color:white;
     z-index: -3;
 }
-.dropdown-cate{
+.menu .dropdown-cate{
     position: relative;
     display: inline-block;
 }
-.dropdown {
+.menu .dropdown {
     border: none;
     background-color: rgb(68, 68, 156);
     color: white;
@@ -33,14 +33,14 @@ body{
     cursor: pointer;
     display: inline;
 }
-.drop-content{
+.menu .drop-content{
     position: absolute;
     background-color: rgb(68, 68, 156);
     z-index: 1;
     display: none;
     width: 100%;
 }
-.drop-content a{
+.menu .drop-content a{
     text-decoration: none;
     display: block;
     color: white;
@@ -49,17 +49,17 @@ body{
     padding-bottom: 10px;
     font-size: 15px;
 }
-.drop-content a:hover {
+.menu .drop-content a:hover {
     background-color: rgb(189, 189, 255);
 }
-.dropdown:hover .drop-content{
+.menu .dropdown:hover .drop-content{
     display: block;
 }
-.material-icons {  
+.menu .material-icons {  
     text-align: center;
 }
 /* Format the A-Z navigation*/
-.navside {
+.menu .navside {
   height: 100%;
   width: 150px;
   position: fixed;
@@ -68,18 +68,18 @@ body{
   overflow-x: hidden;
   overflow-y: visible;
 }
-.navside li {
+.menu .navside li {
   text-align: center;
   list-style-type: none;
 }
 
-.navside a {
+.menu .navside a {
   color: white;
   padding: 15px;
   display: block;
   text-decoration: none;
 }
-.navside a:hover {
+.menu > .navside > a:hover {
   background-color: rgb(189, 189, 255);
 }
 /* Format the store layout*/
