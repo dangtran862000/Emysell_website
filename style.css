@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    height: auto;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .container{
+      padding-left: 15%;
+      padding-right: 15%;
+  }
+
+  .ava_picture{
+    max-width:100%; height:auto; display:block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  div.polaroid {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  
+  div.container {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .column {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  .fa-facebook-official{
+    font-size:20px; color:#3B5998; text-decoration: none;
+  }
+
+  .fa-google-plus{
+    font-size:20px; color:#dd4b39; margin-left: 3%; text-decoration: none;
+  }
+
+  .nav {
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}

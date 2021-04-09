@@ -94,101 +94,29 @@ hr {
     justify-content: space-around;
 }
 
-/* Navbar container */
-.navbar {
-    overflow: hidden;
-    background-color: black;
-}
-
-/* Links inside the navbar */
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 30px 16px;
-    text-decoration: none;
-}
-
-/* The dropdown container */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-/* Dropdown button */
-.dropdown .dropbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 30px 26px;
-    background-color: inherit;
-    font-family: inherit; /* Important for vertical align on mobile phones */
-    margin: 0; /* Important for vertical align on mobile phones */
-}
-
-/* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: #00fceb;
-    color: black;
-}
-
-/* Dropdown content (hidden by default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-    /* Links inside the dropdown */
-    .dropdown-content a {
-        float: none;
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
+    .nav a {
+        float: right;
         display: block;
-        text-align: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 20px 16px 20px;
+        text-decoration: none;
+        font-size: 17px;
+        align-content: center;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
     }
 
-        /* Add a grey background color to dropdown links on hover */
-        .dropdown-content a:hover {
-            background-color: #ddd;
+        .nav a:hover {
+            background: #00f9e8;
+            color: black;
         }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-
-
-.nav a {
-    float: right;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 16px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    align-content: center;
-    align-items: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.nav a:hover {
-    background: #00f9e8;
-    color: black;
-}
-
-.nav img {
-    width: 10%;
-    float: left;
-    padding: 0.7%;
-}
+    .nav img {
+        width: 10%;
+        float: left;
+        padding: 0.7%;
+    }
 
 .button {
     background-color: #00f9e8; /* Green */
@@ -199,21 +127,6 @@ hr {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
-
-a.signup:hover {
-    background-color: black;
-}
-
-.button {
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #00fceb;
-    background-color: black;
-    /*margin: 16px 0;*/
-    padding: 12px 16px;
-    color: #00fceb;
-    display: block;
 }
 
 
@@ -253,7 +166,7 @@ ul.no-bullets {
 }
 
 ul li {
-    padding:5%;
+    padding-top: 15%;
 }
 
 
@@ -401,6 +314,83 @@ body {
     max-width: 100%;
 }
 
-@media-desktop{
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    height: auto;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .container_aboutus{
+      padding-left: 15%;
+      padding-right: 15%;
+      padding-bottom: 15%;
+  }
 
-}
+  .ava_picture{
+    max-width:100%; height:auto; display:block;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  div.polaroid {
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+  }
+  
+  div.container {
+    padding: 10px;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .column {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
+  .fa-facebook-official{
+    font-size:20px; color:#3B5998; text-decoration: none;
+  }
+
+  .fa-google-plus{
+    font-size:20px; color:#dd4b39; margin-left: 3%; text-decoration: none;
+  }
+
+  main{
+      padding-top: 15%;
+      padding-bottom: 15%;
+      background-color: #f4f4ff;
+  }
+
+  .aside_contact{
+        margin-left: 5%;
+        width: 40%;
+        height:inherit;
+        border: 3px solid violet ;
+        background-color: white;
+        overflow-wrap: break-word;
+  }
+  
+  .container_contact{
+      display: flex;
+      padding-top: 3%;
+      padding-bottom: 5%;
+  }
+
+    .form_contact{
+        text-align: center;
+        border: 3px solid violet ;
+        margin-right: 5%;
+  }
