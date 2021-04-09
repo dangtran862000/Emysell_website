@@ -19,20 +19,42 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 <body>
+  
   <header>
     <!--Navigation area-->
-    <nav class="nav">
+    <nav class="navbar">
         <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-        <img src="image\logo123.png" style="width:7.5%;"   />
-        <a href="contact.html">Contact</a>
-        <a href="">FAQs</a>
-        <a href="">Browse</a>
-        <a href="myaccount.html">My Account</a>
-        <a href="fee.html">Fees</a>
-        <a href="aboutus.html">About us</a>
-        <a href="homepage.html">Home</a>
+        <img src="image\logo123.png" style="width:7.5%; float:left; align-items:center; justify-items:center;display:block; padding-top:15px" />
+        <nav style="float:right">
+            <a href="homepage.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="fee.html">Fees</a>
+            <a href="myaccount.html">My Account</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Browse
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Browse by categories</a>
+                    <a href="#">Browse by name</a>
+                </div>
+            </div>
+            <a href="">FAQS</a>
+            <a href="">Contact</a>
+            <a class="signup" href="login.html" style="padding:0;">
+                
+                   
+                    <p class="button">Sign Up</p>
+                    
+                
+            </a>
+           
+        </nav>
+
     </nav>
 </header>
+
 <div>
   <img src="image/aboutusbanner.jpg" class="banner" />
 </div>
