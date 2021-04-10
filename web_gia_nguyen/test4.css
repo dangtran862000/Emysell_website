@@ -13,7 +13,7 @@ body{
 
 
 /* Left content */
-.block-slider{
+.block .block-slider{
   display: grid;
   place-items: center;
   float: left;
@@ -23,7 +23,7 @@ body{
   border-radius: 10px;
 }
 
-.block-slider .slider{
+.block .block-slider .slider{
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -31,35 +31,35 @@ body{
   height: 370px;
 }
 
-.block-slider .slider > div {
+.block .block-slider .slider > div {
   flex-shrink: 0;
   width: 100%;
   height: inherit;
 }
 
-.block-slider .slider > div > img{
+.block .block-slider .slider > div > img{
   width: inherit;
   height: inherit;
 }
 
-.link-image{
+.block .link-image{
   width: 100%;
   height: 60px;
   text-align: center;
 }
 
-.link-image > a {
+.block .link-image > a {
   display: inline-block;
   padding: 3px;
   border: 1px solid black;
   border-radius: 3px;
 }
 
-.link-image > a:hover {
+.block .link-image > a:hover {
   border: 2px solid orange;
 }
 
-.link-image > a > img {
+.block .link-image > a > img {
   width: 45px;
   height: 45px;
 }
@@ -80,37 +80,37 @@ body{
   border-radius: 10px;
 }
 
-.rating{
+.content .rating{
   display: inline;
 }
 
-.rating::before{
+.content .rating::before{
   content: '★ ';
   font-size: 30px;
   color: #ffc700;
 }
 
-.rating:last-child::before{
+.content .rating:last-child::before{
   color: white;
 }
 
-h1{
+.content h1{
   margin-left: 15px;
 }
 
-.price{
+.content .price{
   font-size: 30px;
   text-align: center;
   display: inline-block;
 }
 
-.dis{
+.content .dis{
   margin-left: 30px;
   text-decoration: line-through red;
   display: inline-block;
 }
 
-.description{
+.content .description{
   margin: 15px 0;
   text-align: center;
 }
@@ -133,7 +133,7 @@ h1{
   border-radius: 90px;
 }
 
-.shopping-button:hover{
+.content .shopping-button:hover{
   background-color: #03BFCB;
 }
 
@@ -142,13 +142,13 @@ h1{
 
 
 /* Recommend product section */
-.recommend-title{
+.recommend-title .recommend-title{
   text-align: center;
   margin-top: 100px;
   color: white;
 }
 
-.block-recommend-product{
+.recommend-title .block-recommend-product{
   width: 75%;
   margin: 10px auto;
   border: 3px solid blue;
@@ -157,19 +157,19 @@ h1{
   white-space: nowrap;
 }
 
-.recommend-product{
+.recommend-title .recommend-product{
   position: relative;
   display: inline-block;
   width: 150px;
   margin-right: 20px;
 }
 
-.recommend-product .recommend-image{
+.recommend-title .recommend-product .recommend-image{
   width: 150px;
   height: 200px;
 }
 
-.bar{
+.recommend-title .bar{
   position: absolute;
   background-color: black;
 
@@ -181,7 +181,7 @@ h1{
   z-index: 1;
 }
 
-.title{
+.recommend-title .title{
   position: absolute;
   text-align: center;
   overflow: hidden;
