@@ -1,175 +1,111 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
-
-body{
-    padding: 0;
-    margin: 0;
-    position: relative;
-    background-color: rgba(161, 161, 161, 0.13);
+body {
+  margin: 0;
 }
-.left{
-    margin-top: 10%;
-    margin-left: 5%;
-    width: 250px;
+main .container-cate{
+  float: left;
 }
 
-.right{
-    position: absolute;
-    margin-top: -2%;
-    left:25%;
-    right: 10%;
-    background-color:white;
-    z-index: -3;
+main .rightside{
+  margin-left: 20%;
+  overflow: hidden;
 }
-.dropdown-cate{
-    position: relative;
-    display: inline-block;
+main .rightside .gallery-side{
+  float: left;
 }
-.dropdown {
-    border: none;
-    background-color: rgb(68, 68, 156);
-    color: white;
-    text-transform: uppercase;
-    font-size: 15px;
-    cursor: pointer;
-    display: inline;
+/* Categori cus */
+.dropdown-cate {
+  position: relative;
+  display: inline-block;
 }
-.drop-content{
-    position: absolute;
-    background-color: rgb(68, 68, 156);
-    z-index: 1;
-    display: none;
-    width: 100%;
+.dropdown-button {
+  width: 100%;
+  border: none;
+  background-color: black !important;
+  color: white;
+  text-transform: uppercase;
+  font-size: 100%;
+  cursor: pointer;
+  display: inline;
 }
-.drop-content a{
-    text-decoration: none;
-    display: block;
-    color: white;
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 15px;
+.drop-content {
+  position: absolute;
+  background-color: black;
+  z-index: 1;
+  display: none;
+  width: 100%;
+}
+.drop-content a {
+  text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 90%;
+  text-transform: uppercase;
 }
 .drop-content a:hover {
-    background-color: rgb(189, 189, 255);
+  background-color: #00fceb;
+  color: black;
 }
-.dropdown:hover .drop-content{
-    display: block;
-}
-.material-icons {  
-    text-align: center;
-}
-/* Format the A-Z navigation*/
-#info {
-  font-size: 18px;
-  color: rgb(68, 68, 156);
-  text-align: center;
-  margin-bottom: 25px;
-}
-.scrollbar {
-  margin-left: 30px;
-  float: left;
-  height: 400px;
-  width: 100px;
-  background: rgb(68, 68, 156);
-  overflow-y: scroll;
-  margin-bottom: 25px;
-}
-#wrapper {
-  text-align: center;
-}
-
-#style-3::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color:rgba(68, 68, 156, 0);
-}
-
-#style-3::-webkit-scrollbar {
-  width: 6px;
-  background-color:rgb(163, 163, 163);
-}
-
-#style-3::-webkit-scrollbar-thumb {
-  background-color: rgb(255, 255, 255);
-}
-
-.navside li {
-  text-align: center;
-  list-style-type: none;
-}
-
-.navside a {
-  color: white;
-  padding: 15px;
+.dropdown-section:hover .drop-content {
   display: block;
-  text-decoration: none;
 }
-.navside a:hover {
-  background-color: rgb(189, 189, 255);
+.material-icons {
+  text-align: center;
+}
+/*Locate store*/
+.rightside .store{
+  position: relative;
+  width: 30%;
+  height: 30%;
+  display:inline-block;
+  margin-left: 3%;
 }
 
-/* Format the store layout*/
-.content h1{
-    margin-left: 2%;
-    font-size: 25px;
-    color: rgba(0, 0, 0, 0.575);
-}
-.content p {
-    margin-top:-0.5%;
-    margin-left: 2%;
-    font-size: 15px;
-    color: rgb(145, 144, 145);
-}
-.store {
-  float: left;
-  margin-top: 2%;
-  margin-left: 1%;
-  padding: 20px;
-  overflow: hidden;
-  position: relative;
-}
 div.store-logo {
-  width: 236px;
-  height: 236px;
+  width: 250px;
+  height: 250px;
   cursor: pointer;
 }
 .store:hover .store-logo img {
-  border-bottom: solid 10px rgb(189, 189, 255);
+  border-bottom: solid 10px #00fceb;
 }
 div.store-logo img {
   top: 0%;
+  left: 10%;
   position: absolute;
-  width: 70%;
-  height: 70%;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
-  z-index: -1;
 }
 div.visit-tag{
   position: absolute;
   top: 40%;
   left: 25%;
-  background-color: white;
-  color: rgb(68, 68, 156);
-  border-bottom: 3px solid rgb(68, 68, 156);
-  border-right: 3px solid rgb(68, 68, 156);
+  background-color: #00fceb;
+  color:black;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
   text-align: center;
   display: none;
+  z-index: 2;
 }
 .store:hover .visit-tag {
   display: block;
 }
-
 div.shope-name {
   position: absolute;
   top: 75%;
   left: 35%;  
 }
-
 div.shope-name a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  color: rgb(189, 189, 255);
+  color: black;
   font-size: 22px;
   cursor: pointer;
 }
@@ -185,7 +121,21 @@ div.description {
   text-align: center;
 }
 
-
+@media only screen and (max-width: 767px) {
+  .responsive {
+    width: 100%;
+  }
+  .dropdown-button {
+    width: 50%;
+    font-size: 50%;
+  }
+  .drop-content a {
+    font-size: 50%;
+  }
+  .drop-content {
+    width: 50%;
+  }
+}
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
