@@ -9,7 +9,7 @@ body{
 .left{
     margin-top: 10%;
     margin-left: 5%;
-    width: 250px;
+    width: 150px;
 }
 
 .right{
@@ -24,7 +24,7 @@ body{
     position: relative;
     display: inline-block;
 }
-.dropdown {
+.dropdown-button {
     border: none;
     background-color: rgb(68, 68, 156);
     color: white;
@@ -48,18 +48,19 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 15px;
+    text-transform: uppercase;
 }
 .drop-content a:hover {
     background-color: rgb(189, 189, 255);
 }
-.dropdown:hover .drop-content{
+.dropdown-section:hover .drop-content{
     display: block;
 }
 .material-icons {  
     text-align: center;
 }
 /* Format the A-Z navigation*/
-.navside {
+.menu .navside {
   height: 100%;
   width: 150px;
   position: fixed;
@@ -68,18 +69,18 @@ body{
   overflow-x: hidden;
   overflow-y: visible;
 }
-.navside li {
+.menu .navside li {
   text-align: center;
   list-style-type: none;
 }
 
-.navside a {
+.menu .navside a {
   color: white;
   padding: 15px;
   display: block;
   text-decoration: none;
 }
-.navside a:hover {
+.menu > .navside > a:hover {
   background-color: rgb(189, 189, 255);
 }
 /* Format the store layout*/
