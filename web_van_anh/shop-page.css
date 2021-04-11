@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+:root {
+  --light-red: hsl(356, 100%, 66%);
+  --very-light-red: hsl(355, 100%, 74%);
+  --very-dark-blue: hsl(208, 49%, 24%);
+  --white-text: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(240, 2%, 79%);
+  --very-dark-grayish-blue: hsl(207, 13%, 34%);
+  --very-dark-black-blue: hsl(240, 10%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "Overpass", sans-serif;
+  width: 100vw;
+  font-size: 16px;
+  color: var(--very-dark-grayish-blue);
+  line-height: 150%;
+}
+ul li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header {
+  position: relative;
+  width: 100%;
+  padding: 18px;
+  height: 100vh;
+  background: url(images/logo1.jpg) no-repeat center center;
+  z-index: 0;
+}
+header::before {
+    position: absolute;
+    content: '';
+  background-image: linear-gradient(
+    to bottom right,
+    hsl(194, 61%, 22%),
+    hsl(194, 50%, 27%)
+  );
+  opacity: 90%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+nav {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  /* z-index: 10; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 80px;
+  position: relative;
+  cursor: pointer;
+}
+.main-nav {
+  display: flex;
+ 
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  /* align-items: center; */
+  position: absolute;
+  /* padding: 2rem 0; */
+  background-color: var(--white-text);
+  color: var(--very-dark-black-blue);
+  font-weight: 600;
+  width: 100%;
+  height: 80vh;
+  font-size: 1.4rem;
+  top: 100%;
+  opacity: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.main-nav li {
+  width: 100%;
+  text-align: center;
+  
+}
+.main-nav li a{
+    color: black;
+}
+.main-nav li > span {
+  margin-left: 4px;
+}
+
+label{
+    cursor: default;
+}
+
+.checkbtn > i{
+    width: 30px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  
+    z-index: 10;
+    color: whitesmoke;
+    
+}
+#check{
+    display: none;
+  }
+.hero {
+}
+ 
+
+#check:checked ~ .main-nav{
+    opacity: 1;
+  }
