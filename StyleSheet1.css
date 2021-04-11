@@ -446,6 +446,7 @@ body {
   }
 
   @media screen and (max-width: 1000px) {
+
     .column {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
@@ -475,13 +476,76 @@ body {
   }
   
   .container_contact{
-      display: flex;
       padding-top: 3%;
       padding-bottom: 5%;
   }
 
-    .form_contact{
+  .form_contact{
+        float: right;
         text-align: center;
         border: 3px solid violet ;
         margin-right: 5%;
+        width: 50%;
+  }
+
+  section.container_contact{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    margin: 30px;
+    background: rgba(233, 231, 231, 0.849); ;
+    border: 1px solid black;
+    
+}
+
+
+  .comment_contact {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+  .textinput {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+}
+
+[class*="col-"] {
+    float: center;
+    padding: 15px;
+  }
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 1035px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
   }

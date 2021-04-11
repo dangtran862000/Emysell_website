@@ -18,7 +18,8 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
-<body>
+
+<body style="background-image: url('image/3124541.png'); background-repeat: repeat; ">
     <header>
         <!--Navigation area-->
         <nav class="navbar">
@@ -50,79 +51,76 @@
                 </a>
                
             </nav>
-
+    
         </nav>
     </header>
-
-    <div class="container_contact">
-    <div class="aside_contact">
-        <img src="image/contactus.png" style="width: 100%">
-    </div>
-    <div class="form_contact">
-    <form method="get">
-        <div>Contact Purpose
-            <select name="Choose" id="select_style">
-                <option value="" ></option>
-                <option Value ="1" class="text-color">Business</option>
-                <option Value ="2">Personal</option>
-            </select>
-        </div><br>
-        <div>
-            Name:
-            <input type="text" id="name" name="name" maxlength="50">
-        </div><br>
-        <div>
-            Email:
-            <input type="email" id="email" name="email">
-        </div><br>
-        <div>
-            Phone:
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
-        </div><br>
-        <div>
-            Preferred contact method: <br><br>
-            <input type="radio" id="email" name="method" value="email">
-            <label for="email">Email</label>
-            <input type="radio" id="phone" name="method" value="phone">
-            <label for="phone">Phone</label>
-        </div><br>
-        <div>
-            Contact day(s):<br><br>
-            <div id="contactday">
-            <input type="checkbox" class="contact_checkbox" name="mon">
-            <label for="mon">Monday</label>
-            <input type="checkbox" class="contact_checkbox" name="tue">
-            <label for="tue">Tuesday</label>
-            <input type="checkbox" class="contact_checkbox" name="wed">
-            <label for="wed">Wednesday</label>
-            <input type="checkbox" class="contact_checkbox" name="thu">
-            <label for="thu">Thursday</label>
-            <input type="checkbox" class="contact_checkbox" name="fri">
-            <label for="fri">Friday</label>
-            <input type="checkbox" class="contact_checkbox" name="sat">
-            <label for="sat">Saturday</label>
-            <input type="checkbox" class="contact_checkbox" name="sun">
-            <label for="sun">Sunday</label>
-            </div>
-        </div><br>
-        <div>
-            <textarea cols='50' rows='9'>
-                
-              </textarea>
+    <div class="row" style="padding-top: 2%; padding-bottom: 2%;">
+    
+        <div class="col-8 center" >
+            <section class="container_contact">
+                <form method="get">
+                    <h1>Contact Us</h1>
+                    <div><p>Contact Purpose</p>
+                        <select name="Choose" id="select_style">
+                            <option value="" ></option>
+                            <option Value ="1" class="text-color">Business</option>
+                            <option Value ="2">Personal</option>
+                        </select>
+                    </div><br>
+                    <div>
+                        Name:
+                        <input type="text" id="name" name="name" maxlength="50">
+                    </div><br>
+                    <div>
+                        Email:
+                        <input type="email" id="email" name="email">
+                    </div><br>
+                    <div>
+                        Phone:
+                        <input type="tel" id="email" name="email">
+                    </div><br>
+                    <div>
+                        Preferred contact method: <br><br>
+                        <input type="radio" id="email" name="method" value="email">
+                        <label for="email">Email</label>
+                        <input type="radio" id="phone" name="method" value="phone">
+                        <label for="phone">Phone</label>
+                    </div><br>
+                    <div>
+                        Contact day(s):<br><br>
+                        <div id="contactday">
+                        <input type="checkbox" class="contact_checkbox" name="mon">
+                        <label for="mon">Monday</label>
+                        <input type="checkbox" class="contact_checkbox" name="tue">
+                        <label for="tue">Tuesday</label>
+                        <input type="checkbox" class="contact_checkbox" name="wed">
+                        <label for="wed">Wednesday</label>
+                        <input type="checkbox" class="contact_checkbox" name="thu">
+                        <label for="thu">Thursday</label>
+                        <input type="checkbox" class="contact_checkbox" name="fri">
+                        <label for="fri">Friday</label>
+                        <input type="checkbox" class="contact_checkbox" name="sat">
+                        <label for="sat">Saturday</label>
+                        <input type="checkbox" class="contact_checkbox" name="sun">
+                        <label for="sun">Sunday</label>
+                        </div>
+                    </div><br>
+                    <div class="comment">
+                        <textarea class="textinput" placeholder="Comment"></textarea>
+                    </div>
+                    <div style="padding-top: 10%;">
+                        <button type="reset" value="Clear" class="style_button">CLEAR</button>
+                        <button type="submit" value="Send">SEND</button>
+                    </div>
+                </div>
+                </form>
+                </section>
         </div>
-        <div>
-            <h3>Introduction Video</h3>
-            <iframe src="https://www.youtube.com/embed/zLwpcLJibw0" ></iframe>
-        </div>
-        <div>
-            <button type="reset" value="Clear" class="style_button">CLEAR</button>
-            <button type="submit" value="Send">SEND</button>
-        </div>
-    </form>
-    </div>
-    </div>
-
-    <footer style="background-color: #131a22; color:white; padding-bottom:5%">
+        
+      </div>
+    
+    
+    <footer style="background-color: #131a22; color:white; padding-bottom:5%; clear: both;">
         <div class="flex">
             <!--Zero Columns-->
             <div style="flex: 2; margin: 1% 5% 0 5%">
