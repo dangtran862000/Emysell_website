@@ -5,136 +5,248 @@ body{
   color: #B3B8CD;
 }
 
-.block{
-  width: 800px;
+.product-detail{
+  width: 60%;
   height: 500px;
-  margin: 100px auto;
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px 3px rgb(0,0,0,0.2);
 }
 
-
-/* Left content */
-.block .block-slider{
-  display: grid;
-  place-items: center;
+.left{
   float: left;
-  width: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+
   height: 100%;
-  background-color: #FFFFFF;
-  border-radius: 10px;
-}
-
-.block .block-slider .slider{
-  display: flex;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  width: 85%;
-  height: 370px;
-}
-
-.block .block-slider .slider > div {
-  flex-shrink: 0;
-  width: 100%;
-  height: inherit;
-}
-
-.block .block-slider .slider > div > img{
-  width: inherit;
-  height: inherit;
-}
-
-.block .link-image{
-  width: 100%;
-  height: 60px;
-  text-align: center;
-}
-
-.block .link-image > a {
-  display: inline-block;
-  padding: 3px;
-  border: 1px solid black;
-  border-radius: 3px;
-}
-
-.block .link-image > a:hover {
-  border: 2px solid orange;
-}
-
-.block .link-image > a > img {
-  width: 45px;
-  height: 45px;
-}
-
-
-
-
-
-/* Right content */
-.content{
-  float: right;
-  text-align: center;
-  background-color: #1d1e22;
-
-  margin-top: 4.5%;
   width: 50%;
-  height: 85%;
-  border-radius: 10px;
 }
 
-.content .rating{
-  display: inline;
-}
+    .logo > img{
+      display: inline-block;
+      width: 25%;
+      height: 10%;
+    }
 
-.content .rating::before{
-  content: '★ ';
-  font-size: 30px;
-  color: #ffc700;
-}
+    .slider{
+      display: flex;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      overflow-y: hidden;
 
-.content .rating:last-child::before{
+      margin: 0 auto;
+      height: 70%;
+      width: 100%;
+    }
+
+    .slider > div {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .product{
+      height: 100%;
+      flex-shrink: 0;
+    }
+
+    .slider img{
+      height: 100%;
+      width: 90%;
+    }
+
+    .link-image{
+      width: 100%;
+      height: 50px;
+      text-align: center;
+    }
+
+    .link-image > a {
+      display: inline-block;
+      padding: 6px;
+      border: 1px solid black;
+      border-radius: 100%;
+      background-color: #999999;
+      opacity: 0.5
+    }
+
+    .link-image > a:hover {
+      background-color: yellow;
+    }
+
+
+
+
+.right{
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  float: right;
   color: white;
+  background-color: #2d2e32;
+  height: 100%;
+  width: 50%;
 }
 
-.content h1{
-  margin-left: 15px;
+    .content{
+      margin-left: 30px;
+    }
+
+    .right .title{
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .logo-brand-name{
+      margin-top: 0;
+      margin-bottom: 25px;
+      font-size: 1em;
+      font-style: italic;
+      color: #999999;
+    }
+
+    .price{
+      display: inline;
+      font-size: 1.4em;
+    }
+
+    .star{
+      display: inline-block;
+      float: right;
+      margin-right: 20px;
+    }
+
+    .rating{
+      display: inline;
+    }
+
+    .rating::before{
+      content: '★ ';
+      font-size: 1.4em;
+      color: #ffc700;
+    }
+
+    .description-title{
+      text-align: center;
+      margin-top: 35px;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .description{
+      color: #999999;
+      margin-bottom: 20px;
+    }
+
+    .color{
+      margin-bottom: 15px;
+    }
+
+    .name{
+      text-align: left;
+      display: inline-flex;
+      font-weight: 600;
+    }
+
+    .color{
+      height: 25px;
+    }
+
+    .color > a{
+      display: inline-block;
+      margin: 0 15px;
+      padding: 7px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .input-size{
+      display: inline-flex;
+      width: 30%;
+      margin-left: 40px;
+    }
+
+    .input-size > button{
+      flex: 1;
+    }
+    .input-size > input{
+      flex: 2;
+      width: 100%;
+      font-size: 0.8em;
+    }
+
+
+    .btn-1{
+      text-align: center;
+      margin-top: 55px;
+    }
+
+    .btn-1 > a{
+      background-color: #2d2e32;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: bold;
+
+      padding: 12px;
+      margin: 0 10px;
+      font-size: 0.9em;
+      border-radius: 30px;
+      border: 2px solid white;
+      transition: 0.2s;
+    }
+
+    .btn-1 > a:hover{
+      background-color: yellow;
+      color: black;
+    }
+
+
+
+
+@media screen and (min-width: 1400px){
+  .product-detail{
+    font-size: 1.4vw;
+    height: 800px;
+  }
 }
 
-.content .price{
-  font-size: 30px;
-  text-align: center;
-  display: inline-block;
+@media screen and (max-width: 1100px) {
+  .btn-1{ margin-top: 20px;}
+
+  .btn-1 > a{
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
 }
 
-.content .dis{
-  margin-left: 30px;
-  text-decoration: line-through red;
-  display: inline-block;
+@media screen and (max-width: 800px) {
+  .product-detail{  width: 100%;}
 }
 
-.content .description{
-  margin: 15px 0;
-  text-align: center;
+@media screen and (max-width: 516px) {
+  .title{margin-bottom: 0px;}
+
+  .content{margin: 0;}
+
+  .star{margin-right: 0px; }
+
+  .color > a{
+    margin: 0 5px;
+    padding: 0.3em;
+  }
 }
 
-.content .shopping-button{
-  display: inline-block;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  text-decoration: none;
+@media screen and (max-width: 400px){
+  .input-size{  width: 60%;}
 
-  border: 1px solid #03BFCB;
-  background-color: #231E39;
-  color: #fff;
+  .name{  width: 100%;}
 
-  margin: 25px;
-  padding: 13px;
-  font-weight: 300;
-  font-size: 14px;
-  border-radius: 90px;
-}
-
-.content .shopping-button:hover{
-  background-color: #03BFCB;
+  .btn-1{ margin-top: 10px;}
 }
 
 
@@ -144,14 +256,13 @@ body{
 /* Recommend product section */
 .recommend-title{
   text-align: center;
-  margin-top: 100px;
   color: white;
 }
 
 .block-recommend-product{
   width: 75%;
   margin: 10px auto;
-  border: 3px solid blue;
+  border: 2px solid black;
   text-align: center;
   overflow-x: hidden;
   white-space: nowrap;
@@ -167,6 +278,7 @@ body{
 .recommend-product .recommend-image{
   width: 150px;
   height: 200px;
+  vertical-align: bottom;
 }
 
 .bar{
@@ -181,7 +293,7 @@ body{
   z-index: 1;
 }
 
-.title{
+.recommend-product .title{
   position: absolute;
   text-align: center;
   overflow: hidden;
@@ -189,9 +301,8 @@ body{
   text-overflow: ellipsis;
 
   left: 0;
-  bottom: 0;
+  bottom: 7px;
   width: 100%;
   color: white;
-  padding-bottom: 5px;
   z-index: 2;
 }
