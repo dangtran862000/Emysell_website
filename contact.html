@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
 
-<body style="background-image: url('image/3124541.png'); background-repeat: repeat; ">
+<body>
     <header>
         <!--Navigation area-->
         <nav class="navbar">
@@ -54,55 +54,71 @@
     
         </nav>
     </header>
+    <div style="background-image: url('image/3124541.png'); background-repeat: repeat; ">
     <div class="row" style="padding-top: 2%; padding-bottom: 2%;">
-    
         <div class="col-8 center" >
             <section class="container_contact">
                 <form method="get">
                     <h1>Contact Us</h1>
-                    <div><p>Contact Purpose</p>
-                        <select name="Choose" id="select_style">
-                            <option value="" ></option>
-                            <option Value ="1" class="text-color">Business</option>
+                    <div>Contact Purpose
+                        <select name="Choose" id="select_style" placeholder="Please">
+                            <option Value ="" disabled selected>Choose</option>
+                            <option Value ="1" >Business</option>
                             <option Value ="2">Personal</option>
                         </select>
                     </div><br>
-                    <div>
-                        Name:
-                        <input type="text" id="name" name="name" maxlength="50">
-                    </div><br>
-                    <div>
-                        Email:
-                        <input type="email" id="email" name="email">
+                    <div style="display:flex;">
+                        <p style="padding-right: 2%;"><i><b>Name:</b></i></p>
+                        <input type="text" id="name" name="name" placeholder="Please type your full name" maxlength="50">
+                    </div>
+                    <div style="display:flex; padding-top: 3%;">
+                        <p style="padding-right: 2%;"><i><b>Email:</b></i></p>
+                        <input type="email" id="email" name="email" placeholder="Please type your email">
                     </div><br>
                     <div>
                         Phone:
-                        <input type="tel" id="email" name="email">
+                        <input type="tel" id="email" name="email" placeholder="Enter phone number">
                     </div><br>
-                    <div>
+                    <div style="display:inline-flex;">
                         Preferred contact method: <br><br>
+                        <div style="display:inline-flex;">
                         <input type="radio" id="email" name="method" value="email">
                         <label for="email">Email</label>
                         <input type="radio" id="phone" name="method" value="phone">
                         <label for="phone">Phone</label>
+                        </div>
                     </div><br>
                     <div>
-                        Contact day(s):<br><br>
+                        <p style="padding-right: 2%;"><i><b>Contact day(s):</b></i></p>
                         <div id="contactday">
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="mon">
                         <label for="mon">Monday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="tue">
                         <label for="tue">Tuesday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="wed">
                         <label for="wed">Wednesday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="thu">
                         <label for="thu">Thursday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="fri">
                         <label for="fri">Friday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="sat">
                         <label for="sat">Saturday</label>
+                        </div>
+                        <div>
                         <input type="checkbox" class="contact_checkbox" name="sun">
                         <label for="sun">Sunday</label>
+                        </div>
                         </div>
                     </div><br>
                     <div class="comment">
@@ -110,7 +126,7 @@
                     </div>
                     <div style="padding-top: 10%;">
                         <button type="reset" value="Clear" class="style_button">CLEAR</button>
-                        <button type="submit" value="Send">SEND</button>
+                        <button type="submit" value="Send" class="style_button"> SEND</button>
                     </div>
                 </div>
                 </form>
@@ -118,7 +134,7 @@
         </div>
         
       </div>
-    
+    </div>
     
     <footer style="background-color: #131a22; color:white; padding-bottom:5%; clear: both;">
         <div class="flex">

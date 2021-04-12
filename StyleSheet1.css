@@ -408,7 +408,7 @@ body {
 * {
     box-sizing: border-box;
   }
-  
+
  /* Create four equal columns that floats next to each other */
  .column {
     float: left;
@@ -517,6 +517,56 @@ body {
     border: 1px solid grey;
 }
 
+#contactday {
+    color: rgb(0, 0, 0);
+    font-size:18px;
+    text-align: center;
+    
+}
+
+#contactday div{
+    display:inline-flex;
+    padding-left: 1%;
+}
+
+input.contact_checkbox { 
+    width: 20px;
+    height: 20px;
+} 
+
+option.text-color {
+    color: white;
+}
+
+#select_style {
+    -webkit-appearance: menulist-button;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    color:black;
+}
+
+button.style_button{
+    margin-top: 10%;
+    margin-right: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(189, 178, 169);
+    font-size: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+button.style_button:hover {background-color: #3e678e}
+
+button.style_button:active {
+    background-color: #3e8e4f;
+    box-shadow: 0 2px #666;
+    transform: translateY(0px);
+  }
+
 [class*="col-"] {
     float: center;
     padding: 15px;
@@ -536,16 +586,20 @@ body {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 1035px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
-}
 
-@media only screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
     /* For mobile phones: */
     [class*="col-"] {
       width: 100%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #contactday {
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size:18px;
+        text-align: left;
+        flex-direction: column;
     }
   }
