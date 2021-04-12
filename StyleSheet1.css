@@ -424,6 +424,13 @@ body {
     clear: both;
   }
   
+  .row-contact{
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    padding-left: 15%; 
+    padding-right: 15%;
+  }
+
   .container_aboutus{
       padding-left: 15%;
       padding-right: 15%;
@@ -473,11 +480,6 @@ body {
         border: 3px solid violet ;
         background-color: white;
         overflow-wrap: break-word;
-  }
-  
-  .container_contact{
-      padding-top: 3%;
-      padding-bottom: 5%;
   }
 
   .form_contact{
@@ -594,12 +596,18 @@ button.style_button:active {
     }
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 872px) {
     #contactday {
         display: flex;
         color: rgb(0, 0, 0);
         font-size:18px;
         text-align: left;
         flex-direction: column;
+    }
+    .row-contact {
+        padding-top: 2%; 
+        padding-bottom: 2%; 
+        padding-left: 0%; 
+        padding-right: 0%;
     }
   }
