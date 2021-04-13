@@ -36,43 +36,53 @@ main{
 }
 /*Select catagory*/
 
-.side-bar{
-  height: 35vh;
-  position: relative;
+/* Format the A-Z navigation*/
+#info {
+  font-size: 18px;
+  color: #2c3e503a;
+  text-align: center;
+  margin-bottom: 25px;
 }
-.side-bar .drop-down{
-  position: absolute;
-  padding-left: 50%;
-  padding: 2rem;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  z-index: 2;
-}
-.side-bar .drop-down select{
+.scrollbar {
+  margin-left: 25%;
+  float: left;
+  height: 300px;
   width: 200px;
-  min-height: 50px;
-  padding-left: 5%;
-  font-size: 1rem;
-  color: whitesmoke;
-  cursor: pointer;
-  box-shadow: 0 5p 25px rgba(0, 0, 0, 0.2);
-  outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  outline: 0;
-  box-shadow: none;
-  border: 0 !important;
   background: #2c3e50;
-  background-image: none;
+  overflow-y: scroll;
+  margin-bottom: 25px;
 }
-.select::before{
-  content: '\25BC';
-  color: whitesmoke;
-  top: 40%;
-  pointer-events: none;
-  left:75%;
-  z-index: 10;
+#wrapper {
+  text-align: center;
+}
+
+#style-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgba(68, 68, 156, 0);
+}
+
+#style-3::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgb(163, 163, 163);
+}
+
+#style-3::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 255, 255);
+}
+
+.navside li {
+  text-align: center;
+  list-style-type: none;
+}
+
+.navside a {
+  color: white;
+  padding: 15px;
+  display: block;
+  text-decoration: none;
+}
+.navside a:hover {
+  background-color: #2c3e503a;
 }
 h1, h2{
   text-align: center;
@@ -186,4 +196,11 @@ h1, h2{
   .shop-item__name{
     font-size: 1.2rem;
   }  
+  .scrollbar {
+  margin-left: 15%;
+  float: left;
+  height: 600px;
+  width: 200px;
+  overflow-y: scroll;
+}
 }
