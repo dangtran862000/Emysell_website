@@ -249,7 +249,7 @@ ul.no-bullets {
     list-style-type: none; /* Remove bullets */
     padding: 5px; /* Remove padding */
     margin: 5px; /* Remove margins */
-   
+
 }
 
 ul li {
@@ -262,7 +262,7 @@ ul li {
     flex-direction: column;
 }
 
-input[type=text], input[type=email] {
+.inputlogin {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -412,13 +412,15 @@ body {
     padding: 30px;
     height: auto;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
+<<<<<<< HEAD
+=======
   
   .row-contact{
     padding-top: 2%; 
@@ -426,6 +428,7 @@ body {
     padding-left: 15%; 
     padding-right: 15%;
   }
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
 
   .container_aboutus{
       padding-left: 15%;
@@ -443,7 +446,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
   }
-  
+
   div.container {
     padding: 10px;
   }
@@ -477,12 +480,23 @@ body {
         background-color: white;
         overflow-wrap: break-word;
   }
+<<<<<<< HEAD
+
+  .container_contact{
+      display: flex;
+      padding-top: 3%;
+      padding-bottom: 5%;
+  }
+=======
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
 
   .form_contact{
         float: right;
         text-align: center;
         border: 3px solid violet ;
         margin-right: 5%;
+<<<<<<< HEAD
+=======
         width: 50%;
   }
 
@@ -606,4 +620,5 @@ button.style_button:active {
         padding-left: 0%; 
         padding-right: 0%;
     }
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
   }

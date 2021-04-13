@@ -48,6 +48,15 @@ main{
   transform: translate(-50%,-50%);
   z-index: 2;
 }
+.side-bar .drop-down select{
+  background-color: whitesmoke;
+  border: none;
+  width: 80vw;
+  min-height: 50px;
+}
+.side-bar .drop-down option{
+  background-color: whitesmoke;
+}
 h1, h2{
   text-align: center;
   margin-bottom: 2rem;
