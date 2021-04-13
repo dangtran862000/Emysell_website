@@ -33,28 +33,33 @@ section{
 	justify-content: center;
 	align-items: center;
 
-	width: 90%;
-	max-width: 800px;
-	height: 400px;
+  /* border: 3px solid red; */
 }
+
+
 
 .left{
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
   position: relative;
-	background: linear-gradient(to bottom right, #f5f7fa , #c3cfe2);
+	/* background: linear-gradient(to bottom right, #f5f7fa , #c3cfe2); */
+  background: whitesmoke;
 
+  float: left;
 	width: 50%;
 	height: 100%;
 }
+    .left > *{
+      padding: 1.4rem;
+    }
 
 		.logo{
 		  font-size: 3.5em;
 		}
 		.logo > img{
-		  width: 50px;
-		  height: 50px;
+		  width: 4rem;
+		  height: 4rem;
 		}
 
 		.slide-image{
@@ -74,8 +79,8 @@ section{
 			width: 100%;
 		}
 
-		.img-product{
-			height: 100%;
+		.show-img-product{
+			height: 110%;
 			width: 100%;
 		}
 
@@ -127,17 +132,20 @@ section{
 
 
 
+
+
 .right{
-	display: flex;
+	display: table;
 	flex-direction: column;
 	justify-content: center;
-	background: linear-gradient(to bottom right, #a1c4fd , #c2e9fb);
+	background: white;
   color: #141414;
 	font-family: 'Helvetica', sans-serif;
 
+  float: left;
 	width: 50%;
 	padding: 5%;
-	height: 120%;
+	height: 100%;
   text-shadow: 1px 1px 1px rgba(170, 170, 170, 0.3);
 }
 
@@ -182,7 +190,7 @@ section{
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			background: #ef8bef;
+			background: black;
 			cursor: pointer;
 
 			transition: 0.3s;
@@ -209,11 +217,9 @@ section{
 			transform: scale(.6);
 		}
 		.color:nth-child(2){
-			background: #f43542;
+			background: #999999;
 		}.color:nth-child(3){
-			background: #ffe55b;
-		}.color:nth-child(4){
-			background: #6cf96c;
+			background: red;
 		}
 
 		.selected{
@@ -238,10 +244,15 @@ section{
 				}
 				.purchase:hover{
 					transform: scale(1.1);
+          background-color: #03BFCB;
 				}
 				.purchase:active{
 					transform: scale(.8);
 				}
+
+
+
+
 
 @media screen and (min-width: 1400px){
 	body{
@@ -250,8 +261,11 @@ section{
 	.product-detail{
 		width: 60%;
 		max-width: none;
-		height: 60%;
+		height: 50%;
 	}
+  .right > *{
+    padding: 1.4rem 0;
+  }
 }
 
 
@@ -281,6 +295,8 @@ section{
 
 
 
+
+.recommendation{}
 /* Recommend product section */
 .recommend-title{
   text-align: center;
