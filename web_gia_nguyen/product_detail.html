@@ -20,6 +20,7 @@
 
       <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
       <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
    <body>
 
@@ -61,73 +62,62 @@
 
 
      <main>
-       <section class='product-detail'>
-         <div class="left">
-           <div class="logo">
-             <img src="addidas-logo.png" alt="">
+       <section>
+         <div class="product-detail">
+           <div class="left">
+             <div class="arrow in-right"></div>
+             <div class="arrow in-left"></div>
+
+             <div class="slides">
+               <a href="#img-1" class="slider"></a>
+               <a href="#img-2" class="slider"></a>
+               <a href="#img-3" class="slider"></a>
+             </div>
+
+             <div class="slide-image">
+              <div id="img-1">
+                <img class="img-product" src="img-1.png">
+              </div>
+              <div id="img-2">
+                <img class="img-product" src="img-2.png">
+              </div>
+             </div>
+
+             <div class="logo"><img src="addidas-logo.png"></div>
+
            </div>
 
-           <div class="slider">
-             <div id="slide-1">
-               <img src="addidas.png" alt="">
-             </div>
-             <div id="slide-2">
-               <img src="img-2.png" alt="">
-             </div>
-             <div id="slide-3">
-               <img src="img-3.png" alt="">
-             </div>
-           </div>
+           <div class="right">
+             <h1 class="title">Nike Air Max for Men</h1>
+             <p>Men's Running Shoes.</p>
 
-           <div class="link-image">
-             <a href="#slide-1"></a>
-             <a href="#slide-2"></a>
-             <a href="#slide-3"></a>
-           </div>
-         </div>
-
-         <div class="right">
-           <div class="content">
-
-             <h1 class="title">Title of the product</h1>
-             <h4 class='logo-brand-name'>Addidas</h4>
-
-             <div class="price-rating">
-               <p class='price'>$20</p>
-               <div class="star">
-                 <div class="rating"></div>
-                 <div class="rating"></div>
-                 <div class="rating"></div>
-                 <div class="rating"></div>
-                 <div class="rating"></div>
-               </div>
+             <div class="price-star">
+               <span class="price">$ 50.00</span>
+               <span class="stars">★★★★★</span>
              </div>
 
-             <p class='description-title'>DESCRIPTION</p>
-             <p class='description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-             <div class="color">
-               <div class="name">COLOR</div>
-               <a href="#" style="background-color:blue;"></a>
-               <a href="#"></a>
-               <a href="#" style="background-color:white;"></a>
+             <h3>Color</h3>
+             <div class="block-colors">
+               <span class="color"></span>
+               <span class="color selected"></span>
+               <span class="color"></span>
+               <span class="color"></span>
              </div>
 
-             <div class="size">
-               <div class="name">SIZE</div>
-               <div class="input-size">
-                 <button type="button" name="button">- </button>
-                 <input type="text" name="" value="38">
-                 <button type="button" name="button">+</button>
-               </div>
+             <h3>Size</h3>
+             <div class="block-sizes">
+               <span class="size">40</span>
+               <span class="size">41</span>
+               <span class="size selected">42</span>
+               <span class="size">43</span>
              </div>
 
              <div class="btn-1">
-               <a>BUY NOW</a>
-               <a>ADD TO CARD</a>
+               <div class="purchase">ADD TO CARD</div>
+               <div class="purchase">BUY NOW</div>
              </div>
-           </div>
 
+           </div>
          </div>
        </section>
      </main>

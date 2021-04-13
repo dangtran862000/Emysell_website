@@ -249,7 +249,7 @@ ul.no-bullets {
     list-style-type: none; /* Remove bullets */
     padding: 5px; /* Remove padding */
     margin: 5px; /* Remove margins */
-   
+
 }
 
 ul li {
@@ -262,7 +262,7 @@ ul li {
     flex-direction: column;
 }
 
-input[type=text], input[type=email] {
+.inputlogin {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -408,7 +408,7 @@ body {
 * {
     box-sizing: border-box;
   }
-  
+
  /* Create four equal columns that floats next to each other */
  .column {
     float: left;
@@ -416,14 +416,14 @@ body {
     padding: 30px;
     height: auto;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
-  
+
   .container_aboutus{
       padding-left: 15%;
       padding-right: 15%;
@@ -440,7 +440,7 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     text-align: center;
   }
-  
+
   div.container {
     padding: 10px;
   }
@@ -473,7 +473,7 @@ body {
         background-color: white;
         overflow-wrap: break-word;
   }
-  
+
   .container_contact{
       display: flex;
       padding-top: 3%;
