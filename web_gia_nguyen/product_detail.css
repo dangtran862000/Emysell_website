@@ -11,14 +11,16 @@ body{
 	box-sizing: border-box;
 }
 
-section{
+a{
+  text-decoration: none;
+}
+
+.section-1{
 	width: 100%;
-	height: 100vh;
+	height: 600px;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	font-size: 100%;
-	background-image: linear-gradient(30deg, #ffffff, #929292);
 }
 
 .slider, .color{
@@ -26,14 +28,18 @@ section{
 	height: 1.2rem;
 }
 
+.clear{
+	clear: both;
+}
+
 
 /* Start product detail */
 .product-detail{
-	display: flex;
+	display: table;
 	justify-content: center;
 	align-items: center;
 
-  /* border: 3px solid red; */
+	width: 70%;
 }
 
 
@@ -43,7 +49,6 @@ section{
   align-items: center;
   flex-direction: column-reverse;
   position: relative;
-	/* background: linear-gradient(to bottom right, #f5f7fa , #c3cfe2); */
   background: whitesmoke;
 
   float: left;
@@ -135,7 +140,7 @@ section{
 
 
 .right{
-	display: table;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	background: white;
@@ -152,6 +157,26 @@ section{
 		/* Padding top/bottom every element inside 'right' div with 0.5rem */
 		.right > *{
 			padding: 0.5rem 0;
+		}
+
+		.left-title{
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.right > .title-sale {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.right .title{
+			display: inline;
+		}
+
+		.title-sale > img{
+			width: 4rem;
+			height: 4rem;
 		}
 
 		.price-star{
@@ -260,12 +285,15 @@ section{
 	}
 	.product-detail{
 		width: 60%;
-		max-width: none;
+		/* max-width: none; */
 		height: 50%;
 	}
   .right > *{
     padding: 1.4rem 0;
   }
+	.section-2{
+		margin-top: 20%;
+	}
 }
 
 
@@ -280,14 +308,14 @@ section{
 }
 
 @media screen and (max-width: 600px){
-	.product-detail{
-		display: block;
-	}
 	.left{
 		width: 100%;
 	}
 	.right{
 		width: 100%;
+	}
+	.section-2{
+		margin-top: 500px;
 	}
 }
 
@@ -296,11 +324,10 @@ section{
 
 
 
-.recommendation{}
-/* Recommend product section */
+
 .recommend-title{
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .block-recommend-product{
@@ -349,4 +376,5 @@ section{
   width: 100%;
   color: white;
   z-index: 2;
+	font-size: 1rem;
 }
