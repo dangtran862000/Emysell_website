@@ -34,8 +34,28 @@ main{
   flex-direction: column;
   
 }
+/*Select catagory*/
+
 .side-bar{
   height: 50vh;
+  position: relative;
+}
+.side-bar .drop-down{
+  position: absolute;
+  padding-left: 50%;
+  padding: 1rem 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+}
+.side-bar .drop-down select{
+  background-color: whitesmoke;
+  border: none;
+  width: 80vw;
+  min-height: 50px;
+}
+.side-bar .drop-down option{
+  background-color: whitesmoke;
 }
 h1, h2{
   text-align: center;
@@ -46,7 +66,7 @@ h1, h2{
 }
 .shop-list{
   display: grid;
-  width: 100%; 
+  width: 100%;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
@@ -62,9 +82,7 @@ h1, h2{
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.2);
-  
   z-index: 1;
- 
 }
 
 
@@ -130,7 +148,7 @@ h1, h2{
     grid-template-columns: 1fr 1fr 1fr;
   }
   .shop-item__image::before{
-     transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     opacity: 0;
     transform: translateY(100%);
   }

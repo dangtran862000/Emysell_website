@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <link rel="stylesheet" href="shop-page.css">
+    <link rel="stylesheet" href="../web_gia_nguyen/product_category.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <img class="img" src="./images/hm-logo.jpg" alt="">
+          </div>
+
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+     
+          <ul class="main-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>   
+          </ul>
+
+        </nav>
+        <div class="hero">
+          <h1>Welcome to H&M</h1>
+          <p>Your style is our inspire</p>
+        </div>
+     
+      </header> 
+      <div class="shoppingcart_container">
+    <h1>SHOPPING CART</h1>
+    <div class="shoppingcart_table">
+    <table id="customers">
+        <tr >
+          <th class="table_cart_title" style="width:5%"></th>
+          <th style="width: 15%"></th>
+          <th style="width: 25%; text-align: center">PRODUCT</th>
+          <th style="width: 20%; text-align: center">PRICE</th>
+          <th style="width: 22%; text-align: center">QUANTITY</th>
+          <th style="width: 25%; text-align: center">TOTAL</th>
+        </tr>
+        <tr>
+          <td style="text-align: center">
+            <a href="" style="font-size:120%" class="fa">&#xf014;</a>
+          </td>
+          <td>
+            <img src="images/zara-pro1.jpg" class="cart_img_center">
+          </td>
+          <td></td>
+          <td style="text-align: center">₫299.000</td>
+          <td>
+            <div style="text-align: center;">
+                <div class="input-size">
+                  <button type="button" name="button">- </button>
+                  <input type="text" name="" value="1">
+                  <button type="button" name="button">+</button>
+                </div>
+              </div>
+          </td>
+          <td style="text-align: center">₫299.000</td>
+        </tr>
+          <tr>
+            <td style="text-align: center">
+                <a href=# style="font-size:120%" class="fa">&#xf014;</a>
+            </td>
+            <td>
+              <img src="images/zara-pro2.jpg" class="cart_img_center">
+            </td>
+            <td></td>
+            <td style="text-align: center">₫349.000</td>
+            <td>
+              <div style="text-align: center;">
+                  <div class="input-size">
+                    <button type="button" name="button">-</button>
+                    <input type="text" name="" value="1">
+                    <button type="button" name="button">+</button>
+                  </div>
+                </div>
+            </td>
+            <td style="text-align: center">₫349.000</td>
+          </tr>
+          <tr>
+              <td colspan="3" class="table_cart_title">
+                <form>
+                    <input type="text" id="coupon" name="coupon" placeholder="Coupon code" style="height:40px; width:40%">
+                    <input type="submit" value="Apply Coupon" style="height:40px; width:30%; background-color: rgb(85, 85, 85); color:blanchedalmond;">
+              </td>
+              <td colspan="3" class="table_cart_title">
+                    <button type="submit" style="height:40px; width:30%; background-color: rgb(85, 85, 85); color:blanchedalmond; margin-left: 70%;">CONTINUE SHOPPING</button>
+              </td>
+          </tr>
+        
+      </table>
+    </div>
+    </div>
+    <section class="container_cart">
+        <div class="row">
+          <div class="column">
+            <h1>CUSTOMER INFORMATION</h1>
+            
+            <p>Some text..</p>
+            <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-facebook-official"></a>
+            <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-google-plus"></a>
+          </div>
+          <div class="column">
+            <h1 style="padding-bottom: 5%;">CART TOTAL</h1>
+            <hr style="margin-bottom: 5%; background-color:black; border-color: black;">
+            <table id="customers_total"  style="overflow-x:auto;">
+                <tr >
+                    <td class="table_cart_total" style="width: 22%; text-align: center; background-color: white;">SUB-TOTAL</th>
+                    <th class="table_cart_total" style="width: 25%; text-align: center">₫648.000</th>
+                </tr>
+                <tr>
+                    <td class="table_cart_total" style="width: 22%; text-align: center">TOTAL</th>
+                    <th class="table_cart_total" style="width: 25%; text-align: center">₫648.000</th>
+                </tr>
+            </table>
+        
+            <button type="submit" style="height:40px; width:30%; background-color: rgb(85, 85, 85); color:blanchedalmond; margin-top: 5%;">ORDER</button>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <div class="footer--left">
+        <div class="footer-logo">
+           <div class="logo"> <img class="img" src="./images/hm-logo.jpg" alt=""></div>
+        </div>
+        <p>© Copyright 2021. All rights reserved</p>
+        <p>Term of Service</p>
+        <p>Privacy Policy</p>
+    </div>
+    <div class="footer--right">
+        <ul class="footer-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Contact</a></li>   
+        </ul>
+    </div>
+</footer>
+</html>

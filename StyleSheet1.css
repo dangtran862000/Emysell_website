@@ -423,6 +423,16 @@ body {
     display: table;
     clear: both;
   }
+<<<<<<< HEAD
+=======
+  
+  .row-contact{
+    padding-top: 2%; 
+    padding-bottom: 2%; 
+    padding-left: 15%; 
+    padding-right: 15%;
+  }
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
 
   .container_aboutus{
       padding-left: 15%;
@@ -446,6 +456,7 @@ body {
   }
 
   @media screen and (max-width: 1000px) {
+
     .column {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
@@ -473,15 +484,145 @@ body {
         background-color: white;
         overflow-wrap: break-word;
   }
+<<<<<<< HEAD
 
   .container_contact{
       display: flex;
       padding-top: 3%;
       padding-bottom: 5%;
   }
+=======
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
 
-    .form_contact{
+  .form_contact{
+        float: right;
         text-align: center;
         border: 3px solid violet ;
         margin-right: 5%;
+<<<<<<< HEAD
+=======
+        width: 50%;
+  }
+
+  section.container_contact{
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    margin: 30px;
+    background: rgba(233, 231, 231, 0.849); ;
+    border: 1px solid black;
+    
+}
+
+
+  .comment_contact {
+    float: left;
+    width: 100%;
+    height: auto;
+}
+
+  .textinput {
+    float: left;
+    width: 100%;
+    min-height: 100px;
+    outline: none;
+    resize: none;
+    border: 1px solid grey;
+}
+
+#contactday {
+    color: rgb(0, 0, 0);
+    font-size:18px;
+    text-align: center;
+    
+}
+
+#contactday div{
+    display:inline-flex;
+    padding-left: 1%;
+}
+
+input.contact_checkbox { 
+    width: 20px;
+    height: 20px;
+} 
+
+option.text-color {
+    color: white;
+}
+
+#select_style {
+    -webkit-appearance: menulist-button;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    color:black;
+}
+
+button.style_button{
+    margin-top: 10%;
+    margin-right: 30px;
+    height: 50px;
+    width: 200px;
+    background-color: rgb(189, 178, 169);
+    font-size: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: inline-block;
+
+}
+
+button.style_button:hover {background-color: #3e678e}
+
+button.style_button:active {
+    background-color: #3e8e4f;
+    box-shadow: 0 2px #666;
+    transform: translateY(0px);
+  }
+
+[class*="col-"] {
+    float: center;
+    padding: 15px;
+  }
+
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+@media (max-width: 1200px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 872px) {
+    #contactday {
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-size:18px;
+        text-align: left;
+        flex-direction: column;
+    }
+    .row-contact {
+        padding-top: 2%; 
+        padding-bottom: 2%; 
+        padding-left: 0%; 
+        padding-right: 0%;
+    }
+>>>>>>> 45f6ce64dc11e04d9ddd574441631ce530559ed4
   }
