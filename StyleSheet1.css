@@ -401,10 +401,6 @@ body {
     max-width: 100%;
 }
 
-@media-desktop{
-
-}
-
 * {
     box-sizing: border-box;
   }
