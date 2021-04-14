@@ -57,6 +57,7 @@ select{
 
 
 
+
 .block-product{
 	text-align: center;
 	width: 75%;
@@ -164,3 +165,31 @@ padding: 0;
     .btn-1:hover{
       background-color: #03BFCB;
     }
+
+
+
+@media screen and (max-width: 800px){
+	.block-product{
+		width: 100%;
+	}
+  .product{
+    width: 70%;
+  }
+  .two-third > h3,.two-third-2 > h3 {
+    display: block;
+    margin: 0 0 0 0;
+  }
+  .date{
+    margin-left: 60%;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .search-product{
+    margin: 0 auto 100px auto;
+    width: 40%;
+  }
+  main{
+    display: block;
+  }
+}
