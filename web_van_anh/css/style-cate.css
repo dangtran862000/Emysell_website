@@ -93,20 +93,21 @@ h1, h2{
   padding-bottom: 150%;
   overflow-y: hidden;
 }
-.shop-item__image::before{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
 
 .shop-item__name{
   text-align: center;
   margin: 1rem 0;
   font-weight: 500;
+  cursor: pointer;
+  color: #2c3e50;
+}
+.shop-item__name a{
+  color: #2c3e50;
+}
+
+.shop-item__name:hover{
+  font-size: 1.5rem;
+  color: #2c3e50;
 }
 
 .shop-item__btn{
