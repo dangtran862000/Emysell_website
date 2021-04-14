@@ -1,0 +1,648 @@
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 500px;
+    line-height: 1;
+    opacity: .75;
+    color: black !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ /* Nav and footer css */
+
+.nav {
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+a.navbar-brand {
+    text-align: center;
+    align-content: center;
+    float:left;
+    padding:25px 16px;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 30px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #00fceb;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.nav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav a:hover {
+    background: #00f9e8;
+    color: black;
+}
+
+.navbar .logo-image img {
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.button {
+    background-color: #00f9e8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+a.signup:hover {
+    background-color: black;
+}
+
+.footer_col {
+    align-content:center;
+    justify-content:center;
+    display:flex;
+    grid-gap: 3%;
+}
+
+.footer_col a:link {
+    text-decoration: none;
+    color:white;
+}
+
+.footer_col a:visited {
+    text-decoration: none;
+    color:white;
+}
+
+.footer_col a:hover {
+    text-decoration: none;
+    color: #00f9e8;
+}
+
+.footer_col a:active {
+    text-decoration: none;
+}
+
+.footer_column3{
+    font-size:30px
+}
+
+ /*Reposive for the phone*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1024px) {
+
+    .navbar .logo-image img {
+        width: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -6px;
+    }
+
+    a.navbar-brand div {
+        float: unset;
+    }
+
+    .dropdown-content{
+        min-width: 100%;
+    }
+
+    .navbar a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 20px 16px;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+        padding: 30px 16px;
+    }
+
+    .price h1 {
+        font-size: 25px;
+    }
+
+    .price h2 {
+        font-size: 23px;
+    }
+
+    .main-fee {
+        padding:0;
+    }
+
+    div.img-banner-fee {
+        height:100px;
+    }
+
+    .register-page .form {
+        width:100%;
+    }
+
+    footer .flex .first, .second, .zero {
+        display:none;
+    }
+
+    footer .flex .three {
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .main-account .grid_2_items {
+        flex-direction: column;
+    }
+
+    .main-account .grid_2_items .first-main .ul {
+        font-size:30px;
+    }
+
+    .main-account .grid_2_items .second-main .account_form {
+        width:100%;
+    }
+
+    .main-account .grid_2_items .second-main h1  {
+        text-align:center;
+    }
+
+    .main-account .grid_2_items .second-main .button {
+        width:100%;
+    }
+
+    img.cicrle-ava.center_img {
+        width: 20%;
+    }
+
+   
+    
+
+
+}
+
+@media only screen and (max-width: 375px) {
+    .footer_column0{
+        text-align: center;
+    }
+
+    .footer_column1{
+        text-align: center;
+    }
+
+    .footer_column2{
+        text-align: center;
+    }
+
+    .footer_column3{
+        text-align: center;
+    }
+
+    .footer_column3 h3{
+        display: inline-block;
+
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .footer_col {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+
+    img.cicrle-ava.center_img {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+
+    .footer_column0{
+        text-align: center;
+    }
+
+    .footer_column1{
+        text-align: center;
+    }
+
+    .footer_column2{
+        text-align: center;
+    }
+
+    .footer_column3{
+        text-align: center;
+    }
+
+    .footer_column3 h3{
+        display: inline-block;
+
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .footer_col {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+
+    img.cicrle-ava.center_img {
+        width: 30%;
+    }
+
+   
+
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1024px) {
+
+.grid_2_items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navbar.responsive {
+    position: relative;
+}
+
+.navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.navbar div {
+    float:left;
+}
+
+.navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+}
+
+.navbar.responsive .dropdown {
+    float: none;
+}
+
+.navbar.responsive .dropdown-content {
+    position: relative;
+}
+
+.navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 481px){
+    .myinformation_form{
+        padding-left: 4%;
+    }
+}
+
+/**Responsive for ipad*/
+@media screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
+    .register-page .form {
+        max-width: 600px;
+    }
+
+    .flex_1{
+        padding-left: 0%;
+        display: inline-block;
+    }
+
+    div.grid_2_items{
+        padding-left: 5%;
+    }
+
+}
+ /* Nav and footer css*/
+
+ .button {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #00fceb;
+    background-color: black;
+    padding: 12px 16px;
+    color: #00fceb;
+    display: block;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  *::before{
+    position: absolute;
+    content: "";
+  } */
+  
+  html, body{
+    width: 100vw;
+    font-size: 16px;
+    line-height: 150%;
+    color: black;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .shop-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+  }
+  
+  main{
+    padding: 5% 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  /*Select catagory*/
+  
+  /* Format the A-Z navigation*/
+  #info {
+    font-size: 18px;
+    color: #2c3e503a;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .scrollbar {
+    margin-left: 25%;
+    float: left;
+    height: 300px;
+    width: 200px;
+    background: #2c3e50;
+    overflow-y: scroll;
+    margin-bottom: 25px;
+  }
+  #wrapper {
+    text-align: center;
+  }
+  
+  /* #style-3::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(68, 68, 156, 0);
+  } */
+  
+  #style-3::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgb(163, 163, 163);
+  }
+  
+  #style-3::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .navside li {
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  .navside a {
+    color: white;
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+  }
+  .navside a:hover {
+    background-color: #345372f5;
+  }
+  h1, h2{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .shop-container{
+    width: 100%;
+  }
+  .shop-list{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .shop-item__image{
+    position: relative;
+    padding-bottom: 150%;
+    overflow-y: hidden;
+  }
+  
+  
+  
+  .shop-item__name{
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 500;
+    cursor: pointer;
+    color: #2c3e50;
+  }
+  .shop-item__name a{
+    color: #2c3e50;
+  }
+  .shop-item__name:hover{
+    font-size: 1.5rem;
+    color: #2c3e50;
+  }
+  
+  .shop-item__btn{
+    position: absolute;
+    width: 200px;
+    border: 2px solid whitesmoke;
+    text-align: center;
+    padding: 1rem 0;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    
+  }
+  .shop-item__btn:focus, .shop-item__btn:hover{
+    background-color: whitesmoke;
+    color: #000;
+  }
+  
+  
+  @media only screen and (min-width: 768px){
+    h1,h2{
+      font-size: 2em;
+    }
+    .shop-list{
+      gap: 1.5rem;
+    }
+    .shop-item__image{
+      padding-bottom: 100%;
+    }
+    .shop-item__btn{
+      font-size: 2rem;
+      width: 250px;
+      padding: 2rem 0;
+    }
+    .shop-item__name{
+      font-size: 2rem;
+      margin: 1.5rem 0;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px){
+    main{
+      flex-direction: row;
+    }
+    .side-bar{
+      flex-basis: 30%;
+    }
+    .shop-container{
+      padding: 0 2rem;
+    }
+    .shop-list{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  
+  
+    .shop-item__btn{
+      opacity: 0;
+      font-size: 1rem;
+      width: 170px;
+      padding: 1rem 0;
+    }
+  
+    .shop-item__image:hover > .shop-item__btn{
+      opacity: 1;
+    }
+    .shop-item__name{
+      font-size: 1.2rem;
+    }  
+    .scrollbar {
+    margin-left: 15%;
+    float: left;
+    height: 600px;
+    width: 200px;
+    overflow-y: scroll;
+  }
+  }
