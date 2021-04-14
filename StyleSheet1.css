@@ -382,7 +382,7 @@ a.signup:hover {
     }
 }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
+@media only screen and (min-width: 375px) and (max-width: 812px) {
 
     .footer_column0{
         text-align: center;
@@ -544,8 +544,8 @@ body {
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
+    padding-top: 10%;
     width: 360px;
-    padding: 8% 0 0;
     margin: auto;
 }
 
