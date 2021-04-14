@@ -1,20 +1,16 @@
-body{
-  background-color: #c8cad1;
-  font-family: Montserrat, sans-serif;
-}
-h4{
-	margin: 0;
-}
-
-
-.n-main{
+main{
   display: flex;
 }
 
 aside{
   flex-shrink:0;
   width: 20%;
-  margin-top: 60px;
+  margin-top: 45px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 
@@ -23,7 +19,7 @@ aside{
   position: relative;
   overflow: hidden;
   margin: auto;
-  width: 90%;
+  width: 75%;
   height: 30px;
   border-radius: 3px;
   box-sizing: border-box;
@@ -58,7 +54,6 @@ select{
     width: 100%;
   }
 }
-
 
 
 
@@ -111,7 +106,7 @@ padding: 0;
       display: inline-block;
       margin: 10px 0 0 0;
     }
-    .two-third-2 > h3{
+    .two-third-2 > h3 > a{
       color:white;
     }
 
