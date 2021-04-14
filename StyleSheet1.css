@@ -342,7 +342,7 @@ a.signup:hover {
 
 }
 
-@media only screen and (max-device-width: 375px) {
+@media only screen and (max-width: 375px) {
     .footer_column0{
         text-align: center;
     }
@@ -471,14 +471,14 @@ a.signup:hover {
 }
 }
 
-@media screen and (max-device-width: 481px){
+@media screen and (max-width: 481px){
     .myinformation_form{
         padding-left: 4%;
     }
 }
 
 /**Responsive for ipad*/
-@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+@media screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
     .register-page .form {
         max-width: 600px;
     }
