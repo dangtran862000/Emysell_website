@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Page</title>
-    <link rel="stylesheet" href="shop-page.css">
-    <link rel="stylesheet" href="../web_gia_nguyen/product_category.css">
+    <link rel="stylesheet" href="./shop-page.css">
+    <link rel="stylesheet" href="../web_van_anh/css/product_category.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body>
@@ -16,6 +16,7 @@
             <img class="img" src="./images/hm-logo-png.png" alt="">
           </div>
 
+
           <input type="checkbox" id="check">
           <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
@@ -23,8 +24,14 @@
      
           <ul class="main-nav">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Product</a></li>
+            <li><a href="../aboutus.html">About us</a></li>
+            <li><div class="dropdown-product">
+              <button class="dropbtn">Product</button>
+              <div class="dropdown-content-shop">
+              <a href="../web_gia_nguyen/product_category.html">Browse by category</a>
+              <a href="../web_gia_nguyen/product_createTime.html">Browse by created time</a>
+              </div>
+            </div></li>
             <li><a href="#">Contact</a></li>   
           </ul>
 
@@ -39,62 +46,60 @@
         <div class="product-section">
             <h3>New Products</h3>
         <section class='block-product'>
+          
 
-            <div class="product">
-              <div class="upper">
-                <div class='two-third'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-3.png" alt="">
-                </div>
+          <div class="product">
+            <div class="upper">
                 <div class="one-third"></div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="btn">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+            <div class='two-third'>
+                <h3><a href="product_detail.html">T-shirt 1</a></h3>
+                <a href="product_detail.html"><img src="../web_gia_nguyen/store/t-shirt-1.png" alt=""></a>
               </div>
             </div>
-    
-            <div class="product">
-              <div class="upper">
-                <div class='two-third-2'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-4.png" alt="">
-                </div>
-                <div class="one-thrid">
-                </div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="test">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+            <div class="lower">
+              <p class='price'>₫ 250.000</p>
+              <p class='date'>9/4/2021</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class="btn">
+                <a href="../web_gia_nguyen/product_detail.html" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
-    
-            <div class="product">
-              <div class="upper">
-                <div class='two-third'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-3.png" alt="">
-                </div>
-                <div class="one-thrid">
-                </div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="test">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+          </div>
+          <div class="product">
+            <div class="upper">
+                <div class="one-third"></div>
+            <div class='two-third'>
+                <h3><a href="product_detail.html">T-shirt 1</a></h3>
+                <a href="product_detail.html"><img src="../web_gia_nguyen/store/t-shirt-2.png" alt=""></a>
               </div>
             </div>
+            <div class="lower">
+              <p class='price'>₫ 250.000</p>
+              <p class='date'>9/4/2021</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class="btn">
+                <a href="../web_gia_nguyen/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <div class="upper">
+                <div class="one-third"></div>
+            <div class='two-third'>
+                <h3><a href="product_detail.html">T-shirt 1</a></h3>
+                <a href="product_detail.html"><img src="../web_gia_nguyen/store/t-shirt-3.png" alt=""></a>
+              </div>
+            </div>
+            <div class="lower">
+              <p class='price'>₫ 250.000</p>
+              <p class='date'>9/4/2021</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class="btn">
+                <a href="../web_gia_nguyen/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+              </div>
+            </div>
+          </div>
     
            
           </section>
@@ -103,61 +108,41 @@
             <h3>Featured Products</h3>
         <section class='block-product'>
 
-            <div class="product">
-              <div class="upper">
-                <div class='two-third'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-3.png" alt="">
-                </div>
+          <div class="product">
+            <div class="upper">
                 <div class="one-third"></div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="btn">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+            <div class='two-third'>
+                <h3><a href="product_detail.html">T-shirt 1</a></h3>
+                <a href="product_detail.html"><img src="../web_gia_nguyen/store/t-shirt-1.png" alt=""></a>
               </div>
             </div>
-    
-            <div class="product">
-              <div class="upper">
-                <div class='two-third-2'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-4.png" alt="">
-                </div>
-                <div class="one-thrid">
-                </div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="test">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+            <div class="lower">
+              <p class='price'>₫ 250.000</p>
+              <p class='date'>9/4/2021</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class="btn">
+                <a href="../web_gia_nguyen/product_detail.html" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
-    
-            <div class="product">
-              <div class="upper">
-                <div class='two-third'>
-                  <h3> Title Of the product</h3>
-                  <img src="../web_gia_nguyen/img-3.png" alt="">
-                </div>
-                <div class="one-thrid">
-                </div>
-              </div>
-              <div class="lower">
-                <p class='price'>$ 29</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>qqwbrkqwefqw qwe  rqwe fqwef  wqefqwef qwefqwef  qwef qư qwef we f qwe f qwe fqw è </p>
-                <div class="test">
-                  <a href="product_detail.html" class='btn-1'>VIEW DETAIL</a>
-                </div>
+          </div>
+
+             <div class="product">
+            <div class="upper">
+                <div class="one-third"></div>
+            <div class='two-third'>
+                <h3><a href="product_detail.html">T-shirt 1</a></h3>
+                <a href="product_detail.html"><img src="../web_gia_nguyen/store/t-shirt-1.png" alt=""></a>
               </div>
             </div>
+            <div class="lower">
+              <p class='price'>₫ 250.000</p>
+              <p class='date'>9/4/2021</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class="btn">
+                <a href="../web_gia_nguyen/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+              </div>
+            </div>
+          </div>
     
            
           </section>
