@@ -11,6 +11,7 @@ body {
   font-family: "Overpass", sans-serif;
   width: 100vw;
   font-size: 16px;
+  overflow-x: hidden;
   line-height: 150%;
 }
 ul li {
@@ -190,25 +191,14 @@ label{
 footer{
     background-color:   hsl(194, 61%, 22%);
     color:whitesmoke;
-    /* display: flex; */
-    /* height: 20vh; */
-    /* padding: 10px; */
-    /* justify-content: space-between; */
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    justify-content: space-between;
 }
-
-footer .footer--right {
-  float: right;
-}
-
-footer .footer--left {
-  float: left;
-}
-
 footer .footer--left p{
     font-size: 0.7rem;
 }
-
-
 .footer-nav a{
     color: whitesmoke;
 }
@@ -248,11 +238,10 @@ footer .footer--left p{
     .main-nav li a:hover{
         color: black;
     }
+
     /* Drop down*/
 .dropbtn {
-
   color:whitesmoke;
-
 }
 
 .dropdown {
@@ -283,21 +272,16 @@ footer .footer--left p{
         color: whitesmoke;
     }
     .logo{
-        width: 150px;
+        width: 70px;
     }
     footer{
         padding: 2rem;
-        height: 21vh;
+        height:100%;
     }
     footer .footer--left p{
         font-size: 1.2rem;
-        line-height: 150%;
     }
     footer .footer-nav a{
         font-size: 1.5rem;
-        line-height: 150%;
     }
-
-
-
 }
