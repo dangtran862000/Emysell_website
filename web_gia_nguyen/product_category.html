@@ -4,21 +4,7 @@
     <meta charset="utf-8">
     <title>Product by Category</title>
     <link rel="stylesheet" href="product_category.css">
-    <link rel="stylesheet" href="../StyleSheet1.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../style.css">
-    <title></title>
-    <!--FontList-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <link rel="stylesheet" type="text/css" href="../slick/slick.css" />
-    <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../web_van_anh/shop-page.css">
   </head>
 
 
@@ -26,38 +12,37 @@
 
     <!--Header Area-->
     <header>
-        <!--Navigation area-->
-        <nav class="navbar">
-            <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <img src="../image/logo123.png" style="width:7.5%; float:left; align-items:center; justify-items:center;display:block; padding-top:15px" />
-            <nav style="float:right">
-                <a href="homepage.html">Home</a>
-                <a href="">About us</a>
-                <a href="fee.html">Fees</a>
-                <a href="myaccount.html">My Account</a>
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        Browse
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Browse by categories</a>
-                        <a href="#">Browse by name</a>
-                    </div>
-                </div>
-                <a href="">FAQS</a>
-                <a href="">Contact</a>
-                <a class="signup" href="login.html" style="padding:0;">
-                        <p class="button">Sign Up</p>
-              </a>
-            </nav>
-        </nav>
-    </header>
+        <nav>
+          <div class="logo">
+            <img class="img" src="./images/hm-logo-png.png" alt="">
+          </div>
 
-    <!--Banner-->
-    <div>
-        <img src="../image/banner1.jpg" class="banner" />
-    </div>
+
+          <input type="checkbox" id="check">
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+
+          <ul class="main-nav">
+            <li><a href="shop-page.html">Home</a></li>
+            <li><a href="../aboutus.html">About us</a></li>
+            <li><div class="dropdown">
+              <button class="dropbtn">Product</button>
+              <div class="dropdown-content">
+              <a href="../web_gia_nguyen/product_category.html">Browse by category</a>
+              <a href="../web_gia_nguyen/product_createTime.html">Browse by created time</a>
+              </div>
+            </div></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="contact_shop.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="hero">
+          <h1>Welcome to H&M</h1>
+          <p>Your style is our inspire</p>
+        </div>
+
+      </header>
 
 
     <main class='n-main'>
