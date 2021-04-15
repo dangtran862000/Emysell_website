@@ -198,12 +198,10 @@ footer{
 
 footer .footer--right {
   float: right;
-  border: 3px solid blue;
 }
 
 footer .footer--left {
   float: left;
-  border: 3px solid red;
 }
 
 footer .footer--left p{
