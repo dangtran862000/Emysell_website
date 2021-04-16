@@ -1,235 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
 
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-html,
-body {
-  font-family: "Overpass", sans-serif;
-  width: 100vw;
-  font-size: 16px;
-  overflow-x: hidden;
-  line-height: 150%;
-}
-ul li {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-}
-.img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-header {
-  position: relative;
-  
-  width: 100%;
-  padding: 18px;
-  height: 50vh;
-  background: url(images/logo1.jpg) no-repeat center center;
-  z-index: 1;
-}
-header::before {
-    position: absolute;
-    content: '';
-  background-image: linear-gradient(
-    to bottom right,
-    hsl(194, 61%, 22%),
-    hsl(194, 50%, 27%)
-  );
-  opacity: 90%;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-nav {
-  position: relative;
-  width: 100%;
-  height: 100px;
-  /* z-index: 10; */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-.logo {
-  width: 80px;
-  position: relative;
-  cursor: pointer;
-}
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  /* align-items: center; */
-  position: absolute;
-  /* padding: 2rem 0; */
-  background-color: white;
-  
-  font-weight: 600;
-  width: 100%;
-  height: 80vh;
-  font-size: 1.4rem;
-  top: 100%;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: all 0.7s ease-in-out ;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-.main-nav li {
-  width: 100%;
-  text-align: center;
-  
-}
-.main-nav li a{
-    color: black;
-}
-
-
-label{
-    cursor: default;
-}
-
-.checkbtn { 
-    display: block;
-    cursor: pointer;
-    position: relative;  
-    color: whitesmoke;   
-}
-#check{
-    display: none;
-  }
-
-
-#check:checked ~ .main-nav{
-    transform: translateX(0);
-    opacity: 1;
-  }
-
-.hero{
-    position: relative;
-    text-align: center;
-    margin-top: 10%; 
-}
-.hero h1{
-    font-size: 2rem;
-    color: whitesmoke;
-}
-.hero p{
-    margin-top: 0.7em;
-    font-size: 1rem;
-    color: whitesmoke;
-}
-.product-section > h3{
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 2rem;
-    font-size: 1.5rem;
-    color: royalblue;
-    position: relative;
-}
-.product-section > h3::before{
-    position: absolute;
-    top: 120%;
-    left:50%;
-    transform: translateX(-50%);
-    content: "";
-    width:70%;
-    height: 1px;
-    background-color: grey;
-}
-footer{
-    background-color:   hsl(194, 61%, 22%);
-    color:whitesmoke;
-    display: flex;
-    height: 20vh;
-    padding: 10px;
-    justify-content: space-between;
-}
-footer .footer--left p{
-    font-size: 0.7rem;
-}
-.footer-nav a{
-    color: whitesmoke;
-}
-.footer-nav a:hover{
-    color: black;
-}
-@media only screen and (min-width: 1024px){
-    .checkbtn{
-        display: none;
-    }
-    .main-nav{
-        flex-direction: row;
-        /* align-items: center; */
-        position: static;
-        width: initial;
-        /* padding: 2rem 0; */
-        background-color:transparent;
-        font-weight: 600;
-        height: initial;
-        font-size: 1.4rem;
-        opacity: 1;
-        transform: translateX(0);
-        border-radius: none;
-        box-shadow: none;
-        z-index: 1  
-    }
-    
-    .main-nav li {
-        display: inline-block;
-        width: initial;
-        margin-right: 1rem;
-    }
-    .main-nav li a{
-        font-size: 1.3rem;
-        color: whitesmoke
-    }
-    .main-nav li a:hover{
-        color: black;
-    }
-    .hero{
-        text-align: center;
-        margin-top: 10%; 
-    }
-    .hero h1{
-        font-size: 4rem;
-        color: whitesmoke;
-    }
-    .hero p{
-        margin-top: 1.5rem;
-        font-size: 2rem;
-        color: whitesmoke;
-    }
-    .logo{
-        width: 150px;
-    }
-    footer{
-        padding: 2rem;
-        height: 21vh;
-    }
-    footer .footer--left p{
-        font-size: 1.2rem;
-        line-height: 150%;
-    }
-    footer .footer-nav a{
-        font-size: 1.5rem;
-        line-height: 150%;
-    }
-    
-    
-
-}
 
 
 .shoppingcart_container{
@@ -474,3 +244,460 @@ div.shoppingcart_table table th {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
   }
+
+
+  
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 500px;
+    line-height: 1;
+    opacity: .75;
+    color: black !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+ /* Nav and footer css */
+
+.nav {
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Navbar container */
+.navbar {
+    overflow: hidden;
+    background-color: black;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+}
+
+a.navbar-brand {
+    text-align: center;
+    align-content: center;
+    float:left;
+    padding:25px 16px;
+}
+
+.navbar .icon {
+    display: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 30px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #00fceb;
+    color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        /* Add a grey background color to dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+.nav a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 16px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    align-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav a:hover {
+    background: #00f9e8;
+    color: black;
+}
+
+.navbar .logo-image img {
+    width: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+.button {
+    background-color: #00f9e8; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+a.signup:hover {
+    background-color: black;
+}
+
+.footer_col {
+    align-content:center;
+    justify-content:center;
+    display:flex;
+    grid-gap: 3%;
+}
+
+.footer_col a:link {
+    text-decoration: none;
+    color:white;
+}
+
+.footer_col a:visited {
+    text-decoration: none;
+    color:white;
+}
+
+.footer_col a:hover {
+    text-decoration: none;
+    color: #00f9e8;
+}
+
+.footer_col a:active {
+    text-decoration: none;
+}
+
+.footer_column3{
+    font-size:30px
+}
+
+ /*Reposive for the phone*/
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1024px) {
+
+    .navbar .logo-image img {
+        width: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-top: -6px;
+    }
+
+    a.navbar-brand div {
+        float: unset;
+    }
+
+    .dropdown-content{
+        min-width: 100%;
+    }
+
+    .navbar a:not(:first-child), .dropdown .dropbtn {
+        display: none;
+    }
+
+    .navbar a {
+        float: left;
+        padding: 20px 16px;
+    }
+
+    .navbar a.icon {
+        float: right;
+        display: block;
+        padding: 30px 16px;
+    }
+
+    .price h1 {
+        font-size: 25px;
+    }
+
+    .price h2 {
+        font-size: 23px;
+    }
+
+    .main-fee {
+        padding:0;
+    }
+
+    div.img-banner-fee {
+        height:100px;
+    }
+
+    .register-page .form {
+        width:100%;
+    }
+
+    footer .flex .first, .second, .zero {
+        display:none;
+    }
+
+    footer .flex .three {
+        display: flex;
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .main-account .grid_2_items {
+        flex-direction: column;
+    }
+
+    .main-account .grid_2_items .first-main .ul {
+        font-size:30px;
+    }
+
+    .main-account .grid_2_items .second-main .account_form {
+        width:100%;
+    }
+
+    .main-account .grid_2_items .second-main h1  {
+        text-align:center;
+    }
+
+    .main-account .grid_2_items .second-main .button {
+        width:100%;
+    }
+
+    img.cicrle-ava.center_img {
+        width: 20%;
+    }
+
+   
+    
+
+
+}
+
+@media only screen and (max-width: 375px) {
+    .footer_column0{
+        text-align: center;
+    }
+
+    .footer_column1{
+        text-align: center;
+    }
+
+    .footer_column2{
+        text-align: center;
+    }
+
+    .footer_column3{
+        text-align: center;
+    }
+
+    .footer_column3 h3{
+        display: inline-block;
+
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .footer_col {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+
+    img.cicrle-ava.center_img {
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 812px) {
+
+    .footer_column0{
+        text-align: center;
+    }
+
+    .footer_column1{
+        text-align: center;
+    }
+
+    .footer_column2{
+        text-align: center;
+    }
+
+    .footer_column3{
+        text-align: center;
+    }
+
+    .footer_column3 h3{
+        display: inline-block;
+
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .footer_col {
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+    }
+
+
+    img.cicrle-ava.center_img {
+        width: 30%;
+    }
+
+   
+
+}
+
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1024px) {
+
+.grid_2_items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.navbar.responsive {
+    position: relative;
+}
+
+.navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.navbar div {
+    float:left;
+}
+
+.navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: center;
+}
+
+.navbar.responsive .dropdown {
+    float: none;
+}
+
+.navbar.responsive .dropdown-content {
+    position: relative;
+}
+
+.navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 481px){
+    .myinformation_form{
+        padding-left: 4%;
+    }
+}
+
+/**Responsive for ipad*/
+@media screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
+    .register-page .form {
+        max-width: 600px;
+    }
+
+    .flex_1{
+        padding-left: 0%;
+        display: inline-block;
+    }
+
+    div.grid_2_items{
+        padding-left: 5%;
+    }
+
+}
+ /* Nav and footer css*/
+
+ .button {
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #00fceb;
+    background-color: black;
+    padding: 12px 16px;
+    color: #00fceb;
+    display: block;
+}
+
+
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+.thankyou_container{
+  padding-top: 10%;
+  padding-bottom: 10%;
+  padding-right: 10%;
+  padding-left: 10%;
+}
