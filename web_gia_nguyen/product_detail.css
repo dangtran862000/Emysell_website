@@ -5,10 +5,15 @@ body{
   color: #B3B8CD;
 }
 
-* {
+main * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+}
+
+footer{
+	margin:unset;
+	padding: unset;
 }
 
 a{
@@ -381,3 +386,4 @@ a{
   z-index: 2;
 	font-size: 1rem;
 }
+

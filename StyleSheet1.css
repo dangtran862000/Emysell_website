@@ -142,9 +142,13 @@ a.navbar-brand {
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover:not(.navbar-brand, .signup), .dropdown:hover .dropbtn {
     background-color: #00fceb;
     color: black;
+}
+
+a.signup:hover{
+    background-color: unset;
 }
 
 /* Dropdown content (hidden by default) */
@@ -203,6 +207,7 @@ a.navbar-brand {
     overflow: hidden;
     margin-top: -6px;
 }
+
 
 .button {
     background-color: #00f9e8; /* Green */
@@ -476,6 +481,7 @@ a.signup:hover {
         padding-left: 4%;
     }
 }
+
 
 /**Responsive for ipad*/
 @media screen and (min-width: 481px) and (max-width: 1024px) and (orientation:portrait) {
@@ -994,5 +1000,15 @@ button.style_button:active {
         padding-right: 5%; padding-left: 5%
       }
   }
+
+ @media (max-width: 1024px) and (min-width:846px){
+     li.flex_1{
+         padding-left: 0%;
+        display: inline-block;
+     }
+     .myinformation_form{
+        padding-left: 4%;
+    }
+ }
 
  
