@@ -3,12 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Product by Create Time</title>
-    <link rel="stylesheet" href="product_category.css">
+    <link rel="stylesheet" href="product_createTime.css">
     <link rel="stylesheet" href="../shoppage_shopcontact_shopaboutus/shop-page.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-
-  <body>
+  <body onload="check();">
 
     <header>
       <nav>
@@ -456,6 +455,13 @@
       </section>
     </main>
 
+    <div id="cookies">
+      <h3>I use cookies</h3>
+      <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+      <button type="button" name="button" onclick="agree();">I understand</button>
+      <a href="#">Learn more</a>
+    </div>
+
 
     <footer>
       <div class="footer--left">
@@ -475,5 +481,30 @@
           </ul>
       </div>
   </footer>
+
+
+    <script type="text/javascript">
+      function check(){
+        if (typeof(Storage) !== 'undefined') {
+          if (sessionStorage.getItem("status") === null){
+            document.getElementById('cookies').style.visibility = 'visible';
+          }
+        } else {
+          alert('Sorry your browser not support Storage');
+        }
+      }
+
+
+      function agree(){
+        if (typeof(Storage) !== 'undefined') {
+          if (sessionStorage.status != 'true'){
+            sessionStorage.setItem('status','true');
+            document.getElementById('cookies').style.visibility = 'hidden';
+          }
+        } else {
+          alert('Sorry your browser not support Storage');
+        }
+      }
+    </script>
   </body>
 </html>

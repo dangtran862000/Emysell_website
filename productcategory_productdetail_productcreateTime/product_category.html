@@ -9,7 +9,7 @@
   </head>
 
 
-  <body>
+  <body onload="check();">
 
     <header>
       <nav>
@@ -460,6 +460,13 @@
     </main>
 
 
+    <div id="cookies">
+      <h3>I use cookies</h3>
+      <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+      <button type="button" name="button" onclick="agree();">I understand</button>
+      <a href="#">Learn more</a>
+    </div>
+
 
     <footer>
       <div class="footer--left">
@@ -480,7 +487,29 @@
       </div>
   </footer>
 
+    <script type="text/javascript">
+      function check(){
+        if (typeof(Storage) !== 'undefined') {
+          if (sessionStorage.getItem("status") === null){
+            document.getElementById('cookies').style.visibility = 'visible';
+          }
+        } else {
+          alert('Sorry your browser not support Storage');
+        }
+      }
 
+
+      function agree(){
+        if (typeof(Storage) !== 'undefined') {
+          if (sessionStorage.status != 'true'){
+            sessionStorage.setItem('status','true');
+            document.getElementById('cookies').style.visibility = 'hidden';
+          }
+        } else {
+          alert('Sorry your browser not support Storage');
+        }
+      }
+    </script>
 
   </body>
 </html>
