@@ -1,0 +1,28 @@
+#cookies{
+  position: fixed;
+  bottom: 0px;
+  background-color: yellow;
+  padding: 1rem;
+  z-index: 3;
+  width: 100%;
+  visibility: hidden;
+}
+
+    #cookies > * {
+      margin: 0.2rem;
+    }
+
+    #cookies button{
+      background-color: blue;
+      color: white;
+      padding: 1rem;
+      border-radius: 0.7rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    #cookies > a {
+      margin-left: 2rem;
+      text-decoration: underline;
+    }

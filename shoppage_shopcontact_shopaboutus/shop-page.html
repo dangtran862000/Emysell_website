@@ -7,8 +7,9 @@
     <title>Shop Page</title>
     <link rel="stylesheet" href="./shop-page.css">
     <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/product_category.css">
+    <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
 </head>
-<body>
+<body onload="check();">
     <header>
         <nav>
           <div class="logo">
@@ -142,6 +143,15 @@
           </section>
         </div>
       </main>
+
+      <div id="cookies">
+        <h3>I use cookies</h3>
+        <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+        <button type="button" name="button" onclick="agree();">I understand</button>
+        <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
+      </div>
+
+
       <footer>
           <div class="footer--left">
               <div class="footer-logo">
@@ -160,5 +170,6 @@
               </ul>
           </div>
       </footer>
+      <script type="text/javascript" src="../productcategory_productdetail_productcreateTime/javascript.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList provided by Google Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -19,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
-<body style="background-color:black">
+<body style="background-color:black" onload="check();">
 
 
     <!--Header Area-->
@@ -33,7 +34,7 @@
                     <img src="image\logo123.png" class="img-fluid" alt="image_logo_website">
                 </div>
             </a>
-            
+
             <a href="index.html">Home</a>
             <a href="aboutus.html">About us</a>
             <a href="fee.html">Fees</a>
@@ -143,10 +144,17 @@
                                 <input type="submit" value="CREATE">
                                 <input type="reset" value="CLEAR">
                             </div>
-               
+
                 <p class="message">Already registered? <a href="login.html">Sign In</a></p>
             </form>
         </div>
+    </div>
+
+    <div id="cookies">
+      <h3>I use cookies</h3>
+      <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+      <button type="button" name="button" onclick="agree();">I understand</button>
+      <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
     </div>
 
 
@@ -176,9 +184,9 @@
                     <h3>Pham Gia Nguyen - s3819521</h3>
                     <h3>Ngo My Quynh - S3836322</h3>
                 </div>
-    
+
                 <!--Third Columns-->
-    
+
                 <div class="three" style="flex: 0.25">
                     <!--Remember to add link Github-->
                     <h3><a href="https://morioh.com/p/c479c01cf484" style="text-decoration: none"><i class="fa fa-github" aria-hidden="true" style='font-size:30px'></i></a></h3>
@@ -186,13 +194,13 @@
                     <h3><i class="fa fa-twitter" aria-hidden="true" style='font-size:30px'></i></h3>
                 </div>
             </div>
-    
+
             <div class="footer_col">
                 <a href=""><span>Terms of Service</span></a>
                 <a href=""><span>Privacy Policy</span></a>
                 <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
             </div>
-    
+
         </footer>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -219,6 +227,7 @@
             }
         }
     </script>
+    <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
 
 </body>
 </html>

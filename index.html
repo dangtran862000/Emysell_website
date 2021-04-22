@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="StyleSheet1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList was getting from the Google Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,7 +18,7 @@
     <link rel="stylesheet" href="index_product.css">
 
 </head>
-<body>
+<body onload="check();">
 
     <!--Header Area-->
     <header>
@@ -405,6 +406,15 @@
         </section>
     </main>
 
+
+    <div id="cookies">
+      <h3>I use cookies</h3>
+      <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+      <button type="button" name="button" onclick="agree();">I understand</button>
+      <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
+    </div>
+
+
     <!--Footer Area-->
     <!-- Element that contains the client's contact email, phone and address details
         (these can be dummy data). Please put your student name(s) and student id(s) in the footer with a link to your GitHub repository.-->
@@ -461,6 +471,7 @@
             }
         }
     </script>
+    <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
 
 </body>
 </html>
