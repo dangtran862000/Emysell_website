@@ -254,10 +254,10 @@ a.signup:hover {
     font-size:30px
 }
 
- /*Reposive for the phone*/
+
+/*Reposive for the phone*/
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 1024px) {
-
     .navbar .logo-image img {
         width: 80px;
         border-radius: 50%;

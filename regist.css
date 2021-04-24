@@ -470,6 +470,16 @@ input[type="submit"] {
     overflow-x:auto;
 }
 
+#name-error-message, #email_error, #fname-error, #lname-error, #phone_error, #address_error, #city_error, #password_error, #repassword_error, #zipcode_error, #country_error, #business_error, #store_error, #castore_error {
+    color: red;
+    text-align: left;
+    margin-bottom: 20px;
+    display: none;
+}
+#storeowner {
+    display:none;
+}
+
 
 /*Reposive for the phone*/
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
