@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="StyleSheet1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="myaccount.css">
     <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList-->
@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="myaccount.js"></script>
 </head>
 <body onload="check();">
 
@@ -63,103 +64,130 @@
 
 
     <main>
-        <div class="grid_2_items" style="background-color:#f4f4f4; padding-right:5%">
-            <!--The first column-->
-            <div style="flex: 1" >
-                <!--Avatar-->
-
-                <img class="cicrle-ava center_img" alt="myava" src="image\ava.jpg" alt="image_ava_account"/>
-
-                <!--LIST OF THE FEATURES-->
-                <ul class="no-bullets">
-                    <li class="flex_1">
-                        <!--Icon-->
-                        <img class="icons" src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" alt="icon_account"/>
-                        <a href="account.html"><span>My Account</span></a>
-                    </li>
-                    <li class="flex_1">
-                        <!--Icon-->
-                        <img class="icons" src="https://img.icons8.com/material-rounded/64/000000/appointment-reminders.png" alt="icon_notification"/>
-                        <a><span>Notification</span></a>
-                    </li>
-
-                    <li class="flex_1" style="padding-right: 0%;">
-                        <!--Icon-->
-                        <img class="icons" src="https://img.icons8.com/fluent-systems-filled/100/000000/purchase-order.png" alt="icon_order"/>
-                        <a><span>My Orders</span></a>
-                    </li>
-
-
-                    <li class="flex_1">
-                        <!--Icon-->
-                        <img class="icons" src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png" alt="icon_location"/>
-                        <a><span>Billing Address</span></a>
-                    </li>
-                </ul>
+        <section class="account-body">
+            <div class="login-myaccount">
+                <div class="container-login">
+                    <div class="header-login">
+                        <h2>Create Account</h2>
+                    </div>
+                    <form name="myForm" id="myForm" class="form-login" onsubmit="validateForm();return false">
+                
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" placeholder="emysell@gmail.com" id="email-login" name="email-login" />
+                            <small>Error message</small>
+                        </div>
+                        
+                        <div class="form-control">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password-login" />
+                            <small>Error message</small>
+                        </div>
+                        
+                        <input type="submit" class="input-btn" value="Submit">
+                    </form>
+                </div>
             </div>
+        </section>
+        <div class="information-account">
+            <div class="grid_2_items" style="background-color:#f4f4f4; padding-right:5%">
+                <!--The first column-->
+                <div style="flex: 1" >
+                    <!--Avatar-->
 
-            <!--The second column-->
-            <div style="flex: 5" class="myinformation_form">
-                <h1>My information</h1>
-                <div class="account_form" style="background-color:white; padding:3%; margin-bottom:5%;">
-                    <form>
+                    <img class="cicrle-ava center_img" alt="myava" src="image\ava.jpg" alt="image_ava_account"/>
 
-                        <div class="flex_horizone">
+                    <!--LIST OF THE FEATURES-->
+                    <ul class="no-bullets">
+                        <li class="flex_1">
+                            <!--Icon-->
+                            <img class="icons" src="https://img.icons8.com/pastel-glyph/64/000000/person-male--v3.png" alt="icon_account"/>
+                            <a href="account.html"><span>My Account</span></a>
+                        </li>
+                        <li class="flex_1">
+                            <!--Icon-->
+                            <img class="icons" src="https://img.icons8.com/material-rounded/64/000000/appointment-reminders.png" alt="icon_notification"/>
+                            <a><span>Notification</span></a>
+                        </li>
 
-                            <div class="grid_3_items">
-                                <label style="width: 30%;" for="fname">Name</label>
-                                <input type="text" id="fname" name="name" placeholder="Your name..">
-                                <br />
-                                <br />
-                            </div>
+                        <li class="flex_1" style="padding-right: 0%;">
+                            <!--Icon-->
+                            <img class="icons" src="https://img.icons8.com/fluent-systems-filled/100/000000/purchase-order.png" alt="icon_order"/>
+                            <a><span>My Orders</span></a>
+                        </li>
 
-                            <div class="grid_3_items">
-                                <label style="width: 30%;" for="phone">Phone number</label>
-                                <input type="text" id="phone" name="phone" placeholder="Your phone number..">
-                                <br />
-                                <br />
-                            </div>
 
-                            <div class="grid_3_items">
-                                <label style="width: 30%;" for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your email">
-                                <br />
-                                <br />
-                            </div>
+                        <li class="flex_1">
+                            <!--Icon-->
+                            <img class="icons" src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png" alt="icon_location"/>
+                            <a><span>Billing Address</span></a>
+                        </li>
+                    </ul>
+                </div>
 
-                            <div class="grid_2_items">
-                                <div class="grid_3_items" style="justify-content:normal; grid-gap:23%">
-                                    <div>
-                                        <label for="email">Gender</label>
-                                    </div>
-                                    <div class="grid_2_items">
-                                        <div>
-                                            <input type="radio" id="male" name="gender" value="male">
-                                            <label for="male">Male</label><br>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="female" name="gender" value="female">
-                                            <label for="female">Female</label><br>
-                                        </div>
-                                        <div>
-                                            <input type="radio" id="other" name="gender" value="other">
-                                            <label for="other">Prefer not to say</label>
-                                        </div>
-                                    </div>
+                <!--The second column-->
+                <div style="flex: 5" class="myinformation_form">
+                    <h1>My information</h1>
+                    <div class="account_form" style="background-color:white; padding:3%; margin-bottom:5%;">
+                        <form>
+
+                            <div class="flex_horizone">
+
+                                <div class="grid_3_items">
+                                    <label style="width: 30%;" for="fname">Name</label>
+                                    <input type="text" id="fname" name="name" placeholder="Your name..">
+                                    <br />
+                                    <br />
                                 </div>
 
+                                <div class="grid_3_items">
+                                    <label style="width: 30%;" for="phone">Phone number</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+                                    <br />
+                                    <br />
+                                </div>
 
-                                <br />
-                                <br />
+                                <div class="grid_3_items">
+                                    <label style="width: 30%;" for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="Your email">
+                                    <br />
+                                    <br />
+                                </div>
+
+                                <div class="grid_2_items">
+                                    <div class="grid_3_items" style="justify-content:normal; grid-gap:23%">
+                                        <div>
+                                            <label for="email">Gender</label>
+                                        </div>
+                                        <div class="grid_2_items">
+                                            <div>
+                                                <input type="radio" id="male" name="gender" value="male">
+                                                <label for="male">Male</label><br>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="female" name="gender" value="female">
+                                                <label for="female">Female</label><br>
+                                            </div>
+                                            <div>
+                                                <input type="radio" id="other" name="gender" value="other">
+                                                <label for="other">Prefer not to say</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <br />
+                                    <br />
+                                </div>
+
+                                <div style="justify-content:flex-end; width:100%; display:flex;">
+                                    <input class="button" type="submit" value="Save">
+                                </div>
+
                             </div>
 
-                            <div style="justify-content:flex-end; width:100%; display:flex;">
-                                <input class="button" type="submit" value="Save">
-                            </div>
-
-                        </div>
-
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
