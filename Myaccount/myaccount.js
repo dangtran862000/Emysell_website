@@ -10,7 +10,7 @@ function validateForm() {
     if (password== "") {
         setErrorFor(document.getElementById('password'), 'Password cannot be blank');
     } else if (password =="password") {
-        alert("Log in succesfully");
+        setSuccesLogin();
     }
     else{
         setErrorFor(document.getElementById('password'), 'Password is incorrect');;
@@ -25,5 +25,11 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
 	const formControl = input.parentElement;
 	formControl.className = 'form-control success';
+}
+/* fucntion to display none */
+function setSuccesLogin() {
+  document.getElementsByClassName("container-login")[0].style.display ="none";
+  document.getElementsByClassName("information-account")[0].style.display ="block";
+
 }
 
