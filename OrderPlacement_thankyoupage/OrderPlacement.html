@@ -6,12 +6,15 @@
     <title>EmySell</title>
     <link rel="stylesheet" href="OrderPlacement_thankyou.css">
     <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
-    <title></title>
     <!--FontList was getting from the Google Font-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
 <body onload="check();">
@@ -58,7 +61,7 @@
     <div class="shoppingcart_container">
     <h1>SHOPPING CART</h1>
     <div class="shoppingcart_table">
-    <table id="customers">
+    <!-- <table id="customers">
         <tr >
           <th class="table_cart_title" style="width:5%"></th>
           <th style="width: 15%"></th>
@@ -126,8 +129,24 @@
               </td>
           </tr>
 
-      </table>
+      </table> -->
     </div>
+    
+    <div class="container-products">
+      <div class="product-header">
+          <h5 class="product-title">PRODUCT</h5>
+          <h5 class="price sm-hide">PRICE</h5>
+          <h5 class="quantity">QUANTITY</h5>
+          <h5 class="total">TOTAL</h5>
+      </div>
+      <div class="products">
+
+      </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
     </div>
     <section class="container_cart" style="padding-bottom: 10%;">
         <div class="row">
@@ -238,4 +257,8 @@
           }
       }
   </script>
+
+<script src="../productcategory_productdetail_productcreateTime/main.js"></script>
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
 </html>
