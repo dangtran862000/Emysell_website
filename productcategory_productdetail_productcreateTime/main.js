@@ -4,13 +4,13 @@ let products = [
     {
         name: "Cotton flannel shirt",
         tag: "cottonflannelshirt",
-        price: 150000,
+        price: 299000,
         inCart: 0
     },
     {
-        name: "Grey Hoddie",
-        tag: "greyhoddie",
-        price: 20,
+        name: "Cotton white shirt",
+        tag: "cottonwhiteshirt",
+        price: 399000,
         inCart: 0
     },
     {
@@ -121,7 +121,9 @@ function displayCart() {
             productContainer.innerHTML += 
             `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./store/${item.tag}.jpg" />
                 <span class="sm-hide">${item.name}</span>
+                
             </div>
+            
             <div class="price sm-hide">${item.price} VND</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>

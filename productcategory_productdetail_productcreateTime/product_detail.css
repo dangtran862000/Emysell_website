@@ -313,6 +313,8 @@ a{
 	.section-2{
 		margin-top: 20%;
 	}
+
+	
 }
 
 
@@ -329,6 +331,12 @@ a{
   }
 }
 
+@media screen and (max-width: 1399px){
+	h2 {
+		padding-top: 10%;
+	}
+}
+
 @media screen and (max-width: 570px){
 	.left{
 		width: 100%;
@@ -341,7 +349,11 @@ a{
 	}
 }
 
-
+@media screen and (max-width: 799px) and (min-width:570px) {
+	h2 {
+		padding-top: 0%;
+	}
+}
 
 
 
