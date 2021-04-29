@@ -96,6 +96,21 @@ section{
 	margin-top: 20px;
 	width: 100%;
 }
+@media (max-width: 500px){
+.container-login {
+	width: 300px;
+    height: 350px;
+}	
+.header-login {
+	padding: 10px 10px;
+}
+.input-btn{
+	font-size: 10px;
+	padding: 10px;
+	margin-top: 10px;
+	width: 100%;
+}	
+}
 
 
 /* */

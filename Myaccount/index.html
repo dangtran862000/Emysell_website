@@ -1,185 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORM DATA</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-* {
-	box-sizing: border-box;
-}
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
 
-body {
-	background-color: #9b59b6;
-	font-family: 'Open Sans', sans-serif;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	margin: 0;
-}
+		.container {
+			margin: 10px 50px;
+		}
 
-.container {
-	background-color: #fff;
-	border-radius: 5px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-	overflow: hidden;
-	width: 400px;
-	max-width: 100%;
-}
+		.form-group {
+			margin: 10px;
+		}
+		.output{
+			display: none;
+		}
 
-.header {
-	border-bottom: 1px solid #f0f0f0;
-	background-color: #f7f7f7;
-	padding: 20px 40px;
-}
+		input {
+			width: 100%;
+			border: solid 1px #eee;
+			padding: 15px 10px;
+		}
 
-.header h2 {
-	margin: 0;
-}
+		button {
+			width: 200px;
+			padding: 15px;
+			margin-left: 250px;
+			background: #fff;
+			color: dodgerblue;
+			border: solid 1px dodgerblue;
+			cursor: pointer;
+			transition: all .38s ease-in-out;
+		}
 
-.form {
-	padding: 30px 40px;	
-}
+		button:hover {
+			background: dodgerblue;
+			color: #fff;
+		}
 
-.form-control {
-	margin-bottom: 10px;
-	padding-bottom: 20px;
-	position: relative;
-}
-
-.form-control label {
-	display: inline-block;
-	margin-bottom: 5px;
-}
-
-.form-control input {
-	border: 2px solid #f0f0f0;
-	border-radius: 4px;
-	display: block;
-	font-family: inherit;
-	font-size: 14px;
-	padding: 10px;
-	width: 100%;
-}
-
-.form-control input:focus {
-	outline: 0;
-	border-color: #777;
-}
-
-.form-control.success input {
-	border-color: #2ecc71;
-}
-
-.form-control.error input {
-	border-color: #e74c3c;
-}
-
-.form-control i {
-	visibility: hidden;
-	position: absolute;
-	top: 40px;
-	right: 10px;
-}
-
-.form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
-}
-
-.form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
-}
-
-.form-control small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
-}
-
-.form-control.error small {
-	visibility: visible;
-}
-
-.input-btn{
-	background-color: #8e44ad;
-	border: 2px solid #8e44ad;
-	border-radius: 4px;
-	color: #fff;
-	display: block;
-	font-family: inherit;
-	font-size: 16px;
-	padding: 10px;
-	margin-top: 20px;
-	width: 100%;
-}
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 480px) {
-
-	.social-panel-container.visible {
-		transform: translateX(0px);
-	}
-	
-	.floating-btn {
-		right: 10px;
-	}
-}
-    </style>
+		table tr td {
+			border: solid 1px #eee;
+			padding: 10px;
+		}
+	</style>
 </head>
+
 <body>
-    <div class="container">
-        <div class="header">
-            <h2>Create Account</h2>
-        </div>
-        <form name="myForm" id="form" class="form" onsubmit="return validateForm()">
-        
-            <div class="form-control">
-                <label for="username">Email</label>
-                <input type="email" placeholder="emysell@gmail.com" id="email" name="email-login" />
-                <small>Error message</small>
-            </div>
-            <div class="form-control">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password-login" />
-                <small>Error message</small>
-            </div>
-            <input type="submit" class="input-btn" value="Submit">
-        </form>
-    </div>
-    
 
-    <script>
+	<div class="container">
+		<div class="form-content"><h2>SIGNUP FORM</h2>
+		<form role="form" onsubmit="signUp(event);">
+			<div class="form-group">
+				<input type="email" name="email" id="email" placeholder="Email Address" required>
+			</div>
+			<div class="form-group">
+				<input type="password" name="pwd" id="pwd" placeholder="Password" required>
+			</div>
+			<div class="form-group">
+				<button type="submit">Sign Up</button>
+			</div>
+		</form>
+		</div>
+		<h2>MY INFO</h2>
+		<div id="output">
+			<!-- DISPLAY USERS DATA -->
+		</div>
+	</div>
 
+	<script type="text/javascript">
+		const signUp = e => {
+			let formData = {
+				email: document.getElementById('email').value,
+				pwd: document.getElementById('pwd').value
+			}
+			password = document.getElementById('pwd').value
+			if (password == "123") {
+				localStorage.setItem('formData', JSON.stringify(formData));
+				dispData();
+				setStyle()
+			} else {
+				alert("Login again");
+			
+			}	
+			e.preventDefault();	
+			// console.log(localStorage.getItem('formData'));		
+		}
 
-   function validateForm() {
-        var x = document.forms["myForm"]["email-login"].value;
-        if (x == "hello@gmail.com") {
-            alert("Name must be filled out");
-
-        }
-    }
-    
-
-       
-
-
-
-    </script>
+		function dispData() {
+			// console.log(localStorage.getItem('formData'));
+			let {email, pwd } = JSON.parse(localStorage.getItem('formData'));
+			var output = document.getElementById('output');
+			output.innerHTML = `
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>${email}</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>${pwd}</td>
+                    </tr>
+                </tbody>
+            </table>`;
+		}
+		function setStyle(){
+			localStorage.disPlay = document.getElementsByClassName("form-content")[0].style.display;
+			var curentDisplay = localStorage.getItem("disPlay");
+			curentDisplay = "none";
+		}
+	dispData();
+	</script>
 </body>
+
 </html>
