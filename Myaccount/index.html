@@ -88,7 +88,7 @@
 			if (password == "123") {
 				localStorage.setItem('formData', JSON.stringify(formData));
 				dispData();
-				setStyle()
+				// setStyle();
 			} else {
 				alert("Login again");
 			
@@ -115,11 +115,7 @@
                 </tbody>
             </table>`;
 		}
-		function setStyle(){
-			localStorage.disPlay = document.getElementsByClassName("form-content")[0].style.display;
-			var curentDisplay = localStorage.getItem("disPlay");
-			curentDisplay = "none";
-		}
+		
 	dispData();
 	</script>
 </body>
