@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../OrderPlacement_thankyoupage/OrderPlacement_thankyou.css">
     <title>Shopping Cart</title>
 </head>
-<body>
+<body onload="check();">
 
     <!--Header Area-->
     <header>
@@ -31,7 +31,7 @@
                     <img src="..\image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
             </a>
-  
+
             <a href="..\index.html">Home</a>
             <a href="..\aboutus.html">About us</a>
             <a href="..\fee.html">Fees</a>
@@ -49,11 +49,11 @@
             <a href="..\faq.html">FAQS</a>
             <a href="..\contact.html">Contact</a>
             <a class="signup" href="..\login.html" style="padding:0;">
-  
-  
+
+
                 <p class="button">Sign Up</p>
-  
-  
+
+
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             <div class="cart">
@@ -63,10 +63,10 @@
             </div>
         </nav>
     </header>
-   
+
     <div class="shoppingcart_container">
         <h1>SHOPPING CART</h1>
-    </div>         
+    </div>
 
 
     <div class="container-products">
@@ -128,6 +128,14 @@
         </div>
     </section>
 
+
+    <div id="cookies">
+      <h3>I use cookies</h3>
+      <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+      <button type="button" name="button" onclick="agree();">I understand</button>
+      <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
+    </div>
+
     <!--Footer Area-->
     <!-- Element that contains the client's contact email, phone and address details
         (these can be dummy data). Please put your student name(s) and student id(s) in the footer with a link to your GitHub repository.-->
@@ -154,7 +162,7 @@
                     <h3>Pham Gia Nguyen - s3819521</h3>
                     <h3>Ngo My Quynh - S3836322</h3>
                 </div>
-    
+
                 <!--Third Columns-->
                 <div style="flex: 0.25" class="footer_column3">
                     <!--Remember to add link Github-->
@@ -163,17 +171,17 @@
                     <h3><i class="fa fa-twitter" aria-hidden="true"></i></h3>
                 </div>
             </div>
-    
+
             <div class="footer_col">
                 <a href=""><span>Terms of Service</span></a>
                 <a href=""><span>Privacy Policy</span></a>
                 <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
             </div>
-    
+
         </footer>
-    
-    
-    
+
+
+
         <script>
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -184,7 +192,7 @@
                 }
             }
         </script>
-        <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+        <script type="text/javascript" src="javascript.js"></script>
 
     <script src="main.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
