@@ -5,23 +5,17 @@
     <meta charset="utf-8" />
     <title>EmySell</title>
     <link rel="stylesheet" href="OrderPlacement_thankyou.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList was getting from the Google Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="index_product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
-<body>
+<body onload="check();">
      <!--Header Area-->
 <header>
     <!--Navigation area-->
@@ -33,7 +27,7 @@
                 <img src="..\image\logo123.png" class="img-fluid" alt="image_logo_website">
             </div>
         </a>
-  
+
         <a href="../index.html">Home</a>
         <a href="../aboutus.html">About us</a>
         <a href="../fee.html">Fees</a>
@@ -50,19 +44,12 @@
         </div>
         <a href="../faq.html">FAQS</a>
         <a href="../contact.html">Contact</a>
-        <a class="signup" href="login.html" style="padding:0;">
-  
-  
-            <p class="button">Sign Up</p>
-  
-  
-        </a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-  
-  
+
+
     </nav>
   </header>
-      
+
       <div class="thankyou_container" style="text-align: center;">
         <i style="font-size:10vw; color: green; ;" class="fa">&#xf058;</i>
         <h1 style="font-size: 2.5vw; padding-top: 5%; padding-bottom: 3%;">You're all set!</h1>
@@ -74,16 +61,19 @@
             <p style="display: inline-block; font-size: 15px">You'll receive an email confirmation shorly to </p>
             <p style="display: inline-block; color: seagreen; font-size: 15px;">dinhthi.khanhlinh@gmail.com</p>
         </div>
-        <div style="padding-top: 3%;">
-            <p style="display: inline-block; font-size: 20px">ORDER TOTAL</p>
-            <p style="display: inline-block; font-size: 20px; padding-left: 5%;"> 648.000 VND</p>
-        </div>
         <div style="padding-top: 1%;">
             <p style="display: inline-block; font-size: 15px">Payment method</p>
             <p style="display: inline-block; font-size: 15px; padding-left: 12%;">Momo</p>
         </div>
-      
+
         </div>
+      </div>
+
+      <div id="cookies">
+        <h3>I use cookies</h3>
+        <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+        <button type="button" name="button" onclick="agree();">I understand</button>
+        <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
       </div>
 
       <!--Footer Area-->
@@ -112,7 +102,7 @@
                   <h3>Pham Gia Nguyen - s3819521</h3>
                   <h3>Ngo My Quynh - S3836322</h3>
               </div>
-  
+
               <!--Third Columns-->
               <div style="flex: 0.25" class="footer_column3">
                   <!--Remember to add link Github-->
@@ -121,17 +111,15 @@
                   <h3><i class="fa fa-twitter" aria-hidden="true"></i></h3>
               </div>
           </div>
-  
+
           <div class="footer_col">
               <a href=""><span>Terms of Service</span></a>
               <a href=""><span>Privacy Policy</span></a>
               <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
           </div>
-  
+
       </footer>
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
+
 
   <script type="text/javascript">
       $('.autoplay').slick({
@@ -154,4 +142,6 @@
           }
       }
   </script>
+  <script type="text/javascript" src="../productcategory_productdetail_productcreateTime/javascript.js"></script>
+  <script src="main.js"></script>
 </html>

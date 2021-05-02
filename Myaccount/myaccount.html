@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="myaccount.js"></script>
+  
 </head>
 <body onload="check();">
 
@@ -65,7 +65,7 @@
 
     <main>
         <section class="account-body">
-            <div class="login-myaccount">
+            <div class="login-myaccount" id ="login-page">
                 <div class="container-login">
                     <div class="header-login">
                         <h2>Create Account</h2>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-        <div class="information-account">
+        <div class="information-account" id = "info-page">
             <div class="grid_2_items" style="background-color:#f4f4f4; padding-right:5%">
                 <!--The first column-->
                 <div style="flex: 1" >
@@ -135,14 +135,14 @@
 
                                 <div class="grid_3_items">
                                     <label style="width: 30%;" for="fname">Name</label>
-                                    <input type="text" id="fname" name="name" placeholder="Your name..">
+                                    <input type="text" id="fname" name="name" value="Van Anh">
                                     <br />
                                     <br />
                                 </div>
 
                                 <div class="grid_3_items">
                                     <label style="width: 30%;" for="phone">Phone number</label>
-                                    <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+                                    <input type="text" id="phone" name="phone" value="0768044388">
                                     <br />
                                     <br />
                                 </div>
@@ -161,26 +161,16 @@
                                         </div>
                                         <div class="grid_2_items">
                                             <div>
-                                                <input type="radio" id="male" name="gender" value="male">
-                                                <label for="male">Male</label><br>
-                                            </div>
-                                            <div>
-                                                <input type="radio" id="female" name="gender" value="female">
-                                                <label for="female">Female</label><br>
-                                            </div>
-                                            <div>
-                                                <input type="radio" id="other" name="gender" value="other">
-                                                <label for="other">Prefer not to say</label>
+                                                <input type="radio" id="female" name="gender" value="female" checked>
+                                                <label for="female" >Female</label><br>
                                             </div>
                                         </div>
                                     </div>
-
-
                                     <br />
                                     <br />
                                 </div>
 
-                                <div style="justify-content:flex-end; width:100%; display:flex;">
+                                <div style="justify-content:flex-end; width:100%; display:flex; display: none;">
                                     <input class="button" type="submit" value="Save">
                                 </div>
 
@@ -269,6 +259,8 @@
         }
     </script>
     <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+
+    <script src="myaccount.js"></script>
 
 </body>
 </html>
