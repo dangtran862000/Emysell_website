@@ -127,7 +127,7 @@ function displayCart() {
             <div class="price sm-hide">${item.price} VND</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    <span>${item.inCart}</span>
+                    <input type="text" style="width:30%" placeholder=${item.inCart} id="changeQuantity" class="inputQuantity"><span></span></input>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
             <div class="total">${item.inCart * item.price} VND</div>`;
@@ -137,7 +137,7 @@ function displayCart() {
         document.getElementById("sub_total").innerHTML = sub_total;
         document.getElementById("other_total").innerHTML = other_total;
         deleteButtons();
-        manageQuantity();
+        Quantity();
     }
 }
 
@@ -160,7 +160,7 @@ function checkCoupon(other_total){
     }
 }
 
-function manageQuantity() {
+function Quantity() {
     let decreaseButtons = document.querySelectorAll('.decrease');
     let increaseButtons = document.querySelectorAll('.increase');
     let currentQuantity = 0;
@@ -200,8 +200,12 @@ function manageQuantity() {
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
             displayCart();
         });
+    }}
+
+function changeQuantity() {
+    let valueChange = getElementById('changeQuantity').value
+    console.log(valueChange);    
     }
-}
 
 function deleteButtons() {
     let deleteButtons = document.querySelectorAll('.product ion-icon');
@@ -228,6 +232,7 @@ function deleteButtons() {
     }
 }
 
-
 onLoadCartNumbers();
 displayCart();
+
+
