@@ -14,15 +14,15 @@ let products = [
         inCart: 0
     },
     {
-        name: "Black Tshirt",
-        tag: "blacktshirt",
-        price: 15,
+        name: "Cotton flannel shirt",
+        tag: "cottonflannelshirt",
+        price: 299000,
         inCart: 0
     },
     {
-        name: "Black Hoddie",
-        tag: "blackhoddie",
-        price: 20,
+        name: "Cotton white shirt",
+        tag: "cottonwhiteshirt",
+        price: 399000,
         inCart: 0
     }
 ];
@@ -227,6 +227,7 @@ function deleteButtons() {
         })
     }
 }
+
 
 onLoadCartNumbers();
 displayCart();
