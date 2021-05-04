@@ -133,7 +133,7 @@ function displayCart() {
             <div class="price sm-hide">${item.price} VND</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                <form><input type="text" style="width:100%" placeholder=${item.inCart} value=${item.inCart} id="changeQuantity" class="iinputQuantity"><span></span></input></form>
+                <form style="width:30%"><input type="number" style="width:100%;" placeholder=${item.inCart} value=${item.inCart} id="changeQuantity" class="iinputQuantity"><span></span></input></form>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
             <div class="total">${item.inCart * item.price} VND</div>`;
@@ -235,6 +235,7 @@ function deleteButtons() {
 
             displayCart();
             onLoadCartNumbers();
+            window.location.reload();
         })
     }
 }
@@ -259,12 +260,9 @@ let cartTotalCost = localStorage.getItem("totalCost");
                 var product = document.querySelector('.item-name-long').textContent.toLocaleLowerCase().replace(/ /g,'');
                 console.log("product: ",product)
                 cartItems[item.tag].inCart = parseInt(e.target.value);
-                if (e.target.value <= 0) {
+                if (e.target.value < 0) {
                     cartItems[item.tag].inCart = e.target.value = 0;
-                }
-                if (e.target.value == null) {
-                    cartItems[item.tag].inCart = e.target.value = 0;
-                }
+                } 
                 console.log(cartItems[product].inCart)
                 console.log(cartNumbersTotal);
                 console.log(e.target.value);
@@ -272,6 +270,7 @@ let cartTotalCost = localStorage.getItem("totalCost");
                 cartNumbersTotal = parseInt(cartNumbersTotal) + (parseInt(e.target.value) -  parseInt(e.target.placeholder));
                 console.log(cartNumbersTotal);
                 cartTotalCost = parseInt(cartTotalCost) +  (((parseInt(e.target.value) -  parseInt(e.target.placeholder))*cartItems[item.tag].price));
+                console.log ('Cart',cartTotalCost);
                 localStorage.setItem('productsInCart', JSON.stringify(cartItems));
                 localStorage.setItem('cartNumbers', cartNumbersTotal);
                 localStorage.setItem('totalCost', cartTotalCost);
@@ -281,5 +280,14 @@ let cartTotalCost = localStorage.getItem("totalCost");
         })
      });
  }
+myFunction();
 
 
+function myFunction() {
+    let cartTotalCostButton = localStorage.getItem("totalCost");
+    console.log (cartTotalCostButton);
+    if (cartTotalCost == 0){
+        document.getElementById("myP").style.visibility = 'hidden';
+    }
+    
+  }
