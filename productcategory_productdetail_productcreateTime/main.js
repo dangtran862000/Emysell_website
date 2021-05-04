@@ -163,6 +163,8 @@ function checkCoupon(other_total){
         totalcart = cart - (cart * (10/100)) + ' VND';
         document.getElementById("mycoupon").innerHTML = mycoupon;
         document.getElementById("other_total").innerHTML = totalcart;
+    } else {
+        Alert();
     }
 }
 
@@ -189,6 +191,7 @@ function Quantity() {
                 totalCost(cartItems[currentProduct], "decrease");
                 localStorage.setItem('productsInCart', JSON.stringify(cartItems));
                 displayCart();
+                window.location.reload();
             }
         });
 
@@ -206,7 +209,9 @@ function Quantity() {
             totalCost(cartItems[currentProduct]);
             localStorage.setItem('productsInCart', JSON.stringify(cartItems));
             displayCart();
+            window.location.reload();
         });
+    
     }}
 
 function changeQuantity() {
@@ -280,14 +285,17 @@ let cartTotalCost = localStorage.getItem("totalCost");
         })
      });
  }
-myFunction();
+ hiddenOrderButton();
 
-
-function myFunction() {
+function hiddenOrderButton() {
     let cartTotalCostButton = localStorage.getItem("totalCost");
     console.log (cartTotalCostButton);
     if (cartTotalCost == 0){
         document.getElementById("myP").style.visibility = 'hidden';
     }
-    
+  } 
+
+function Alert() {
+    alert("INCORRECT COUPON CODE!!! \n PLEASE TRY ANOTHER CODE AGAIN");
+    window.location.reload();
   }
