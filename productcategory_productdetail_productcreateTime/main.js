@@ -133,7 +133,7 @@ function displayCart() {
             <div class="price sm-hide">${item.price} VND</div>
             <div class="quantity">
                 <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
-                    <form style="width:30%"><input type="text" style="width:100%" placeholder=${item.inCart} value=${item.inCart} id="changeQuantity" class="iinputQuantity"><span></span></input></form>
+                <form><input type="text" style="width:100%" placeholder=${item.inCart} value=${item.inCart} id="changeQuantity" class="iinputQuantity"><span></span></input></form>
                 <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
             </div>
             <div class="total">${item.inCart * item.price} VND</div>`;
@@ -259,6 +259,12 @@ let cartTotalCost = localStorage.getItem("totalCost");
                 var product = document.querySelector('.item-name-long').textContent.toLocaleLowerCase().replace(/ /g,'');
                 console.log("product: ",product)
                 cartItems[item.tag].inCart = parseInt(e.target.value);
+                if (e.target.value <= 0) {
+                    cartItems[item.tag].inCart = e.target.value = 0;
+                }
+                if (e.target.value == null) {
+                    cartItems[item.tag].inCart = e.target.value = 0;
+                }
                 console.log(cartItems[product].inCart)
                 console.log(cartNumbersTotal);
                 console.log(e.target.value);
