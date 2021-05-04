@@ -290,12 +290,20 @@ let cartTotalCost = localStorage.getItem("totalCost");
 function hiddenOrderButton() {
     let cartTotalCostButton = localStorage.getItem("totalCost");
     console.log (cartTotalCostButton);
-    if (cartTotalCost == 0){
+    if (cartTotalCost != 0){
+        document.getElementById("myP").style.visibility = 'visible';
+    } else {
         document.getElementById("myP").style.visibility = 'hidden';
     }
   } 
 
 function Alert() {
-    alert("INCORRECT COUPON CODE!!! \n PLEASE TRY ANOTHER CODE AGAIN");
+    alert("INCORRECT COUPON CODE!!! \nPLEASE TRY ANOTHER CODE AGAIN");
     window.location.reload();
   }
+
+function orderButton() {
+    localStorage.removeItem('productsInCart');
+    localStorage.setItem('totalCost', 0);
+    localStorage.setItem('cartNumbers', 0);
+}

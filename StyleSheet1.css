@@ -426,6 +426,14 @@ a.signup:hover {
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1024px) {
 
+    .cart a {
+        display: none;
+        background-color: royalblue;
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
     .grid_2_items {
         display: flex;
         flex-direction: column;
