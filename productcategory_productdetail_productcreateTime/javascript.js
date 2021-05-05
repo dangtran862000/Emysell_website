@@ -44,7 +44,7 @@ function on(name){
       'Name': 'Ngo My Quynh',
       'Career': 'Data Analytic',
       'Motivation': 'Motivation',
-      'Details': 'Because I like it'
+      'Details': 'Data Analysis is becoming a trend in nowadays career path. Therefore, I have explored a little bit of this career by learning Data Analysis course on LinkedLearn or Coursera. And just by observing the knowledge, I find my self very interested in data. As a result of that, I participant in many competition related to Data such as Shopee or VIB Datathon. From those day, I cannot wait to be a real Data Analysis than ever.'
     }
   ]
   var temp;
