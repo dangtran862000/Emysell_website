@@ -59,7 +59,7 @@
 
 .container-products ion-icon {
     font-size: 25px;
-    color: blue;
+    color: rgb(62, 46, 121);
     margin-left: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -149,12 +149,29 @@
         display: none;;
     }
 
+    div.product{
+        margin-left: 0%;
+    }
+
     .products,
     .product-header {
         justify-content: center;
     }
 
     .basketTotalContainer {
-        padding-right: 8%;
+        padding-right: 3%;
     }
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }

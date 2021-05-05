@@ -11,6 +11,10 @@
     display: block;
 }
 
+.title-product {
+   text-align: center;
+}
+
 .slick-prev:before,
 .slick-next:before {
     font-family: 'slick';
@@ -78,7 +82,8 @@ table {
 }
 
 hr {
-    border: 1.5px solid black;
+    border: 2px solid black;
+    width:50%;
 }
 
 /* Nav and footer css */
@@ -426,14 +431,6 @@ a.signup:hover {
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 1024px) {
 
-    .cart a {
-        display: none;
-        background-color: royalblue;
-        color: #fff;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
     .grid_2_items {
         display: flex;
         flex-direction: column;
@@ -513,10 +510,6 @@ ul.no-bullets {
     list-style-type: none; /* Remove bullets */
     padding: 5px; /* Remove padding */
     margin: 5px; /* Remove margins */
-}
-
-ul li {
-    padding: 5%;
 }
 
 
