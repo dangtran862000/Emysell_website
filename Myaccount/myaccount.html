@@ -17,9 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
+
 </head>
-<body onload="check();">
+<body onload="check(); HiddenSignup();">
 
 
     <!--Header Area-->
@@ -27,7 +27,7 @@
         <!--Navigation area-->
         <nav class="navbar" id="myTopnav">
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="..\index.html">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
                     <img src="..\image\logo123.png" class="img-fluid" alt="image_logo_website">
@@ -50,7 +50,7 @@
             </div>
             <a href="..\faq.html">FAQS</a>
             <a href="..\contact.html">Contact</a>
-            <a class="signup" href="..\login.html" style="padding:0;">
+            <a id='signup' class="signup" href="..\login.html" style="padding:0;">
 
 
                 <p class="button">Sign Up</p>
@@ -72,19 +72,19 @@
                         <h2>Create Account</h2>
                     </div>
                     <form name="myForm" id="myForm" class="form-login" onsubmit="validateForm();return false">
-                
+
                         <div class="form-control">
                             <label for="email">Email</label>
                             <input type="email" placeholder="emysell@gmail.com" id="email-login" name="email-login" />
                             <small>Error message</small>
                         </div>
-                        
+
                         <div class="form-control">
                             <label for="password">Password</label>
                             <input type="password" id="password" name="password-login" />
                             <small>Error message</small>
                         </div>
-                        
+
                         <input type="submit" class="input-btn" value="Submit">
                     </form>
                 </div>
@@ -259,7 +259,7 @@
             }
         }
     </script>
-    <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+    <script type="text/javascript" src="../productcategory_productdetail_productcreateTime/javascript.js"></script>
 
     <script src="myaccount.js"></script>
 

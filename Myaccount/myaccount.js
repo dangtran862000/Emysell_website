@@ -4,7 +4,7 @@ if (sessionStorage.getItem("isLog")){
         document.getElementById('info-page').style.display = 'block';
         document.getElementById('login-page').style.display = 'none';
         document.getElementById("email").value =sessionStorage.getItem('email');
-        
+
     }else{
         document.getElementById('info-page').style.display = 'none';
         document.getElementById('login-page').style.display = 'block';
@@ -31,7 +31,7 @@ function validateForm() {
 }
 function storeInfo(){
     sessionStorage.setItem('email', document.getElementById('email-login').value);
-    
+
     sessionStorage.setItem('isLog', true);
 }
 function setErrorFor(input, message) {
@@ -45,9 +45,14 @@ function setSuccessFor(input) {
 	formControl.className = 'form-control success';
 }
 
+function HiddenSignup(){
+  if (sessionStorage.getItem('isLog')) {
+    document.getElementById('signup').style.visibility = 'hidden';
+  }
+}
+
 /* fucntion to display none */
 // document.getElementById('info-page').style.display =sessionStorage.getItem('display');
 // document.getElementById('login-page').style.display =sessionStorage.getItem('display-none')
 
 // document.getElementById("email").value =sessionStorage.getItem('email');
-

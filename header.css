@@ -229,6 +229,10 @@ a.signup:hover {
     background-color: black;
 }
 
+#signup{
+  visibility: visible;
+}
+
 .footer_col {
     align-content: center;
     justify-content: center;
