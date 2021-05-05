@@ -17,6 +17,8 @@
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <link rel="stylesheet" href="contact.css">
+
 </head>
 
 <body onload="check();">
@@ -58,10 +60,10 @@
 
         </nav>
     </header>
-    <div style="background-image: url('image/contact-background.png'); background-repeat: repeat; ">
+    <div style="background-image: url('pexels-photo-955081.jpeg'); background-repeat: repeat; ">
         <div class="row-contact">
             <section class="container_contact">
-                <form method="get" class="register-form" name="form" onsubmit="return validated()">
+                <form method="get" class="register-form" name="form" id = "form" onsubmit="validated();return false" >
                     <h1>Contact Us</h1>
                     <div>Contact Purpose
                         <select name="Choose" id="select_style" placeholder="Please">
@@ -69,66 +71,84 @@
                             <option Value="2">Personal</option>
                         </select>
                     </div><br>
-                    <div style="display:flex;">
-                        <p style="padding-right: 2%;"><i><b>Name:</b></i></p>
-                        <input type="text" id="name" name="name" placeholder="Please type your full name"
-                            maxlength="50">
+                <!-- Name -->
+                    <div style="display:flex; flex-wrap: wrap;"> 
+                        <label style="padding-right: 2%;"><i><b>Name:</b></i></label>
+                        <input type="text" id="lname" name="lname" placeholder="Please type your full name" class="clear"> 
+                        
+                        <div id="lname-error">Last name must include at least 3 character</div>
                     </div>
-                    <div style="display:flex; padding-top: 3%;">
-                        <p style="padding-right: 2%;"><i><b>Email:</b></i></p>
-                        <input type="email" id="email" name="email" placeholder="Please type your email">
+                <!-- Email  -->
+                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap;">
+                        <label style="padding-right: 2%;"><i><b>Email:</b></i></label>
+                        <input type="email" name="email" placeholder="Please type your email"  id="email"><br>
+                    
+                        <div id="email_error">Please enter the valid email</div>
                     </div><br>
-                    <div>
-                        <b><i>Phone:</i></b>
-                        <input type="tel" id="email" name="email" placeholder="Enter phone number">
+                <!--Phone  -->
+                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap;">
+                        <label style="padding-right: 2%;"> <b><i>Phone:</i></b> </label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter phone number"><br>
+
+                        <div id="phone_error">Phone is incorrect form</div>
                     </div><br>
-                    <div style="display:flex; padding-top: 3%;">
-                        <i><b>Preferred contact method: </b></i>
-                        <br><br>
-                        <div style="display:flex; padding-left: 2%;">
-                            <input type="radio" id="email" name="method" value="email">
+                <!-- Contact Method  -->
+                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap; ">
+                        <label style="padding-right: 2%;"><i><b>Preferred contact method: </b></i> </label> <br>
+                
+                        <div style="display:flex; padding-left:2%;">
+                            <input type="radio" id="email-radio" name="method" value="email">
                             <label for="email">Email</label>
-                            <input type="radio" id="phone" name="method" value="phone">
+                            
+                            <input type="radio" id="phone-radio" name="method" value="phone">
                             <label for="phone">Phone</label>
                         </div>
+
+                        <div id="contact_error">Contact Method has not been selected</div>
                     </div><br>
-                    <div>
-                        <p style="padding-right: 2%;"><i><b>Contact day(s):</b></i></p>
+                <!-- Contact Day  -->
+                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap" >
+                        <label style="padding-right: 2%;"><i><b>Contact day(s):</b></i></label>
                         <div id="contactday">
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="mon">
-                                <label for="mon">Monday</label>
+                                <label for="mon" style="color: whitesmoke;">Monday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="tue">
-                                <label for="tue">Tuesday</label>
+                                <label for="tue" style="color: whitesmoke;">Tuesday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="wed">
-                                <label for="wed">Wednesday</label>
+                                <label for="wed" style="color: whitesmoke;">Wednesday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="thu">
-                                <label for="thu">Thursday</label>
+                                <label for="thu" style="color: whitesmoke;">Thursday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="fri">
-                                <label for="fri">Friday</label>
+                                <label for="fri" style="color: whitesmoke;">Friday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="sat">
-                                <label for="sat">Saturday</label>
+                                <label for="sat" style="color: whitesmoke;">Saturday</label>
                             </div>
                             <div>
                                 <input type="checkbox" class="contact_checkbox" name="sun">
-                                <label for="sun">Sunday</label>
+                                <label for="sun" style="color: whitesmoke;">Sunday</label>
                             </div>
                         </div>
+
+                        <div id="day-error">Contact Day has not been selected</div>
                     </div><br>
-                    <div class="comment">
-                        <textarea class="textinput" placeholder="Comment"></textarea>
+                <!-- Comment Area -->
+                    <div class="comment" style="display:flex; padding-top: 3%; flex-wrap: wrap;">
+                        <textarea class="textinput" placeholder="Comment" id = 'comment'></textarea>
+
+                        <div id="cmt-error"></div>
                     </div>
-                    <div style="padding-top: 10%;">
+                    <div style="padding-top: 1%;">
                         <button type="reset" value="Clear" class="style_button">CLEAR</button>
                         <button type="submit" value="Send" class="style_button"> SEND</button>
                     </div>
@@ -218,6 +238,8 @@
         }
     </script>
     <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+    <script src="contact.js"></script>
+    
 </body>
 
 </html>

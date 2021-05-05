@@ -12,7 +12,7 @@ if (sessionStorage.getItem("isLog")){
 
 function validateForm() {
     email = document.getElementById('email-login').value;
-    password =  document.getElementById('password').value
+    password =  document.getElementById('password').value;
     if ( email=== "") {
         setErrorFor(document.getElementById('email-login'), 'Email cannot be blank');
     }else{
@@ -20,7 +20,7 @@ function validateForm() {
     }
     if (password=== "") {
         setErrorFor(document.getElementById('password'), 'Password cannot be blank');
-    } else if (password ==="1") {
+    } else if (password ==="password") {
         storeInfo();
         document.getElementById('info-page').style.display = 'block';
         document.getElementById('login-page').style.display = 'none';
