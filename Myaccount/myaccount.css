@@ -14,7 +14,7 @@
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 	overflow: hidden;
 	width: 400px;
-    height: 400px;
+    height: 450px;
 }
 section{
 	font-family: 'Open Sans', sans-serif;
@@ -36,7 +36,7 @@ section{
 }
 
 .container-login .form-login {
-	padding: 30px 40px;	
+	padding: 30px 40px;
 }
 
 .form-control {

@@ -6,18 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Account</title>
     <link rel="stylesheet" href="StyleSheet1.css">
-    <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="myaccount.css">
-    <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
+    <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  
 </head>
 <body onload="check(); HiddenSignup();">
 
@@ -27,16 +26,16 @@
         <!--Navigation area-->
         <nav class="navbar" id="myTopnav">
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <a class="navbar-brand" href="..\index.html">
+            <a class="navbar-brand" href="..//index.html">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
                     <img src="..\image\logo123.png" class="img-fluid" alt="image_logo_website">
                 </div>
             </a>
 
-            <a href="..\index.html">Home</a>
-            <a href="..\aboutus.html">About us</a>
-            <a href="..\fee.html">Fees</a>
+            <a href="..//index.html">Home</a>
+            <a href="..//aboutus.html">About us</a>
+            <a href="..//fee.html">Fees</a>
             <a href="../Myaccount/myaccount.html">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
@@ -44,19 +43,12 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="..\browsebycate.html">Browse by categories</a>
-                    <a href="..\browsebyname.html">Browse by name</a>
+                    <a href="..//browsebycate.html">Browse by categories</a>
+                    <a href="..//browsebyname.html">Browse by name</a>
                 </div>
             </div>
-            <a href="..\faq.html">FAQS</a>
-            <a href="..\contact.html">Contact</a>
-            <a id='signup' class="signup" href="..\login.html" style="padding:0;">
-
-
-                <p class="button">Sign Up</p>
-
-
-            </a>
+            <a href="../faq.html">FAQS</a>
+            <a href="../contact.html">Contact</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
@@ -86,6 +78,8 @@
                         </div>
 
                         <input type="submit" class="input-btn" value="Submit">
+                        <p class="message">Not registered? <a href="..//regist.html" style="text-decoration:none">Create an account</a></p>
+                        <p class="message"><a href="..//forgot_password.html" style="text-decoration:none">Forgot the passwork</a></p>
                     </form>
                 </div>
             </div>
@@ -122,6 +116,12 @@
                             <!--Icon-->
                             <img class="icons" src="https://img.icons8.com/material/24/000000/worldwide-location--v1.png" alt="icon_location"/>
                             <a><span>Billing Address</span></a>
+                        </li>
+
+                        <li class="flex_1">
+                            <img class="icons" src="https://img.icons8.com/windows/32/000000/users-settings.png" alt="icon_setting"/>
+                            <!--Icon-->
+                            <a href="../Myaccount/myaccount.html" onclick = "sessionStorage.clear();" style="padding-left: 3%;"><span>SIGN OUT</span></a>
                         </li>
                     </ul>
                 </div>
@@ -199,7 +199,7 @@
                 <!--Zero Columns-->
                 <div class="footer_column0" style="flex: 2; margin: 1% 5% 0 5%">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                    <img src="..\image\logo123.png" width="20%" alt="image_logo_website"/>
+                    <img src="..\\image\logo123.png" width="20%" alt="image_logo_website"/>
                     <p style="font-size:13px">EmySell is the lastest website for whom who are looking for the place to start their business. We provided the solution to help our potential custumers to achive the greatest outcome for their first start</p>
                 </div>
                 <!--First Columns-->

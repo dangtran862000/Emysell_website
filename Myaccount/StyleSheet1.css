@@ -600,11 +600,19 @@ body {
     margin: 15px 0 0;
     color: #b3b3b3;
     font-size: 12px;
+    text-align:center;
+}
+
+p.message {
+    text-align: center;
+    font-size:13px;
 }
 
 .form .message a {
     color: #007674;
     text-decoration: none;
+    text-align:center;
+    justify-items:center;
 }
 
 .form .register-form {
@@ -718,6 +726,7 @@ body {
     .column {
       width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
     }
+
   }
 
   .fa-facebook-official{
@@ -1009,3 +1018,5 @@ button.style_button:active {
         padding-left: 4%;
     }
  } 
+
+ 
