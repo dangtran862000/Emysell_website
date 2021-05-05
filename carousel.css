@@ -141,7 +141,7 @@ main h1, main h2 {
 
 div .glide_track {
     position: relative;
-    max-width: 1440px;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 465px;
@@ -149,7 +149,7 @@ div .glide_track {
 
 div .new-store {
     position: relative;
-    max-width: 1440px;
+    max-width: 100%;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 270px;
@@ -159,7 +159,7 @@ div .new-store {
 ul.block-product {
     position: relative;
     left: 0;
-    width: 1860px;
+    width: 100%;
     height: 465px;
     animation-name: sliding0;
     animation-duration: 3s;
@@ -175,7 +175,7 @@ ul.block-product {
 ul.shop-items {
     position: relative;
     left: 0;
-    width: 1700px;
+    width: 100%;
     height: 275px;
     animation-name: sliding0;
     animation-duration: 3s;
