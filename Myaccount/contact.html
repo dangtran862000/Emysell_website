@@ -35,7 +35,7 @@
             <a href="index.html">Home</a>
             <a href="aboutus.html">About us</a>
             <a href="fee.html">Fees</a>
-            <a href="../Myaccount/myaccount.html">My Account</a>
+            <a href="myaccount.html">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
@@ -60,10 +60,10 @@
 
         </nav>
     </header>
-    <div style="background-image: url('./Myaccount/pexels-photo-955081.jpeg'); background-repeat: repeat; ">
+    <div style="background-image: url('pexels-photo-955081.jpeg'); background-repeat: repeat; ">
         <div class="row-contact">
             <section class="container_contact">
-                <form method="get" class="register-form" name="form" id="form" onsubmit="validated();return false">
+                <form method="get" class="register-form" name="form" id = "form" onsubmit="validated();return false" >
                     <h1>Contact Us</h1>
                     <div>Contact Purpose
                         <select name="Choose" id="select_style" placeholder="Please">
@@ -71,44 +71,43 @@
                             <option Value="2">Personal</option>
                         </select>
                     </div><br>
-                    <!-- Name -->
-                    <div style="display:flex; flex-wrap: wrap;">
+                <!-- Name -->
+                    <div style="display:flex; flex-wrap: wrap;"> 
                         <label style="padding-right: 2%;"><i><b>Name:</b></i></label>
-                        <input type="text" id="lname" name="lname" placeholder="Please type your full name"
-                            class="clear">
-
+                        <input type="text" id="lname" name="lname" placeholder="Please type your full name" class="clear"> 
+                        
                         <div id="lname-error">Last name must include at least 3 character</div>
                     </div>
-                    <!-- Email  -->
+                <!-- Email  -->
                     <div style="display:flex; padding-top: 3%; flex-wrap: wrap;">
                         <label style="padding-right: 2%;"><i><b>Email:</b></i></label>
-                        <input type="email" name="email" placeholder="Please type your email" id="email"><br>
-
+                        <input type="email" name="email" placeholder="Please type your email"  id="email"><br>
+                    
                         <div id="email_error">Please enter the valid email</div>
                     </div><br>
-                    <!--Phone  -->
+                <!--Phone  -->
                     <div style="display:flex; padding-top: 3%; flex-wrap: wrap;">
                         <label style="padding-right: 2%;"> <b><i>Phone:</i></b> </label>
                         <input type="tel" id="phone" name="phone" placeholder="Enter phone number"><br>
 
                         <div id="phone_error">Phone is incorrect form</div>
                     </div><br>
-                    <!-- Contact Method  -->
+                <!-- Contact Method  -->
                     <div style="display:flex; padding-top: 3%; flex-wrap: wrap; ">
                         <label style="padding-right: 2%;"><i><b>Preferred contact method: </b></i> </label> <br>
-
+                
                         <div style="display:flex; padding-left:2%;">
                             <input type="radio" id="email-radio" name="method" value="email">
                             <label for="email">Email</label>
-
+                            
                             <input type="radio" id="phone-radio" name="method" value="phone">
                             <label for="phone">Phone</label>
                         </div>
 
                         <div id="contact_error">Contact Method has not been selected</div>
                     </div><br>
-                    <!-- Contact Day  -->
-                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap">
+                <!-- Contact Day  -->
+                    <div style="display:flex; padding-top: 3%; flex-wrap: wrap" >
                         <label style="padding-right: 2%;"><i><b>Contact day(s):</b></i></label>
                         <div id="contactday">
                             <div>
@@ -143,9 +142,9 @@
 
                         <div id="day-error">Contact Day has not been selected</div>
                     </div><br>
-                    <!-- Comment Area -->
+                <!-- Comment Area -->
                     <div class="comment" style="display:flex; padding-top: 3%; flex-wrap: wrap;">
-                        <textarea class="textinput" placeholder="Comment" id='comment'></textarea>
+                        <textarea class="textinput" placeholder="Comment" id = 'comment'></textarea>
 
                         <div id="cmt-error"></div>
                     </div>
@@ -240,7 +239,7 @@
     </script>
     <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
     <script src="contact.js"></script>
-
+    
 </body>
 
 </html>

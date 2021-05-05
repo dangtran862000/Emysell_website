@@ -1,0 +1,14 @@
+#email_error,#lname-error, #phone_error,#contact_error, #day-error,#cmt-error {
+    color: rgb(248, 86, 86);
+    text-align: left;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-top: 0.7rem;
+    display: none;
+}
+section.container_contact{
+    background-color: rgba(97, 97, 97, 0.404);
+    border: none;
+    box-shadow: 0 0 5px 2px #282a2d;
+    color: whitesmoke;
+}
