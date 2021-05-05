@@ -26,19 +26,19 @@ function on(name){
       'Name': 'Pham Gia Nguyen',
       'Career': 'AI Engineer',
       'Motivation': 'Motivation',
-      'Details': 'Because I like it'
+      'Details': 'Artificial Intelligence is the promising field that allows machine to think like humans by applying mathematical models. Its application present everywhere from medical, games, etc. in order to help human solve their daily problems and enhance the convienience in thei lives. Therefore, the career prospect is undoubtly, which inspired me to follow this path.'
     },
     {
       'Name': 'La Tran Hai Dang',
       'Career': 'Security',
       'Motivation': 'Motivation',
-      'Details': 'Because I like it'
+      'Details': 'For me, the field of science and technology, especially information technology, has brought me the passion to learn new knowledge by the vastness of the IT world. I first encountered programming in grade 8, when it was the pascal programming language as an official subject in the school curriculum. I was intrigued by the command lines and the magic of computer algorithms. Since then, I have decided to enter the computer science class at high school and have achieved the silver medal for good students in IT. '
     },
     {
       'Name': 'Huynh Van Anh',
       'Career': 'Data Science',
       'Motivation': 'Motivation',
-      'Details': 'Because I like it'
+      'Details': 'Previously, I was a student specializing in Chemistry. Instead of choosing to become a doctor or pharmacist, I followed my passion and became a member of SST (School of Science and Technology). I have a great curiosity to explore the Data Industry, and I expect to be a Data Scientist.'
     },
     {
       'Name': 'Ngo My Quynh',
