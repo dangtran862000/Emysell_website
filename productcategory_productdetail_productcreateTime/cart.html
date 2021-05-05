@@ -25,7 +25,7 @@
         <!--Navigation area-->
         <nav class="navbar" id="myTopnav">
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="../index.html">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
                     <img src="..\image\logo123.png" class="img-fluid" alt="img_logo_website">
@@ -67,7 +67,7 @@
         <div class="product-header">
             <h5 class="product-title" style="padding-left:13%;">PRODUCT</h5>
             <h5 class="price sm-hide">PRICE</h5>
-            <h5 class="quantity">QUANTITY</h5>
+            <h5 class="quantity" style="padding-left:3%;">QUANTITY</h5>
             <h5 class="total">TOTAL</h5>
         </div>
         <div class="products">
@@ -76,6 +76,9 @@
     </div>
 
     <section class="container_cart" style="padding-bottom: 10%;">
+        <a href="./product_detail.html">
+            <button type="button" class="button_style_order">CONTINUE SHOPPING</button>
+        </a>
         <div class="row">
           <div class="column">
             <h1 style="padding-bottom: 5%;">CUSTOMER INFORMATION</h1>
@@ -116,7 +119,7 @@
             <input type="text" id="coupon_code" name="coupon" placeholder="Coupon code" style="height:40px; width:40%; margin-top: 10%;">
             <button onclick="checkCoupon()"  class="button_style_apply" style="height:40px; width:40%">Apply coupon</button>
             <a href="../OrderPlacement_thankyoupage/thankyou.html">
-            <button type="button" class="button_style_order" onclick="localStorage.clear()">ORDER</button>
+            <button id="myP" type="button" class="button_style_order" onclick="orderButton()">ORDER</button>
             </a>
             </div>
         </div>
