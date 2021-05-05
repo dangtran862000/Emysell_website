@@ -303,7 +303,15 @@ function Alert() {
   }
 
 function orderButton() {
+    if (sessionStorage.getItem('isLog')) {
     localStorage.removeItem('productsInCart');
     localStorage.setItem('totalCost', 0);
     localStorage.setItem('cartNumbers', 0);
+    location.href='../OrderPlacement_thankyoupage/thankyou.html';
+      } else {
+          alert("PLEASE SIGN UP FIRST !!!");
+          window.location.reload();
+          location.href='../Myaccount/myaccount.html';
+      }
+    
 }
