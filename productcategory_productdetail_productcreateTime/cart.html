@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../OrderPlacement_thankyoupage/OrderPlacement_thankyou.css">
     <title>Shopping Cart</title>
 </head>
-<body onload="check();">
+<body onload="check(); HiddenSignup();">
 
     <!--Header Area-->
     <header>
@@ -48,6 +48,9 @@
             </div>
             <a href="..\faq.html">FAQS</a>
             <a href="..\contact.html">Contact</a>
+            <a id='signup' class="signup" href="../Myaccount/myaccount.html" style="padding:0;">
+                <p class="button">Sign Up</p>
+            </a>
             <div class="cart">
                 <a href="cart.html" style="float: right;">
                     <ion-icon name="basket"></ion-icon>Cart <span>0</span>
@@ -118,9 +121,9 @@
             </div>
             <input type="text" id="coupon_code" name="coupon" placeholder="Coupon code" style="height:40px; width:40%; margin-top: 10%;">
             <button onclick="checkCoupon()"  class="button_style_apply" style="height:40px; width:40%">Apply coupon</button>
-            <a href="../OrderPlacement_thankyoupage/thankyou.html">
+            <!-- <a href="../OrderPlacement_thankyoupage/thankyou.html"> -->
             <button id="myP" type="button" class="button_style_order" onclick="orderButton()">ORDER</button>
-            </a>
+            <!-- </a> -->
             </div>
         </div>
     </section>
@@ -190,7 +193,7 @@
             }
         </script>
         <script type="text/javascript" src="javascript.js"></script>
-
+    <script src="../Myaccount/myaccount.js"></script>
     <script src="main.js"></script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 
