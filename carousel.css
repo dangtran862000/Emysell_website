@@ -138,18 +138,25 @@ main h1, main h2 {
     }
 }
 
+div.glide {
+    width:100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 div .glide_track {
     position: relative;
-    width: 100%;
+    width: 1860px;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 465px;
+    justify-content:center;;
+    align-content: center;
 }
 
 div .new-store {
     position: relative;
-    max-width: 100%;
+    width: 1860px;
     overflow-x: hidden;
     overflow-y: hidden;
     height: 270px;
@@ -252,7 +259,7 @@ main h1, main h2 {
     font-weight: 500;
     position:absolute;
     top:84%;
-    width:50%;
+    width:100%;
     background-color:black;
     color:white;
     justify-content:center;
