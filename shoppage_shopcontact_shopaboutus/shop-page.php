@@ -9,6 +9,49 @@
     <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/product_category.css">
     <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
 </head>
+<?php
+// $rows = 0;
+// $cells = 0;
+// $fp = fopen("products.csv","r");
+// $flag = true;
+// while(($content = fgetcsv($fp, 1000, “,”)) !== FALSE){
+//     if($flag) { $flag = false; continue; }
+//     print_r($content[1]);
+//     echo '' . "<br />\n";
+//     $rows++;
+//     $cells += count($content);
+// }
+// fclose($fp);
+
+// echo "Total rows = $rows, total cells = $cells";
+
+$product = array();
+$count_line = 0;
+$count = 0;
+if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
+    while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
+        $count++;
+        if ($count == 1) { continue; }
+        
+        if ($data[4] == 22 and $data[6] == "TRUE") {
+            // print_r($data[0]);
+            // print_r($data[1]);
+            // print_r($data[3]);
+            // print_r($data[4]);
+            // echo '' . "<br />\n"; // Array
+            $count_line++;
+            $product[] = $data[1];
+        }
+    
+        
+    }
+    $product = array_unique($product);
+
+    // print_r($product)."<br />\n";
+    // echo $count_line;
+    fclose($handle);
+?>
+
 <body onload="check();">
     <header>
         <nav>
@@ -23,7 +66,7 @@
           </label>
 
           <ul class="main-nav">
-            <li><a href="shop-page.html">Home</a></li>
+            <li><a href="shop-page.php">Home</a></li>
             <li><a href="aboutus-shop.html">About us</a></li>
             <li><div class="dropdown">
               <button class="dropbtn">Product</button>
@@ -44,7 +87,29 @@
         <section class='block-product'>
           <div class="product-section">
             <h3>New Products</h3>
-          <div class="product">
+            <?php 
+            for ($i = 0; $i < count($product); $i++) {
+              echo "<div class='product'>
+              <div class='upper'>
+              <div class='two-third'>
+                  <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
+                  <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/t-shirt-1.png' alt=''></a>
+                </div>
+              </div>
+              <div class='lower'>
+                <p class='price'>$product[$i]</p>
+                <p class='date'>9/4/2021</p>
+                <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+                <div class='btn'>
+                  <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                </div>
+              </div>
+            </div>";
+          }
+      
+      }
+            ?>
+          <!-- <div class="product">
             <div class="upper">
                 <div class="one-third"></div>
             <div class='two-third'>
@@ -137,7 +202,7 @@
                 <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
-          </div>
+          </div> -->
 
 
           </section>
@@ -152,6 +217,11 @@
       </div>
 
 
+      <div class="btn">
+          <a href="test.php" class='btn-1'>TEST</a>
+      </div>
+
+
       <footer>
           <div class="footer--left">
               <div class="footer-logo">
@@ -163,7 +233,7 @@
           </div>
           <div class="footer--right">
               <ul class="footer-nav">
-                  <li><a href="shop-page.html">Home</a></li>
+                  <li><a href="shop-page.php">Home</a></li>
                   <li><a href="aboutus-shop.html">About us</a></li>
                   <li><a href="../productcategory_productdetail_productcreateTime/product_category.html">Product</a></li>
                   <li><a href="contact_shop.html">Contact</a></li>
