@@ -10,46 +10,50 @@
     <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
 </head>
 <?php
-// $rows = 0;
-// $cells = 0;
-// $fp = fopen("products.csv","r");
-// $flag = true;
-// while(($content = fgetcsv($fp, 1000, “,”)) !== FALSE){
-//     if($flag) { $flag = false; continue; }
-//     print_r($content[1]);
-//     echo '' . "<br />\n";
-//     $rows++;
-//     $cells += count($content);
-// }
-// fclose($fp);
 
-// echo "Total rows = $rows, total cells = $cells";
-
+$items = array();
+$store = array();
 $product = array();
+$product_price = array();
 $count_line = 0;
 $count = 0;
+$count_store = 0;
+
+  
 if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
         $count++;
+        $product_price[] = $data;
         if ($count == 1) { continue; }
-        
+        $items[] = $data;
         if ($data[4] == 22 and $data[6] == "TRUE") {
-            // print_r($data[0]);
-            // print_r($data[1]);
-            // print_r($data[3]);
-            // print_r($data[4]);
-            // echo '' . "<br />\n"; // Array
             $count_line++;
             $product[] = $data[1];
+            $store[] = $data[4];
+            $product_price[] = $data[2];
         }
-    
+      
         
     }
+}   
+  
     $product = array_unique($product);
+    // $product_price = array_unique($product);
+    $store = array_unique($store);
+    print_r($product);
 
-    // print_r($product)."<br />\n";
-    // echo $count_line;
+    if (($storecsv = fopen('stores.csv', 'r')) !== FALSE) { // Check the resource is valid
+      while (($store_data = fgetcsv($storecsv, 1000, ",")) !== FALSE) { // Check opening the file is OK!
+          $count_store++;
+          if ($count == 1) { continue; }
+          if ($store_data[0] == $store[0]) {
+            $store_name = $store_data[1];
+        }
+      }
+    }
+
     fclose($handle);
+    fclose($storecsv);
 ?>
 
 <body onload="check();">
@@ -79,35 +83,40 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           </ul>
         </nav>
         <div class="hero">
-          <h1>Welcome to H&M</h1>
+          <h1>Welcome to <?echo $store_name ?></h1>
           <p>Your style is our inspire</p>
         </div>
       </header>
      <main>
         <section class='block-product'>
           <div class="product-section">
-            <h3>New Products</h3>
+            <h3>Featured Products</h3>
             <?php 
-            for ($i = 0; $i < count($product); $i++) {
-              echo "<div class='product'>
-              <div class='upper'>
-              <div class='two-third'>
-                  <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
-                  <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/t-shirt-1.png' alt=''></a>
+            for ($row = 0; $row < 1000; $row++) {
+              if ($items[$row][4] == 22 and $items[$row][6] == "TRUE") {
+                // print_r($items[$row][1]);
+                $product_name = $items[$row][1];
+                $product_price = $items[$row][2];
+                // echo '' . "<br />\n";
+                echo "<div class='product'>
+                <div class='upper'>
+                <div class='two-third'>
+                    <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$product_name.png' alt=''></a>
+                  </div>
                 </div>
-              </div>
-              <div class='lower'>
-                <p class='price'>$product[$i]</p>
-                <p class='date'>9/4/2021</p>
-                <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-                <div class='btn'>
-                  <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                <div class='lower'>
+                  <p class='price'>$product_name</p>
+                  <p style='margin-left: 50%; margin-bottom: 0;'> $product_price USD</p>
+                  <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+                  <div class='btn'>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                  </div>
                 </div>
-              </div>
-            </div>";
+              </div>";
           }
+        }
       
-      }
             ?>
           <!-- <div class="product">
             <div class="upper">
@@ -161,12 +170,10 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               </div>
             </div>
           </div>
+        </div>-->
 
-
-
-        </div>
         <div class="product-section">
-            <h3>Featured Products</h3>
+            <h3>New Products</h3>
 
           <div class="product">
             <div class="upper">
@@ -202,7 +209,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                 <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
-          </div> -->
+          </div> 
 
 
           </section>

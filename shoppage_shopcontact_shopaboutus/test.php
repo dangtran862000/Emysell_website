@@ -18,7 +18,7 @@
 
 // echo "Total rows = $rows, total cells = $cells";
 
-
+$items = array();
 $product = array();
 $count_line = 0;
 $count = 0;
@@ -26,7 +26,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
         $count++;
         if ($count == 1) { continue; }
-        
+        $items[] = $data;
         if ($data[4] == 22 and $data[6] == "TRUE") {
             print_r($data[0]);
             print_r($data[1]);
@@ -34,7 +34,10 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
             print_r($data[4]);
             echo '' . "<br />\n"; // Array
             $count_line++;
-            $product[] = $data[1];
+            $product[] = $data[1] + $data[2];
+    
+            
+        
             
         }
     
@@ -62,6 +65,24 @@ for ($i = 0; $i <= count($product); $i++) {
 //     if ($count == 1) { continue; }
 //     print_r($fields)
 // }
+
+
+$students = array
+  (
+  array("Dammio",22,9),
+  array("Lan",25,8),
+  array("Vy",18,5),
+  array("Hoa",17,10)
+  );
+   
+for ($row = 0; $row < 1000; $row++) {
+  if ($items[$row][4] == 22 and $items[$row][6] == "TRUE") {
+    print_r($items[$row][1]);
+    echo '' . "<br />\n";
+  }
+  
+}
+
 
 ?>
 
