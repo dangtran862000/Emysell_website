@@ -11,6 +11,7 @@
 </head>
 <?php
 
+$time = array();
 $items = array();
 $store = array();
 $product = array();
@@ -26,6 +27,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         $product_price[] = $data;
         if ($count == 1) { continue; }
         $items[] = $data;
+        $time[] = $data;
         if ($data[4] == 22 and $data[6] == "TRUE") {
             $count_line++;
             $product[] = $data[1];
@@ -40,7 +42,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
     $product = array_unique($product);
     // $product_price = array_unique($product);
     $store = array_unique($store);
-    print_r($product);
 
     if (($storecsv = fopen('stores.csv', 'r')) !== FALSE) { // Check the resource is valid
       while (($store_data = fgetcsv($storecsv, 1000, ",")) !== FALSE) { // Check opening the file is OK!
@@ -51,6 +52,27 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         }
       }
     }
+
+
+    $category = [];
+    $max_prob = 0;
+    for ($row = 0; $row < 1000; $row++) {
+        if ($time[$row][4] == 22) {
+            $category[] = $time[$row];
+            
+        }
+    }
+    
+    $new_product = [];
+    $flag = 0;
+    
+    for ($i = 0; $i < 17; $i++) {
+        
+        $new_product[] = $category[$i][3];
+    
+    }
+    
+    rsort($new_product);
 
     fclose($handle);
     fclose($storecsv);
@@ -174,8 +196,33 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
 
         <div class="product-section">
             <h3>New Products</h3>
-
-          <div class="product">
+            <?php for ($i = 0; $i < 5; $i++) {
+                  $timeProduct = $new_product[$i];
+                  for ($j = 0; $j < 17; $j++){
+                      if ($timeProduct == $category[$j][3]){
+                          $name_product_time = $category[$j][1];
+                          $price_product_time = $category[$j][2];
+                          echo "<div class='product'>
+                          <div class='upper'>
+                          <div class='two-third'>
+                              <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
+                            </div>
+                          </div>
+                          <div class='lower'>
+                            <p class='price'>$name_product_time</p>
+                            <p style='margin-left: 50%; margin-bottom: 0;'> $price_product_time USD</p>
+                            <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+                            <div class='btn'>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                            </div>
+                          </div>
+                        </div>";
+                      }
+                  }
+              }
+              ?>
+          <!-- <div class="product">
             <div class="upper">
                 <div class="one-third"></div>
             <div class='two-third'>
@@ -209,7 +256,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                 <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
-          </div> 
+          </div>  -->
 
 
           </section>
@@ -222,12 +269,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         <button type="button" name="button" onclick="agree();">I understand</button>
         <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
       </div>
-
-
-      <div class="btn">
-          <a href="test.php" class='btn-1'>TEST</a>
-      </div>
-
 
       <footer>
           <div class="footer--left">

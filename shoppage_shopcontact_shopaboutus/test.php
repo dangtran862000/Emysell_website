@@ -18,8 +18,8 @@
 
 // echo "Total rows = $rows, total cells = $cells";
 
+$time = array();
 $items = array();
-$product = array();
 $count_line = 0;
 $count = 0;
 if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
@@ -27,21 +27,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         $count++;
         if ($count == 1) { continue; }
         $items[] = $data;
-        if ($data[4] == 22 and $data[6] == "TRUE") {
-            print_r($data[0]);
-            print_r($data[1]);
-            print_r($data[3]);
-            print_r($data[4]);
-            echo '' . "<br />\n"; // Array
-            $count_line++;
-            $product[] = $data[1] + $data[2];
-    
-            
-        
-            
-        }
-    
-        
+        $time[] = $data;
     }
     print_r($product)."<br />\n";
     // echo $count_line;
@@ -51,13 +37,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
 
 }
 
-$product = array_unique($product);
-print_r($product_new);
-echo '' . "<br />\n";
-for ($i = 0; $i <= count($product); $i++) {
-    print_r($product[$i]);
-    echo '' . "<br />\n";
-}
 // $handle = fopen($_POST['products.csv'], "r");
 // $count = 0;
 // while (($fields = fgetcsv($handle, 0, ",")) !== FALSE) {
@@ -66,24 +45,50 @@ for ($i = 0; $i <= count($product); $i++) {
 //     print_r($fields)
 // }
 
-
-$students = array
-  (
-  array("Dammio",22,9),
-  array("Lan",25,8),
-  array("Vy",18,5),
-  array("Hoa",17,10)
-  );
-   
+$category = [];
+$max_prob = 0;
 for ($row = 0; $row < 1000; $row++) {
-  if ($items[$row][4] == 22 and $items[$row][6] == "TRUE") {
-    print_r($items[$row][1]);
-    echo '' . "<br />\n";
-  }
-  
+    if ($time[$row][4] == 22) {
+        $category[] = $time[$row];
+        
+    }
 }
 
+$new_product = [];
+$flag = 0;
 
+for ($i = 0; $i < 17; $i++) {
+    
+    $new_product[] = $category[$i][3];
+
+}
+
+rsort($new_product);
+
+for ($i = 0; $i < 5; $i++) {
+    $timeProduct = $new_product[$i];
+    for ($j = 0; $j < 17; $j++){
+        if ($timeProduct == $category[$j][3]){
+            $name_product_time = $category[$j][1];
+            echo "<div class='product'>
+            <div class='upper'>
+            <div class='two-third'>
+                <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
+                <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
+              </div>
+            </div>
+            <div class='lower'>
+              <p class='price'>$name_product_time</p>
+              <p style='margin-left: 50%; margin-bottom: 0;'> $product_price USD</p>
+              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+              <div class='btn'>
+                <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+              </div>
+            </div>
+          </div>";
+        }
+    }
+}
 ?>
 
 </body>
