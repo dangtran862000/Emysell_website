@@ -269,8 +269,8 @@ a.signup:hover {
         width: 20%;
     }
 
-   
-    
+
+
 
 
 }
@@ -302,7 +302,7 @@ a.signup:hover {
         flex-direction: column;
         justify-content: space-around;
     }
-    
+
     .footer_col {
         flex-direction: column;
         text-align: center;
@@ -343,7 +343,7 @@ a.signup:hover {
         flex-direction: column;
         justify-content: space-around;
     }
-    
+
     .footer_col {
         flex-direction: column;
         text-align: center;
@@ -355,7 +355,7 @@ a.signup:hover {
         width: 30%;
     }
 
-   
+
 
 }
 
@@ -459,34 +459,34 @@ body {
     position: absolute;
     content: "";
   } */
-  
+
   html, body{
     width: 100vw;
     font-size: 16px;
     line-height: 150%;
     color: black;
   }
-  
+
   a{
     text-decoration: none;
   }
-  
+
   .shop-img{
     width: 100%;
     height: 100%;
     position: absolute;
     object-fit: cover;
   }
-  
+
   main{
     padding: 5% 0;
     width: 100%;
     display: flex;
     flex-direction: column;
-    
+
   }
   /*Select catagory*/
-  
+
   /* Format the A-Z navigation*/
   #info {
     font-size: 18px;
@@ -506,35 +506,47 @@ body {
   #wrapper {
     text-align: center;
   }
-  
+
   /* #style-3::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: rgba(68, 68, 156, 0);
   } */
-  
+
   #style-3::-webkit-scrollbar {
     width: 6px;
     background-color: rgb(163, 163, 163);
   }
-  
+
   #style-3::-webkit-scrollbar-thumb {
     background-color: rgb(255, 255, 255);
   }
-  
+
   .navside li {
     text-align: center;
     list-style-type: none;
   }
-  
+
   .navside a {
     color: white;
-    padding: 15px;
+    width: 100%;
+    height: 45px;
     display: block;
     text-decoration: none;
   }
-  .navside a:hover {
+
+  .navside button{
+    width: 100%;
+    height: 100%;
+    background-color: #2c3e50;;
+    border: 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  .navside button:hover{
     background-color: #345372f5;
   }
+
   h1, h2{
     text-align: center;
     margin-bottom: 2rem;
@@ -548,15 +560,15 @@ body {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .shop-item__image{
     position: relative;
     padding-bottom: 150%;
     overflow-y: hidden;
   }
-  
-  
-  
+
+
+
   .shop-item__name{
     text-align: center;
     margin: 1rem 0;
@@ -571,7 +583,7 @@ body {
     font-size: 1.5rem;
     color: #2c3e50;
   }
-  
+
   .shop-item__btn{
     position: absolute;
     width: 200px;
@@ -585,14 +597,14 @@ body {
     z-index: 2;
     border-radius: 8px;
     transition: background-color 0.2s ease;
-    
+
   }
   .shop-item__btn:focus, .shop-item__btn:hover{
     background-color: whitesmoke;
     color: #000;
   }
-  
-  
+
+
   @media only screen and (min-width: 768px){
     h1,h2{
       font-size: 2em;
@@ -613,7 +625,7 @@ body {
       margin: 1.5rem 0;
     }
   }
-  
+
   @media only screen and (min-width: 1024px){
     main{
       flex-direction: row;
@@ -627,21 +639,21 @@ body {
     .shop-list{
       grid-template-columns: 1fr 1fr 1fr;
     }
-  
-  
+
+
     .shop-item__btn{
       opacity: 0;
       font-size: 1rem;
       width: 170px;
       padding: 1rem 0;
     }
-  
+
     .shop-item__image:hover > .shop-item__btn{
       opacity: 1;
     }
     .shop-item__name{
       font-size: 1.2rem;
-    }  
+    }
     .scrollbar {
     margin-left: 15%;
     float: left;
