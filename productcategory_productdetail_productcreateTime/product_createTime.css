@@ -19,7 +19,7 @@ a{
   position: relative;
   overflow: hidden;
   margin: auto;
-  width: 75%;
+  width: 50%;
   height: 30px;
   border-radius: 3px;
   box-sizing: border-box;
@@ -31,7 +31,7 @@ select{
   color: white;
   outline: none;
   border: none;
-  padding-left: 10px;
+  padding-left: 30px;
   cursor: pointer;
 }
 
@@ -51,7 +51,7 @@ select{
 
 @media screen and (max-width: 800px) {
   .select{
-    width: 100%;
+    width: 80%;
   }
 }
 
@@ -59,7 +59,7 @@ select{
 
 .block-product{
 	text-align: center;
-	width: 75%;
+	width: 100%;
 	margin: 30px auto;
 }
 
@@ -162,5 +162,58 @@ padding: 0;
     }
 
     .btn-1:hover{
+      background-color: #03BFCB;
+    }
+
+
+    .button_pagination{
+      display: inline-block;
+      background-color: #666666;
+      color: white;
+      text-decoration: none;
+
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 20px;
+      transition: 0.2s;
+    }
+
+    .button_pagination:hover{
+      background-color: #03BFCB;
+    }
+
+    .button_pagination_number{
+      display: inline-block;
+      background-color: #666666;
+      color: white;
+      padding-top: 0.25%;
+      text-decoration: none;
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      font-size: 14px;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    .button_pagination_number:hover{
+      background-color: #03BFCB;
+    }
+
+    .button_pagination_number_active{
+      display: inline-block;
+      background-color: #4ad81f;
+      color: white;
+      padding-top: 0.25%;
+      text-decoration: none;
+      text-align: center;
+      height: 30px;
+      width: 30px;
+      font-size: 14px;
+      border-radius: 50%;
+      transition: 0.2s;
+    }
+
+    .button_pagination_number_active:hover{
       background-color: #03BFCB;
     }
