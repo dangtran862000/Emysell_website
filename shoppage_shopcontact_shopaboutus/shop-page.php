@@ -98,7 +98,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <button class="dropbtn">Product</button>
               <div class="dropdown-content">
               <a href="../productcategory_productdetail_productcreateTime/product_category.html">Browse by category</a>
-              <a href="../productcategory_productdetail_productcreateTime/product_createTime.html">Browse by created time</a>
+              <a href="../productcategory_productdetail_productcreateTime/product_createTime.php?page=1">Browse by created time</a>
               </div>
             </div></li>
             <li><a href="./contact_shop.html">Contact</a></li>
@@ -262,6 +262,10 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           </section>
         </div>
       </main>
+
+      <div class="btn">
+          <a href="test.php" class='btn-1'>VIEW DETAIL</a>
+        </div>
 
       <div id="cookies">
         <h3>I use cookies</h3>
