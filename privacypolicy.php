@@ -50,7 +50,7 @@
                     </button>
                     <div class="dropdown-content">
                         <a href="browsebycate.html">Browse by categories</a>
-                        <a href="browsebyname.html">Browse by name</a>
+                        <a href="browsebyname.php">Browse by name</a>
                     </div>
                 </div>
                 <a href="faq.html">FAQS</a>
