@@ -88,23 +88,29 @@
           $file1 = fopen("categories.csv","r");
           $categories = [];
 
-          while(! feof($file1)){
-            $categories[] = fgetcsv($file1);
+          // while(! feof($file1)){
+          //   $categories[] = fgetcsv($file1);
+          // }
+          while (($result = fgetcsv($file1)) !== false) {
+            if (array(null) !== $result) { // ignore blank lines
+                $categories[] = $result;
+            }
           }
 
           $file2 = fopen("stores.csv","r");
           $stores = [];
 
-          while(! feof($file2)){
-            $stores[] = fgetcsv($file2);
+          while (($result = fgetcsv($file2)) !== false) {
+            if (array(null) !== $result) { // ignore blank lines
+                $stores[] = $result;
+            }
           }
-
 
           if('POST' == $_SERVER['REQUEST_METHOD'] ){
             foreach ($_POST as $key1 => $value1) {
               for ($i=1; $i < count($categories); $i++) {
                 if($categories[$i][1] == $value1){
-                  for ($j = 1; $j < count($stores) - 1; $j++) {
+                  for ($j = 1; $j < count($stores); $j++) {
                     if($stores[$j][2] == $categories[$i][0]){
                       $temp = $stores[$j][1];
                       echo "<div class='shop-item'>
@@ -122,7 +128,7 @@
               }
             }
           } else {
-            for ($i=1; $i < count($stores) -1; $i++) {
+            for ($i=1; $i < count($stores); $i++) {
               $temp = $stores[$i][1];
               echo "<div class='shop-item'>
                   <div class='shop-item__image'>

@@ -107,13 +107,15 @@
             $file = fopen("stores.csv","r");
             $data = [];
 
-            while(! feof($file)){
-              $data[] = fgetcsv($file);
+            while (($result = fgetcsv($file)) !== false) {
+              if (array(null) !== $result) { // ignore blank lines
+                  $data[] = $result;
+              }
             }
 
 
             if('POST' != $_SERVER['REQUEST_METHOD'] ){
-              for ($i=1; $i < count($data) -1; $i++) {
+              for ($i=1; $i < count($data); $i++) {
                 $temp = $data[$i][1];
                 echo "<div class='shop-item'>
                     <div class='shop-item__image'>
@@ -128,7 +130,7 @@
             } else {
               foreach($_POST as $key=>$value) {
                 $pattern = "#^$key#";
-                for ($i=1; $i < count($data) - 1; $i++) {
+                for ($i=1; $i < count($data); $i++) {
                   $temp = $data[$i][1];
                   if(preg_match($pattern, $temp)){
                     echo "<div class='shop-item'>

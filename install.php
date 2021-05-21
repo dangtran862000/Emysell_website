@@ -41,7 +41,7 @@
       <label for="Password">Type the password again</label>
       <input type="password" name="password2">
 
-      <input type="submit" name="Submit" value="Submit">
+      <input type="submit" name="Submit" value="Submit" onclick="inform();">
     </form>
 
     <?php
@@ -52,9 +52,13 @@
           $account  = htmlentities($_POST['username']) . "\n" . password_hash($_POST['password1'], PASSWORD_BCRYPT);
           fwrite($file, $account);
           fclose($file);
+          unlink("install.php");
         }
       }
     ?>
+    <script type="text/javascript">
+      alert("Warning! After you create the account successfully, this file will be deleted. It is a neccessary step for further security");
+    </script>
 
   </body>
 </html>
