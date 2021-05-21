@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="cookies.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+  <script type="text/javascript">
+
+   function changeFunc() {
+
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    if (selectedValue == 1) {
+      document.getElementById('myDIV1').style.display = "none";
+      document.getElementById('myDIV2').style.display = "block";
+    } else if (selectedValue == 2){
+      document.getElementById('myDIV2').style.display = "none";
+      document.getElementById('myDIV1').style.display = "block";
+      
+    } else {
+      document.getElementById('myDIV2').style.display = "none";
+      document.getElementById('myDIV1').style.display = "none";
+    };
+   
+   }
+
+  </script>
   <?php 
   
     $time = array();
@@ -71,6 +92,22 @@
         //   print_r($category[$i][2]);
         //   echo '' . "<br />\n";
         // }
+
+        
+    $new_product_des = [];
+    $new_product_ase = [];
+    
+    
+    for ($i = 0; $i < count( $category); $i++) {
+        
+        $new_product_des[] = $category[$i][3];
+        $new_product_ase[] = $category[$i][3];
+    
+    }
+    
+    rsort($new_product_des);
+    sort($new_product_ase);
+
   
   ?>
   <body onload="check();">
@@ -114,20 +151,89 @@
       <section class='block-product'>
       <section>
         <div class="select">
-          <select class="" name="">
-            <option value="">Newest First</option>
+          <!-- <select class="" name="">
+            <option value="" onchange="myFunctionVisiblity()">Newest First</option>
             <option value="">Olderst First</option>
+          </select> -->
+          <select id="selectBox" onchange="changeFunc();">
+              <option value="1">Oldest First</option>
+              <option value="2">Newest First</option>
           </select>
         </div>
       </section>
-
-
+      <section id="myDIV1" style="display:none">
+            <?php 
+            for ($i = 0; $i < 1; $i++) {
+              $timeProduct_des = $new_product_des[$i];
+              for ($j = 0; $j < 17; $j++){
+                  if ($timeProduct_des == $category[$j][3]){
+                      $name_product_time_des = $category[$j][1];
+                      $price_product_time_des = $category[$j][2];
+                      $product_date_time_des = $category[$j][3];
+                      echo " <div class='product'>
+                              <div class='upper'>
+                                <div class='two-third'>
+                                  <h3><a href='product_detail.html'></a></h3>
+                                  <a href='product_detail.html'><img src='store/$name_product_time_des.png' alt=''></a>
+                                </div>
+                                <div class='one-third'></div>
+                              </div>
+                              <div class='lower'>
+                                <p class='price'>$name_product_time_des</p>
+                                <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_des USD</p>
+                                <p class='description'>$product_date_time_des</p>
+                                <div class='btn'>
+                                  <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                                </div>
+                              </div>
+                            </div> ";
+                  }
+              }
+            }
+            ?>
+      </section>
+      <section id="myDIV2">
+            <?php 
+            
+            for ($i = 0; $i < 1; $i++) {
+              $timeProduct_ase = $new_product_ase[$i];
+              for ($j = 0; $j < 17; $j++){
+                  if ($timeProduct_ase == $category[$j][3]){
+                      $name_product_time_ase = $category[$j][1];
+                      $price_product_time_ase = $category[$j][2];
+                      $product_date_time_ase = $category[$j][3];
+                      echo " <div class='product'>
+                              <div class='upper'>
+                                <div class='two-third'>
+                                  <h3><a href='product_detail.html'></a></h3>
+                                  <a href='product_detail.html'><img src='store/$name_product_time_ase.png' alt=''></a>
+                                </div>
+                                <div class='one-third'></div>
+                              </div>
+                              <div class='lower'>
+                                <p class='price'>$name_product_time_ase</p>
+                                <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_ase USD</p>
+                                <p class='description'>$product_date_time_ase</p>
+                                <div class='btn'>
+                                  <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                                </div>
+                              </div>
+                            </div> ";
+                  }
+              }
+          }
+            ?>
+      </section>
+      <div class="product-section">
+            <h3>Products</h3>
+      </div>
         <?php 
         
         for ($i = $from; $i < $from + $productInPage; $i++) {
           $product_name = $category[$i][1];
           $product_picture = str_replace("'","",$category[$i][1]);
           $product_name_price = $category[$i][2];
+          $product_date = $category[$i][3];
           if ($product_name !== null) {
       
               echo " <div class='product' id='product_php'>
@@ -140,8 +246,8 @@
                   </div>
                   <div class='lower'>
                     <p class='price'>$product_name</p>
-                    <p style='margin-left: 50%; margin-bottom: 0;'>$product_name_price USD</p>
-                    <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
+                    <p style='margin-left: 40%; margin-bottom: 0;'>$product_name_price USD</p>
+                    <p class='description'>$product_date</p>
                     <div class='btn'>
                       <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
                     </div>
