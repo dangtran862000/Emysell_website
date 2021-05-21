@@ -66,7 +66,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
     $new_product = [];
     $flag = 0;
     
-    for ($i = 0; $i < 17; $i++) {
+    for ($i = 0; $i < count( $category); $i++) {
         
         $new_product[] = $category[$i][3];
     
@@ -222,41 +222,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                   }
               }
               ?>
-          <!-- <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-
-             <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>  -->
 
 
           </section>
