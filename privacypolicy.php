@@ -362,11 +362,9 @@
                 <?php 
                  if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                     $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
-                
                         echo $_SESSION['cr'];
                     } else {
-                
-                        echo $_SESSION['cr'];
+                    echo $_SESSION['cr'];
                 }
                 ?>
                 </span>
