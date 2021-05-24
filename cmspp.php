@@ -146,7 +146,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="welcome_pp"/>
+            <textarea type="text" name="welcome_pp" rows="10"><?= $_SESSION['welcome_pp'] ?></textarea>
             <!--Edit the cookies part of the terms of service-->
             <h4>Edit the Consent's part</h4>
             <p>
@@ -160,7 +160,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="consent"/>
+            <textarea type="text" name="consent" rows="10" ><?= $_SESSION['consent'] ?></textarea>
             <!--Edit the Information we collect part of the pp-->
             <h4>Edit the Information we collect's part</h4>
             <p>
@@ -176,7 +176,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="collect"/>
+            <textarea type="text" name="collect"><?= $_SESSION['collect'] ?></textarea>
 
             <!--Edit for How we use your information-->
             <h4>Edit for How we use your information</h4>
@@ -201,7 +201,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="info"/>
+            <textarea type="text" name="info" rows="10" ><?= $_SESSION['info'] ?></textarea>
             <!--Edit for Log Files-->
             <h4>Edit for Log Files</h4>
             <p>
@@ -215,7 +215,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="log">
+            <textarea type="text" name="log" rows="10" ><?= $_SESSION['log'] ?></textarea>
 
             <!--Edit for Cookies and Web Beacons-->
             <h4>Edit for Cookies and Web Beacons</h4>
@@ -232,7 +232,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="beacons">
+            <textarea type="text" name="beacons" rows="10" ><?= $_SESSION['beacons'] ?></textarea>
 
             <!--Edit Advertising Partners Privacy Policies-->
             <h4>Edit for Advertising Partners Privacy Policies</h4>
@@ -251,7 +251,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="adv">
+            <textarea type="text" name="adv" rows="10" ><?= $_SESSION['adv'] ?></textarea>
 
             <!--Edit for Third Party Privacy Policies-->
             <h4>Edit for Third Party Privacy Policies</h4>
@@ -268,7 +268,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="party">
+            <textarea type="text" name="party" rows="10" ><?= $_SESSION['party'] ?></textarea>
 
             <!--Edit for CCPA Privacy Rights (Do Not Sell My Personal Information)-->
             <h4>Edit for CCPA Privacy Rights (Do Not Sell My Personal Information)</h4>
@@ -288,7 +288,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="ccpa">
+            <textarea type="text" name="ccpa"rows="10"><?= $_SESSION['ccpa'] ?></textarea>
 
             <!--Edit for GDPR Data Protection Rights-->
             <h4>Edit for GDPR Data Protection Rights</h4>
@@ -311,7 +311,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="gdpr">
+            <textarea type="text" name="gdpr" rows="10" ><?= $_SESSION['gdpr'] ?></textarea>
 
              <!--Edit for Children's Information-->
              <h4>Edit for Children's Information</h4>
@@ -328,9 +328,10 @@
                     
                 ?>
             </p>
-            <input type="text" name="child">
+            <textarea type="text" name="child" rows="10"><?= $_SESSION['child'] ?></textarea>
 
-            <button type="submit" name="submit" class="button_submit">Submit</button>  
+            <button type="submit" name="submit" class="button_submit">Submit</button>
+            <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
         </form>
        
         </main>
@@ -376,7 +377,18 @@
         <div class="footer_col">
             <a href="tos.php"><span>Terms of Service</span></a>
             <a href="privacypolicy.php"><span>Privacy Policy</span></a>
-            <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
+            <a>
+                <span> 
+                <?php 
+                 if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
+                    $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
+                        echo $_SESSION['cr'];
+                    } else {
+                    echo $_SESSION['cr'];
+                }
+                ?>
+                </span>
+            </a>
         </div>
 
     </footer>

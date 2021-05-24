@@ -6,7 +6,7 @@
       // create a cookie that expires after 7 days
       setcookie('loggedin_name', $_POST['username'], time() + 60 * 60 * 24 * 7);
       $_SESSION['username'] = $_POST['username'];
-      header('location: cms.php');
+      header('location: dashboard.php');
     }
     $status = 'Invalid username/password';
   }
