@@ -78,7 +78,24 @@
 
             </nav>
         </header>
-        <h1>Welcome to the Dashboard <?= $_SESSION['username'] ?></h1>
+        <h1 style="width:100%; text-align:center;">Welcome to the Dashboard <?= $_SESSION['username'] ?></h1>
+
+        <!--Edit copyright-->
+        <a href="copyright.php">  
+            <input type="Edit copyright"/>  
+        </a>
+
+        <!--Edit Terms and Conditions -->
+        <a href="tos.php">  
+            <input type="Edit Terms and Conditions"/>  
+        </a>
+
+         <!--Edit Privacy Policy-->
+         <a href="privacypolicy.php">  
+            <input type="Edit Privacy Policy"/>  
+        </a>
+
+
         <form action="" method="post">
             <input type="text" name="name">
             <input type="text" name="email">
