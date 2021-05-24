@@ -144,7 +144,7 @@
                     }
                 ?>
             </p>
-            <input type="text" name="welcome_tos"/>
+            <textarea type="text" name="welcome_tos" rows="10"><?= $_SESSION['welcome_tos'] ?></textarea>
             <!--Edit the cookies part of the terms of service-->
             <h4>Edit the cookies's part</h4>
             <p>
@@ -159,13 +159,13 @@
                     
                 ?>
             </p>
-            <input type="text" name="cookies"/>
+            <textarea type="text" name="cookies" rows="10" ><?= $_SESSION['cookies'] ?></textarea>
             <!--Edit the liceses part of the terms of service-->
             <h4>Edit the license's part</h4>
             <p>
                 <?php 
                     if (!isset($_SESSION['license']) && empty($_SESSION['license'])){
-                        $_SESSION['license'] = '        <p>Unless otherwise stated, EmySell and/or its licensors own the intellectual property rights for all material on EmySell. All intellectual property rights are reserved. You may access this from EmySell for your own personal use subjected to restrictions set in these terms and conditions.</p>
+                        $_SESSION['license'] = '<p>Unless otherwise stated, EmySell and/or its licensors own the intellectual property rights for all material on EmySell. All intellectual property rights are reserved. You may access this from EmySell for your own personal use subjected to restrictions set in these terms and conditions.</p>
 
                         <p>You must not:</p>
                         <ul>
@@ -199,7 +199,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="license"/>
+            <textarea type="text" name="license" rows="10"><?= $_SESSION['license'] ?></textarea>
 
             <!--Edit for Hyperlinking to our Content-->
             <h4>Edit for Hyperlinking to our Contents</h4>
@@ -253,7 +253,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="hyper">
+            <textarea type="text" name="hyper" rows="10"><?= $_SESSION['hyper'] ?></textarea>
             <!--Edit for Iframe-->
             <h4>Edit for Iframe</h4>
             <p>
@@ -268,7 +268,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="iframe">
+            <textarea type="text" name="iframe" rows="10"><?= $_SESSION['iframe'] ?></textarea>
 
             <!--Edit for Content Liability-->
             <h4>Edit for Content Liability</h4>
@@ -284,7 +284,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="liability">
+            <textarea type="text" name="liability" rows="10" >"<?= $_SESSION['liability'] ?></textarea>
 
             <!--Edit for Your Privacy-->
             <h4>Edit for Your Privacy</h4>
@@ -299,7 +299,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="privacy">
+            <textarea type="text" name="privacy" rows="10" ><?= $_SESSION['privacy'] ?></textarea>
 
             <!--Edit for Reservation of Rights-->
             <h4>Edit for Reservation of Rights</h4>
@@ -314,14 +314,14 @@
                     
                 ?>
             </p>
-            <input type="text" name="right">
+            <textarea type="text" name="right" rows="10" ><?= $_SESSION['right'] ?></textarea>
 
             <!--Edit for Removal of links from our website-->
             <h4>Edit for Removal of links from our website</h4>
             <p>
                 <?php 
                     if (!isset($_SESSION['remove']) && empty($_SESSION['remove'])){
-                        $_SESSION['remove'] = '  <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
+                        $_SESSION['remove'] = '<p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
 
                         <p>We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.</p>
                 ';
@@ -332,8 +332,7 @@
                     
                 ?>
             </p>
-            <input type="text" name="remove">
-
+            <textarea type="text" name="remove" rows="10"><?= $_SESSION['remove'] ?>"></textarea>
             <!--Edit for Disclaimer-->
             <h4>Edit for Disclaimer</h4>
             <p>
@@ -359,9 +358,10 @@
                     
                 ?>
             </p>
-            <input type="text" name="disclaim">
+            <textarea type="text" rows="10" name="disclaim"><?= $_SESSION['disclaim'] ?></textarea>
 
-            <button type="submit" name="submit" class="button_submit">Submit</button>  
+            <button type="submit" name="submit" class="button_submit">Submit</button>
+            <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>    
         </form>
        
         </main>
@@ -407,7 +407,14 @@
         <div class="footer_col">
             <a href="tos.php"><span>Terms of Service</span></a>
             <a href="privacypolicy.php"><span>Privacy Policy</span></a>
-            <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
+            <a><span>  <?php 
+                 if (!isset($_SESSION['cc'])  && empty($_SESSION['cc'])){
+                    $_SESSION['cc'] = '© 2021, EmySell.com, Inc. or its affiliates';
+                        echo $_SESSION['welcome_tos'];
+                    } else {
+                    echo $_SESSION['welcome_tos'];
+                }
+                ?></span></a>
         </div>
 
     </footer>
