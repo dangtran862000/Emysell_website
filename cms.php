@@ -407,14 +407,18 @@
         <div class="footer_col">
             <a href="tos.php"><span>Terms of Service</span></a>
             <a href="privacypolicy.php"><span>Privacy Policy</span></a>
-            <a><span>  <?php 
-                 if (!isset($_SESSION['cc'])  && empty($_SESSION['cc'])){
-                    $_SESSION['cc'] = '© 2021, EmySell.com, Inc. or its affiliates';
-                        echo $_SESSION['welcome_tos'];
+            <a>
+                <span> 
+                <?php 
+                 if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
+                    $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
+                        echo $_SESSION['cr'];
                     } else {
-                    echo $_SESSION['welcome_tos'];
+                    echo $_SESSION['cr'];
                 }
-                ?></span></a>
+                ?>
+                </span>
+            </a>
         </div>
 
     </footer>
