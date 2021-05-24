@@ -330,10 +330,9 @@
             </p>
             <textarea type="text" name="child" rows="10"><?= $_SESSION['child'] ?></textarea>
 
-            <button type="submit" name="submit" class="button_submit">Submit</button>
-            <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
+            <button type="submit" name="submit" class="button_submit">Submit</button>  
         </form>
-       
+        <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
         </main>
        
     </body>

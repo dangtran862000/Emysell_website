@@ -361,9 +361,9 @@
             <textarea type="text" rows="10" name="disclaim"><?= $_SESSION['disclaim'] ?></textarea>
 
             <button type="submit" name="submit" class="button_submit">Submit</button>
-            <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>    
+              
         </form>
-       
+        <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
         </main>
        
     </body>

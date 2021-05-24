@@ -100,8 +100,8 @@
             <input type="text" name="cr" value="<?= $_SESSION['cr'] ?>"/>
 
             <button type="submit" name="submit" class="button_submit">Submit</button>
-            <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
         </form>
+        <a href="dashboard.php"><button class="button_submit">Back to dashboard</button></a>  
        
         </main>
        
