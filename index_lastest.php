@@ -46,8 +46,8 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="browsebycate.html">Browse by categories</a>
-                    <a href="browsebyname.html">Browse by name</a>
+                    <a href="browsebycate.php">Browse by categories</a>
+                    <a href="browsebyname.php">Browse by name</a>
                 </div>
             </div>
             <a href="faq.html">FAQS</a>
@@ -375,7 +375,7 @@
             const img = document.createElement('IMG');
             img.src = slide[img_in];
 
-            a1.href = "shoppage_shopcontact_shopaboutus/shop-page.html";
+            a1.href = "shoppage_shopcontact_shopaboutus/shop-page.php";
             a2.href = "productcategory_productdetail_productcreateTime/product_detail.html";
             a3.href = "productcategory_productdetail_productcreateTime/product_detail.html";
 
@@ -592,9 +592,9 @@
                 const a3 = document.createElement("A");
                 const text3 = document.createTextNode(slide[brand_store]);
 
-                a1.href = "shoppage_shopcontact_shopaboutus/shop-page.html";
-                a2.href = "shoppage_shopcontact_shopaboutus/shop-page.html";
-                a3.href = "shoppage_shopcontact_shopaboutus/shop-page.html";
+                a1.href = "shoppage_shopcontact_shopaboutus/shop-page.php";
+                a2.href = "shoppage_shopcontact_shopaboutus/shop-page.php";
+                a3.href = "shoppage_shopcontact_shopaboutus/shop-page.php";
                 img.alt = "shop-img";
 
                 // Adding class to element
@@ -724,7 +724,7 @@
                         echo " <div class='product'>
                         <div class='upper'>
                             <div class='two-third-2'>
-                                <h3><a href='shoppage_shopcontact_shopaboutus/shop-page.html' target='_blank'>$feature[8]</a></h3>
+                                <h3><a href='shoppage_shopcontact_shopaboutus/shop-page.php' target='_blank'>$feature[8]</a></h3>
                                 <h3><a href='productcategory_productdetail_productcreateTime/product_detail_new.html'>$feature[2]</a></h3>
                                 <a href='./productcategory_productdetail_productcreateTime/product_detail_new.html'><img src='./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg' alt=''></a>
                             </div>
@@ -747,7 +747,7 @@
                 <!-- <div class="product">
                     <div class="upper">
                         <div class='two-third'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">ZARA</a></h3>
+                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">ZARA</a></h3>
                             <h3><a href="productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
                             <a href="productcategory_productdetail_productcreateTime/product_detail.html"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro1.jpg" alt=""></a>
                         </div>
@@ -766,7 +766,7 @@
                 <div class="product">
                     <div class="upper">
                         <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">ZARA</a></h3>
+                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">ZARA</a></h3>
                             <h3><a href="productcategory_productdetail_productcreateTime/product_detail_new.html">T-shirt 2</a></h3>
                             <a href="productcategory_productdetail_productcreateTime/product_detail.html"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg" alt=""></a>
                         </div>
@@ -786,7 +786,7 @@
                 <div class="product">
                     <div class="upper">
                         <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">H&M</a></h3>
+                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
                             <h3><a href="productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 3</a></h3>
                             <a href="productcategory_productdetail_productcreateTime/product_detail.html"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro1.jpg" alt=""></a>
                         </div>
@@ -806,7 +806,7 @@
                 <div class="product">
                     <div class="upper">
                         <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">H&M</a></h3>
+                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
                             <h3><a href="productcategory_productdetail_productcreateTime/product_detail_new.html">T-shirt 4</a></h3>
                             <a href="./productcategory_productdetail_productcreateTime/product_detail_new.html"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg" alt=""></a>
                         </div>
@@ -826,7 +826,7 @@
                 <div class="product">
                     <div class="upper">
                         <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">H&M</a></h3>
+                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
                             <h3><a href="productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 5</a></h3>
                             <a href="productcategory_productdetail_productcreateTime/product_detail.html"><img src="productcategory_productdetail_productcreateTime/store/t-shirt-5.png" alt=""></a>
                         </div>
@@ -864,54 +864,54 @@
                 foreach ($feature_stores as $store){
                     echo"<div class='shop-item'>
                             <div class='shop-item__image'>
-                                <a href='shoppage_shopcontact_shopaboutus/shop-page.html' target='_blank'><img src='shoppage_shopcontact_shopaboutus/images/logo1.jpg' class='shop-img' alt='shop-img'></a>
-                                <a href='shoppage_shopcontact_shopaboutus/shop-page.html' class='shop-item__btn' target='_blank'>Visit Shop</a>
+                                <a href='shoppage_shopcontact_shopaboutus/shop-page.php' target='_blank'><img src='shoppage_shopcontact_shopaboutus/images/logo1.jpg' class='shop-img' alt='shop-img'></a>
+                                <a href='shoppage_shopcontact_shopaboutus/shop-page.php' class='shop-item__btn' target='_blank'>Visit Shop</a>
                             </div>
-                            <h3 class='shop-item__name'><a href='shoppage_shopcontact_shopaboutus/shop-page.html' target='_blank'>$store[2]</a></h3>
+                            <h3 class='shop-item__name'><a href='shoppage_shopcontact_shopaboutus/shop-page.php' target='_blank'>$store[2]</a></h3>
                     </div>";
                 }
             ?>
                 <!-- <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img src="shoppage_shopcontact_shopaboutus/images/logo1.jpg" class="shop-img" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img src="shoppage_shopcontact_shopaboutus/images/logo1.jpg" class="shop-img" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">Nike</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Nike</a></h3>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo2.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo2.jpeg" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">Vans</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Vans</a></h3>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo3.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo3.jpeg" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">Champion</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Champion</a></h3>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo4.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo4.jpeg" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">Routine</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Routine</a></h3>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo5.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo5.jpeg" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">Aldo</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Aldo</a></h3>
                 </div>
                 <div class="shop-item">
                     <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/loho6.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn" target="_blank">Visit Shop</a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/loho6.jpeg" alt="shop-img"></a>
+                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
                     </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.html" target="_blank">G2000</a></h3>
+                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">G2000</a></h3>
                 </div> -->
             </div>
         </section>

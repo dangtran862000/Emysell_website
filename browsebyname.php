@@ -41,8 +41,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="browsebycate.html">Browse by categories</a>
-                <a href="browsebyname.html">Browse by name</a>
+                <a href="browsebycate.php">Browse by categories</a>
+                <a href="browsebyname.php">Browse by name</a>
             </div>
         </div>
         <a href="faq.html">FAQS</a>
@@ -64,32 +64,36 @@
             <div id="wrapper">
                <div class="scrollbar" id="style-3">
                    <div class="navside">
-                       <li><a href="#">A</a></li>
-                       <li><a href="#">B</a></li>
-                       <li><a href="#">C</a></li>
-                       <li><a href="#">D</a></li>
-                       <li><a href="#">E</a></li>
-                       <li><a href="#">F</a></li>
-                       <li><a href="#">G</a></li>
-                       <li><a href="#">H</a></li>
-                       <li><a href="#">I</a></li>
-                       <li><a href="#">J</a></li>
-                       <li><a href="#">K</a></li>
-                       <li><a href="#">L</a></li>
-                       <li><a href="#">M</a></li>
-                       <li><a href="#">N</a></li>
-                       <li><a href="#">O</a></li>
-                       <li><a href="#">P</a></li>
-                       <li><a href="#">Q</a></li>
-                       <li><a href="#">R</a></li>
-                       <li><a href="#">S</a></li>
-                       <li><a href="#">T</a></li>
-                       <li><a href="#">U</a></li>
-                       <li><a href="#">V</a></li>
-                       <li><a href="#">W</a></li>
-                       <li><a href="#">X</a></li>
-                       <li><a href="#">Y</a></li>
-                       <li><a href="#">Z</a></li>
+
+                     <form class="" action="browsebyname.php" method="post">
+                       <li><a href="#"> <button type="submit" name="A" value='find'>A</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="B" value='find'>B</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="C" value='find'>C</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="D" value='find'>D</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="E" value='find'>E</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="F" value='find'>F</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="G" value='find'>G</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="H" value='find'>H</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="I" value='find'>I</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="J" value='find'>J</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="K" value='find'>K</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="L" value='find'>L</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="M" value='find'>M</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="N" value='find'>N</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="O" value='find'>O</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="P" value='find'>P</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="Q" value='find'>Q</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="R" value='find'>R</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="S" value='find'>S</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="T" value='find'>T</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="U" value='find'>U</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="V" value='find'>V</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="W" value='find'>W</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="X" value='find'>X</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="Y" value='find'>Y</button> </a></li>
+                       <li><a href="#"> <button type="submit" name="Z" value='find'>Z</button> </a></li>
+                     </form>
+
                    </div>
                    <div class="force-overflow"></div>
                </div>
@@ -99,61 +103,54 @@
     <section class="shop-container">
         <h1>Browse Shop By Name</h1>
         <div class="shop-list">
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/hm-logo.jpg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">H&M</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo1.jpg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">San Diego</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo2.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Jo Malena</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo3.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Mortorous </a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo4.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Roll Royce</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo5.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Jo Malena</a></h3>
-            </div>
+            <?php
+            $file = fopen("stores.csv","r");
+            $data = [];
+
+            while (($result = fgetcsv($file)) !== false) {
+              if (array(null) !== $result) { // ignore blank lines
+                  $data[] = $result;
+              }
+            }
+
+
+            if('POST' != $_SERVER['REQUEST_METHOD'] ){
+              for ($i=1; $i < count($data); $i++) {
+                $temp = $data[$i][1];
+                echo "<div class='shop-item'>
+                    <div class='shop-item__image'>
+                        <a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>
+                        <img class='shop-img' src='./shoppage_shopcontact_shopaboutus/images/logo5.jpeg' alt='shop-img'>
+                        </a>
+                        <a href='./shoppage_shopcontact_shopaboutus/shop-page.php' class='shop-item__btn'>Visit Shop</a>
+                    </div>
+                    <h3 class='shop-item__name'><a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>$temp</a></h3>
+                </div>";
+              }
+            } else {
+              foreach($_POST as $key=>$value) {
+                $pattern = "#^$key#";
+                for ($i=1; $i < count($data); $i++) {
+                  $temp = $data[$i][1];
+                  if(preg_match($pattern, $temp)){
+                    echo "<div class='shop-item'>
+                        <div class='shop-item__image'>
+                            <a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>
+                            <img class='shop-img' src='./shoppage_shopcontact_shopaboutus/images/logo5.jpeg' alt='shop-img'>
+                            </a>
+                            <a href='./shoppage_shopcontact_shopaboutus/shop-page.php' class='shop-item__btn'>Visit Shop</a>
+                        </div>
+                        <h3 class='shop-item__name'><a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>$temp</a></h3>
+                    </div>";
+                  }
+                }
+              }
+            }
+
+            fclose($file);
+        ?>
         </div>
+
     </section>
 </main>
 

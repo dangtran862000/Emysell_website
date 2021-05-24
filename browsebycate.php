@@ -39,8 +39,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="browsebycate.html">Browse by categories</a>
-                <a href="browsebyname.html">Browse by name</a>
+                <a href="browsebycate.php">Browse by categories</a>
+                <a href="browsebyname.php">Browse by name</a>
             </div>
         </div>
         <a href="faq.html">FAQS</a>
@@ -53,7 +53,6 @@
 
     </nav>
 </header>
-
 <main style="padding-top: 5%;">
     <div class="side-bar">
         <h2>Shop Categories</h2> <br>
@@ -61,74 +60,92 @@
 
         <div class="drop-down">
             <div class="select">
-              <select class="select" name="" style="content: '\25BC';">
-                <option value="" disabled selected><p>Choose the categories!</p></option>
-                <option value="">Fashion </option>
-                <option value="">Electonics</option>
-                <option value="">Sporting Goods</option>
-                <option value="">Toys & Hobby</option>
-                <option value="">Healthy & Beauty</option>
-              </select>
+              <form class="test" action="browsebycate.php" method="post">
+                <select class="select" name="list" style="content: '\25BC';" onchange="this.form.submit();">
+                  <option disabled selected><p>Choose the categories!</p></option>
+                  <option value="Department stores">Department stores</option>
+                  <option value="Grocery stores">Grocery stores</option>
+                  <option value="Restaurants">Restaurants</option>
+                  <option value="Clothing stores">Clothing stores</option>
+                  <option value="Accessory stores">Accessory stores</option>
+                  <option value="Pharmacies">Pharmacies</option>
+                  <option value="Technology stores">Technology stores</option>
+                  <option value="Pet stores">Pet stores</option>
+                  <option value="Toy stores">Toy stores</option>
+                  <option value="Specialty stores">Specialty stores</option>
+                  <option value="Thrift stores">Thrift stores</option>
+                  <option value="Services">Services</option>
+                  <option value="Kiosks">Kiosks</option>
+                </select>
+              </form>
             </div>
         </div>
     </div>
     <section class="shop-container">
         <h1>Browse Shop By Category</h1>
         <div class="shop-list">
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/hm-logo.jpg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">H&M</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo1.jpg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">San Diego</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo2.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Jo Malena</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo3.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Mortorous </a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo4.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Roll Royce</a></h3>
-            </div>
-            <div class="shop-item">
-                <div class="shop-item__image">
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html">
-                    <img class="shop-img" src="./shoppage_shopcontact_shopaboutus/images/logo5.jpeg" alt="shop-img">
-                    </a>
-                    <a href="./shoppage_shopcontact_shopaboutus/shop-page.html" class="shop-item__btn">Visit Shop</a>
-                </div>
-                <h3 class="shop-item__name"><a href="./shoppage_shopcontact_shopaboutus/shop-page.html">Jo Malena</a></h3>
-            </div>
+          <?php
+          $file1 = fopen("categories.csv","r");
+          $categories = [];
+
+          // while(! feof($file1)){
+          //   $categories[] = fgetcsv($file1);
+          // }
+          while (($result = fgetcsv($file1)) !== false) {
+            if (array(null) !== $result) { // ignore blank lines
+                $categories[] = $result;
+            }
+          }
+
+          $file2 = fopen("stores.csv","r");
+          $stores = [];
+
+          while (($result = fgetcsv($file2)) !== false) {
+            if (array(null) !== $result) { // ignore blank lines
+                $stores[] = $result;
+            }
+          }
+
+          if('POST' == $_SERVER['REQUEST_METHOD'] ){
+            foreach ($_POST as $key1 => $value1) {
+              for ($i=1; $i < count($categories); $i++) {
+                if($categories[$i][1] == $value1){
+                  for ($j = 1; $j < count($stores); $j++) {
+                    if($stores[$j][2] == $categories[$i][0]){
+                      $temp = $stores[$j][1];
+                      echo "<div class='shop-item'>
+                          <div class='shop-item__image'>
+                              <a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>
+                              <img class='shop-img' src='./shoppage_shopcontact_shopaboutus/images/logo5.jpeg' alt='shop-img'>
+                              </a>
+                              <a href='./shoppage_shopcontact_shopaboutus/shop-page.php' class='shop-item__btn'>Visit Shop</a>
+                          </div>
+                          <h3 class='shop-item__name'><a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>$temp</a></h3>
+                      </div>";
+                    }
+                  }
+                }
+              }
+            }
+          } else {
+            for ($i=1; $i < count($stores); $i++) {
+              $temp = $stores[$i][1];
+              echo "<div class='shop-item'>
+                  <div class='shop-item__image'>
+                      <a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>
+                      <img class='shop-img' src='./shoppage_shopcontact_shopaboutus/images/logo5.jpeg' alt='shop-img'>
+                      </a>
+                      <a href='./shoppage_shopcontact_shopaboutus/shop-page.php' class='shop-item__btn'>Visit Shop</a>
+                  </div>
+                  <h3 class='shop-item__name'><a href='./shoppage_shopcontact_shopaboutus/shop-page.php'>$temp</a></h3>
+              </div>";
+            }
+          }
+
+
+          fclose($file1);
+          fclose($file2);
+      ?>
         </div>
     </section>
 </main>
@@ -143,7 +160,7 @@
 <!--Footer Area-->
     <!-- Element that contains the client's contact email, phone and address details
         (these can be dummy data). Please put your student name(s) and student id(s) in the footer with a link to your GitHub repository.-->
-        <footer style="background-color: #131a22; color:white; padding-bottom:5%;">
+        <footer style=" background-color: #131a22; color:white; padding-bottom:5%;">
             <div class="flex">
                 <!--Zero Columns-->
                 <div class="footer_column0" style="flex: 2; margin: 1% 5% 0 5%">
