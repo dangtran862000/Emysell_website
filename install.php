@@ -25,6 +25,30 @@
         display: block;
         margin: 0 auto;
         margin-bottom: 20px;
+        border-radius: 10px;
+        border: 2px solid black;
+      }
+
+      input:focus{
+        outline: none;
+      }
+
+      input[type="submit"]{
+        display: inline-block;
+        background-color: #17486a;
+        color: white;
+        text-decoration: none;
+
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 30px;
+        transition: 0.2s;
+        border: none;
+      }
+
+      input[type="submit"]:hover{
+        background-color: #03BFCB;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -41,18 +65,19 @@
       <label for="Password">Type the password again</label>
       <input type="password" name="password2">
 
-      <input type="submit" name="Submit" value="Submit" onclick="inform();">
+      <input type="submit" name="Submit" value="Create" onclick="inform();">
     </form>
 
     <?php
 
       if(isset($_POST['Submit'])){
         if($_POST['password1'] == $_POST['password2']){
-          $file = fopen('../admin.txt', 'w');
-          $account  = htmlentities($_POST['username']) . "\n" . password_hash($_POST['password1'], PASSWORD_BCRYPT);
-          fwrite($file, $account);
+          $file = fopen('../admin.csv', 'w');
+          $username  = array(htmlentities($_POST['username']));
+          $password = array(password_hash($_POST['password1'], PASSWORD_BCRYPT));
+          fputcsv($file, $username);
+          fputcsv($file, $password);
           fclose($file);
-          unlink("install.php");
         }
       }
     ?>
