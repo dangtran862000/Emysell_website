@@ -6,16 +6,16 @@
     $fp = fopen($filename, "r");
 
     while ($aLineOfCells = fgetcsv($fp)) {
-      
+
           $records[] = $aLineOfCells;
-       
+
     }
     fclose($fp);
 
     return $records;
   }
   $filename = "../admin.csv";
-  $user_record = createArray("filename");
+  $user_record = createArray($filename);
 
   if (isset($_POST['act'])) {
     foreach ($user_record as $records){
@@ -27,7 +27,7 @@
         }
     }
     $status = 'Invalid username/password';
-   
+
   }
 ?>
 <!DOCTYPE html>
