@@ -39,7 +39,7 @@
             <a href="index.php">Home</a>
             <a href="aboutus.php">About us</a>
             <a href="fee.php">Fees</a>
-            <a href="Myaccount/myaccount.html">My Account</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse

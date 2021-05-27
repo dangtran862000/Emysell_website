@@ -87,35 +87,36 @@
     </head>
     <body>
         <!--Header Area-->
-        <!--Navigation area-->
-        <nav class="navbar" id="myTopnav">
-                <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-                <a class="navbar-brand" href="index.php">
-                    <div class="logo-image">
-                        <img src="image\logo123.png" class="img-fluid" alt="image_logo_website">
-                    </div>
-                </a>
+        <header>
+            <!--Navigation area-->
+            <nav class="navbar" id="myTopnav">
+                    <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
+                    <a class="navbar-brand" href="index.php">
+                        <div class="logo-image">
+                            <img src="image\logo123.png" class="img-fluid" alt="image_logo_website">
+                        </div>
+                    </a>
 
-                <a href="index.php">Home</a>
-                <a href="aboutus.php">About us</a>
-                <a href="fee.php">Fees</a>
-                <a href="Myaccount/myaccount.html">My Account</a>
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        Browse
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="browsebycate.php">Browse by categories</a>
-                        <a href="browsebyname.php">Browse by name</a>
+                    <a href="index.php">Home</a>
+                    <a href="aboutus.php">About us</a>
+                    <a href="fee.php">Fees</a>
+                    <a href="Myaccount/myaccount.php">My Account</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Browse
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="browsebycate.php">Browse by categories</a>
+                            <a href="browsebyname.php">Browse by name</a>
+                        </div>
                     </div>
-                </div>
-                <a href="faq.php">FAQS</a>
-                <a href="contact.php">Contact</a>
-                <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
-                    <p class="button">Sign Up</p>
-                </a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                    <a href="faq.php">FAQS</a>
+                    <a href="contact.php">Contact</a>
+                    <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+                        <p class="button">Sign Up</p>
+                    </a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
             </nav>
