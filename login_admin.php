@@ -19,7 +19,7 @@
 
   if (isset($_POST['act'])) {
     foreach ($user_record as $records){
-        if (isset($_POST['pass']) && $_POST['username'] == $records[0] && password_verify($_POST['password'], $records[1])) {
+        if (isset($_POST['pass']) && $_POST['username'] == $records[0] && password_verify($_POST['pass'], $records[1])) {
           // create a cookie that expires after 7 days
           setcookie('loggedin_name', $_POST['username'], time() + 60 * 60 * 24 * 7);
           $_SESSION['username'] = $_POST['username'];
