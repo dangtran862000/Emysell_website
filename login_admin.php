@@ -15,7 +15,7 @@
     return $records;
   }
   $filename = "../admin.csv";
-  $user_record = createArray("filename");
+  $user_record = createArray($filename);
 
   if (isset($_POST['act'])) {
     foreach ($user_record as $records){
