@@ -6,9 +6,9 @@
     $fp = fopen($filename, "r");
 
     while ($aLineOfCells = fgetcsv($fp)) {
-      
+
           $records[] = $aLineOfCells;
-       
+
     }
     fclose($fp);
 
@@ -27,7 +27,7 @@
         }
     }
     $status = 'Invalid username/password';
-   
+
   }
 ?>
 <!DOCTYPE html>
