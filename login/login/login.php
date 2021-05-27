@@ -35,11 +35,9 @@
     <?php
     if(isset($_POST["email-login"])){
         $email_input = $_POST["email-login"];
-        $password_nothas_input = $_POST["password-login"]
-        $password_input = 
+        $password_input = $_POST["password-login"];
     }
     ?>
-
 <?php
     $file_pointer = '../res/data.txt';
     if(file_exists($file_pointer)){
@@ -56,18 +54,21 @@
                     echo "Found matches:\n";
                     $line = implode("\n", $matches[0]);
                     $user_details = explode('||', $line);
-                    $email = $user_details[3];
+                    $email1 = $user_details[3];
                     $password = $user_details[8];
+                    $verify = password_verify($password_input, $password);
+                    // if($verify){
+                        
+                    // }
                 }else{
-                    echo "false";
+                    echo " Email is not exist";
                 }
             }
         }  
-?>
+?> 
 <script type="text/javascript">
-    var javaScriptVar = "<?php echo $email_input; ?>"; 
-    // alert(javaScriptVar);
-</script> 
+    var javaScriptVar = "<?php echo $email; ?>"; 
+</script>
 <script src="myaccount.js"></script>
 </body>
 </html>

@@ -33,8 +33,9 @@ function validateForm() {
                 isValid = false;
             }
     }else{
-        setSuccessFor(document.getElementById('email-login'));
-        // setErrorFor(document.getElementById('email-login'), 'Email is not exist');
+        // setSuccessFor(document.getElementById('email-login'));
+        setErrorFor(document.getElementById('email-login'), 'Email is not exist');
+        isValid = false;
     }
     if (password=== ""){
         setErrorFor(document.getElementById('password'), 'Password cannot be blank');
