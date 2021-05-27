@@ -1,35 +1,43 @@
 <?php
   session_start();
 
+  function createArray($filename){
+    $records = array();
+    $fp = fopen($filename, "r");
+
+    while ($aLineOfCells = fgetcsv($fp)) {
+
+          $records[] = $aLineOfCells;
+
+    }
+    fclose($fp);
+
+    return $records;
+  }
+  $filename = "../admin.csv";
+  $user_record = createArray($filename);
+
   if (isset($_POST['act'])) {
-    if (isset($_POST['pass']) && $_POST['pass'] == 'P@ssW0rd') {
-      // create a cookie that expires after 7 days
-      setcookie('loggedin_name', $_POST['username'], time() + 60 * 60 * 24 * 7);
-      $_SESSION['username'] = $_POST['username'];
-      header('location: dashboard.php');
+    foreach ($user_record as $records){
+        if (isset($_POST['pass']) && $_POST['username'] == $records[0] && password_verify($_POST['pass'], $records[1])) {
+          // create a cookie that expires after 7 days
+          setcookie('loggedin_name', $_POST['username'], time() + 60 * 60 * 24 * 7);
+          $_SESSION['username'] = $_POST['username'];
+          header('location: dashboard.php');
+        }
     }
     $status = 'Invalid username/password';
+
   }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    form div {
-      margin: 20px 50px;
-    }
-    .error {
-      background-color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="StyleSheet1.css">
 </head>
-<body>
-<?php
-  if (isset($status)) {
-    echo "<h3 class=\"error\">$status</h3>";
-  }
-?>
-  <h2>Login Form</h2>
+<body style="background-color:black;">
+  <!-- <h2>Login Form For Admin</h2>
   <form method="post" action="login_admin.php">
     <div>
       Username<br>
@@ -42,6 +50,24 @@
     <div>
       <input type="submit" name="act" value="Login">
     </div>
-  </form>
+  </form> -->
+  <div class="login-page" style="padding-top: 20%; padding-bottom: 30%;">
+        <div class="form">
+            <h1><b>Admin Login</b></h1>
+            <form class="login-form" method="post" action="login_admin.php">
+                <input type="text" placeholder="username" name="username" />
+                <input type="password" placeholder="password" name="pass" />
+                <button type="submit" name="act" style="background-color:black">login</button>
+                <p class="message">Not registered? <a href="install.php">Create an account</a></p>
+                <p class="message"><a href="forgetpasswork.html">Forgot the password</a></p>
+                <?php
+                    if (isset($status)) {
+                      echo "<p class=\"error\">$status</p>";
+                    }
+                ?>
+            </form>
+        </div>
+    </div>
+   
 </body>
 </html>
