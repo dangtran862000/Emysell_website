@@ -13,7 +13,7 @@ if (sessionStorage.getItem("isLog")){
         document.getElementById('info-page').style.display = 'none';
         document.getElementById('login-page').style.display = 'block';
     }
-
+var javaScriptVar = "hello@gmail.com";
 function validateForm() {
     var email = emailV.value;
     var password = passwordV.value;
@@ -21,7 +21,9 @@ function validateForm() {
     if ( email=== "") {
         setErrorFor(document.getElementById('email-login'), 'Email cannot be blank');
         isValid = false;
-    } else if (email=== javaScriptVar){
+        
+    } else if (email=== "hello@gmail.com"){
+            alert(1);
             setErrorFor(document.getElementById('password'), '');
             if (password ==="1") {
             alert("Succes login!");
@@ -42,7 +44,6 @@ function validateForm() {
         isValid = false;
     }else{
         setErrorFor(document.getElementById('password'), 'Password is incorrect');
-        
     }
     return isValid;
 }

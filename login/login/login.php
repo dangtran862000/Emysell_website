@@ -33,15 +33,18 @@
             </div>
     <!-- Get value from input -->
     <?php
-    if(isset($_POST["email-login"])){
+    if(isset($_POST["submit"])){
         $email_input = $_POST["email-login"];
         $password_input = $_POST["password-login"];
+        echo $email_input;
+        echo "<br>";
+        echo $password_input;
     }
     ?>
 <?php
     $file_pointer = '../res/data.txt';
     if(file_exists($file_pointer)){
-            if(isset($_POST["email-login"])){
+            if(isset($_POST["submit"])){
                 $searchfor = $email_input;
                 // get the file contents, assuming the file to be readable (and exist)
                 $contents = file_get_contents($file_pointer);
@@ -51,23 +54,24 @@
                 $pattern = "/^.*$pattern.*\$/m";
                 // search, and store all matching occurences in $matches
                 if (preg_match_all($pattern, $contents, $matches)) {
-                    echo "Found matches:\n";
                     $line = implode("\n", $matches[0]);
                     $user_details = explode('||', $line);
                     $email1 = $user_details[3];
                     $password = $user_details[8];
                     $verify = password_verify($password_input, $password);
-                    // if($verify){
-                        
-                    // }
+                    echo '
+                        <script type="text/javascript">
+                            var javaScriptVar = "<?php echo $email1; ?>"; 
+                        </script>
+                    ';
                 }else{
-                    echo " Email is not exist";
+                    echo "Email is not exist";
                 }
             }
         }  
 ?> 
 <script type="text/javascript">
-    var javaScriptVar = "<?php echo $email; ?>"; 
+    // var javaScriptVar = "<?php echo $email1; ?>"; 
 </script>
 <script src="myaccount.js"></script>
 </body>
