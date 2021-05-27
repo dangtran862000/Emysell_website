@@ -33,22 +33,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <style>
-    form div {
-      margin: 20px 50px;
-    }
-    .error {
-      background-color: red;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="StyleSheet1.css">
 </head>
-<body>
-<?php
-  if (isset($status)) {
-    echo "<h3 class=\"error\">$status</h3>";
-  }
-?>
-  <h2>Login Form For Admin</h2>
+<body style="background-color:black;">
+  <!-- <h2>Login Form For Admin</h2>
   <form method="post" action="login_admin.php">
     <div>
       Username<br>
@@ -61,6 +50,24 @@
     <div>
       <input type="submit" name="act" value="Login">
     </div>
-  </form>
+  </form> -->
+  <div class="login-page" style="padding-top: 20%; padding-bottom: 30%;">
+        <div class="form">
+            <h1><b>Admin Login</b></h1>
+            <form class="login-form" method="post" action="login_admin.php">
+                <input type="text" placeholder="username" name="username" />
+                <input type="password" placeholder="password" name="pass" />
+                <button type="submit" name="act" style="background-color:black">login</button>
+                <p class="message">Not registered? <a href="install.php">Create an account</a></p>
+                <p class="message"><a href="forgetpasswork.html">Forgot the password</a></p>
+                <?php
+                    if (isset($status)) {
+                      echo "<p class=\"error\">$status</p>";
+                    }
+                ?>
+            </form>
+        </div>
+    </div>
+   
 </body>
 </html>
