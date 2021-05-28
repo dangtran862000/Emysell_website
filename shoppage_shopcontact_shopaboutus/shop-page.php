@@ -117,6 +117,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
             for ($row = 0; $row < 1000; $row++) {
               if ($items[$row][4] == 22 and $items[$row][6] == "TRUE") {
                 // print_r($items[$row][1]);
+                $product_id = $items[$row][0];
                 $product_name = $items[$row][1];
                 $product_price = $items[$row][2];
                 // echo '' . "<br />\n";
@@ -132,7 +133,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                   <p style='margin-left: 50%; margin-bottom: 0;'> $product_price USD</p>
                   <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                   <div class='btn'>
-                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php' class='btn-1'>VIEW DETAIL</a>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php?product=$product_name&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                   </div>
                 </div>
               </div>";
@@ -200,6 +201,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                   $timeProduct = $new_product[$i];
                   for ($j = 0; $j < 17; $j++){
                       if ($timeProduct == $category[$j][3]){
+                          $product_id = $category[$j][0];
                           $name_product_time = $category[$j][1];
                           $price_product_time = $category[$j][2];
                           echo "<div class='product'>
@@ -214,7 +216,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                             <p style='margin-left: 50%; margin-bottom: 0;'> $price_product_time USD</p>
                             <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                             <div class='btn'>
-                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php' class='btn-1'>VIEW DETAIL</a>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php?product=$name_product_time&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                             </div>
                           </div>
                         </div>";

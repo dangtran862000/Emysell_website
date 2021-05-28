@@ -1,5 +1,6 @@
 <?php
   session_start();
+  
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -25,6 +26,65 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+
+  <?php
+  $product_id = $_GET["product_id"];
+  $page = $_GET["product"];
+  $product_name = str_replace("_","'",$page);
+  
+  $time = array();
+  $items = array();
+  $store = array();
+  $product = array();
+  $product_price = array();
+  $count_line = 0;
+  $count = 0;
+  $count_store = 0;
+
+    
+  if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
+      while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
+          $count++;
+          $product_price[] = $data;
+          if ($count == 1) { continue; }
+          $items[] = $data;
+          $time[] = $data;
+          if ($data[4] == 22 and $data[6] == "TRUE") {
+              $count_line++;
+              $product[] = $data[1];
+              $store[] = $data[4];
+              $product_price[] = $data[2];
+          }
+        
+          
+      }
+  }
+  
+  if (($storecsv = fopen('stores.csv', 'r')) !== FALSE) { // Check the resource is valid
+    while (($store_data = fgetcsv($storecsv, 1000, ",")) !== FALSE) { // Check opening the file is OK!
+        $count_store++;
+        if ($count == 1) { continue; }
+        if ($store_data[0] == $store[0]) {
+          $store_name = $store_data[1];
+      }
+    }
+  }
+
+      $page = $_GET["page"];
+      $productInPage = 2;
+      $count_product = 0;
+      $category = [];
+      $max_prob = 0;
+      for ($row = 0; $row < 1000; $row++) {
+          if ($time[$row][4] == 22) {
+              $category[] = $time[$row];
+          }
+      }
+  
+  
+  ?>
+
+
    <body onload="check(); HiddenSignup();">
 
      <!--Header Area-->
@@ -35,31 +95,42 @@
             <a class="navbar-brand" href="index.php">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
+                    <img src="..\image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
             </a>
 
-            <a href="index.php">Home</a>
-            <a href="aboutus.php">About us</a>
-            <a href="fee.php">Fees</a>
-            <a href="Myaccount/myaccount.php">My Account</a>
+            <a href="..\index.php">Home</a>
+            <a href="..\aboutus.php">About us</a>
+            <a href="..\fee.php">Fees</a>
+            <a href="..\Myaccount/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="browsebycate.php">Browse by categories</a>
-                    <a href="browsebyname.php">Browse by name</a>
+                    <a href="..\browsebycate.php">Browse by categories</a>
+                    <a href="..\browsebyname.php">Browse by name</a>
                 </div>
             </div>
-            <a href="faq.php">FAQS</a>
-            <a href="contact.php">Contact</a>
-            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+            <a href="..\faq.php">FAQS</a>
+            <a href="..\contact.php">Contact</a>
+            <a id='signup' class="signup" href="../Myaccount/myaccount.php" style="padding:0;">
                 <p class="button">Sign Up</p>
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
+            <div class="cart">
+                <a href="../productcategory_productdetail_productcreateTime/cart.php?product=<?php echo $product_name?>&product_id=<?php echo $product_id?>" style="float: right;">
+                    <ion-icon name="basket"></ion-icon>Cart <span><?php
+                    if (count( $_SESSION['current_product']) == null) {
+                      echo 0;
+                    } else {
+                      $count = count( $_SESSION['current_product']);
+                    echo $count;
+                    }
+                    ?></span>
+                </a>
+            </div>
 
         </nav>
     </header>
@@ -86,72 +157,103 @@
                <a href="" class="slider"></a>
              </div>
 
-             <div class="slide-image">
-              <div id="img-1">
-                <img class="show-img-product" src="./store/cottonflannelshirt.jpg">
-              </div>
-              <div id="img-2">
-                <img class="show-img-product" src="../shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg">
-              </div>
-              <div id="img-3">
-                <img class="show-img-product" src="img-3.png">
+             
+
+           <?php 
+              $product_id = $_GET["product_id"];
+              $page = $_GET["product"];
+              $product_name = str_replace("_","'",$page);
+              $quantity = 0;
+              for ($i = 0; $i < count($category); $i++) {
+                if ($category[$i][1] == $product_name and $category[$i][0] == $product_id){
+                  $product_price = $category[$i][2];
+                  echo "
+               <div class='slide-image'>
+              <div id='img-1'>
+                <img class='show-img-product' src='./store/$page.png'>
               </div>
              </div>
 
-             <div class="logo"><img src="kisspng-king-of-prussia-grafton-centre-h-m-retail-logo-m-5abe84c8b4b1e8.4654672615224352727401.png"></div>
-           </div>
-
-
-           <div class="right">
-             <div class="title-sale">
-               <div class="left-title">
-                 <h1 class="title">Cotton flannel shirt</h1>
-                 <p>Women fashion </p>
+             <div class='logo'><img src='kisspng-king-of-prussia-grafton-centre-h-m-retail-logo-m-5abe84c8b4b1e8.4654672615224352727401.png'></div>
+            </div>
+               <div class='right'>
+               <div class='title-sale'>
+                 <div class='left-title'>
+                 <h1 class='title'>$product_name</h1>
+                 </div>
+                 <img src='sale-tag.png' alt=''>
                </div>
-               <img src="sale-tag.png" alt="">
-             </div>
-
-
-             <div class="price-star">
-               <span class="price">₫ 299.000</span>
-               <span class="stars">★★★★★</span>
-             </div>
-
-             <h3>Description</h3>
-             <div class="description">
-               T-shirt in stretch cotton jersey with short sleeves. Muscle fit-designed to showcase the body’s natural physique.
-             </div>
-
-             <h3>Color</h3>
-             <div class="block-colors">
-               <span class="color"></span>
-               <span class="color selected"></span>
-               <span class="color"></span>
-             </div>
-
-             <h3>Size</h3>
-             <div class="block-sizes">
-               <span class="size">S</span>
-               <span class="size">M</span>
-               <span class="size selected">L</span>
-               <span class="size">XL</span>
-             </div>
-
-             <div class="btn-1" style="display: flex;">
-              <a class="add-cart cart1" href="#c1"><div class="purchase">ADD TO CART</div></a>
-              <input type="hidden" value="15" />
-              <a class="add-cart cart2" href="#" style="display: none;">Add Cart</a>
-              <input type="hidden" value="20" />
-              <a class="add-cart cart1"href="../productcategory_productdetail_productcreateTime/cart.php"><div class="purchase">BUY NOW</div></a>
-              <input type="hidden" value="15" />
-             </div>
-      </div>
+  
+  
+               <div class='price-star'>
+                 <span class='price'>$product_price USD</span>
+                 <span class='stars'>★★★★★</span>
+               </div>
+  
+               <h3>Description</h3>
+               <div class='description'>
+                 T-shirt in stretch cotton jersey with short sleeves. Muscle fit-designed to showcase the body’s natural physique.
+               </div>
+  
+               <h3>Color</h3>
+               <div class='block-colors'>
+                 <span class='color'></span>
+                 <span class='color selected'></span>
+                 <span class='color'></span>
+               </div>
+  
+               <h3>Size</h3>
+               <div class='block-sizes'>
+                 <span class='size'>S</span>
+                 <span class='size'>M</span>
+                 <span class='size selected'>L</span>
+                 <span class='size'>XL</span>
+               </div>
+               
+               <form method='post' action='product_detail.php?product=$page&product_id=$product_id'>   
+               <div class='btn-1' style='display: float-left;'>
+                <input type='submit' name='cart' class='add-cart cart1 purchase' value='ADD TO CART'>
+                <a class='add-cart cart1' href='../productcategory_productdetail_productcreateTime/cart.php?product=$page&product_id=$product_id'><div class='purchase'>BUY NOW</div></a>
+                </div>
+                </form> 
+              
+               
+               
+               
+                </div>";
+                }
+                
+              }
+              
+            ?>
+           
 
            </div>
          </div>
        </section>
+        
+        <?php
 
+            
 
+            if (isset($_POST['clear'])) {
+              session_destroy();
+              header("Refresh:0");
+            }
+
+            if (isset( $_POST['cart'])) {
+              $quantity ++;
+              $current_product = [
+                'name' =>  $product_name,
+                'duration' =>   $product_price,
+                'quantity' =>   $quantity,
+              ];
+              $_SESSION['current_product'][] = $current_product;
+              // $_SESSION['current_product'] =  array_unique($_SESSION['current_product']);
+              header("Refresh:0");
+            }
+              
+        ?>
        <div class="clear"></div>
 
 
@@ -269,7 +371,7 @@
       }
   </script>
   <script type="text/javascript" src="javascript.js"></script>
-  <script type="text/javascript" src="cart.js"></script>
+  <!-- <script type="text/javascript" src="cart.js"></script> -->
   <script type="text/javascript" src="../Myaccount/myaccount.js"></script>
    </body>
 </html>

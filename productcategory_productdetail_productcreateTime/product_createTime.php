@@ -167,6 +167,7 @@
               $timeProduct_des = $new_product_des[$i];
               for ($j = 0; $j < 17; $j++){
                   if ($timeProduct_des == $category[$j][3]){
+                      $product_id = $category[$j][0];
                       $name_product_time_des = $category[$j][1];
                       $price_product_time_des = $category[$j][2];
                       $product_date_time_des = $category[$j][3];
@@ -183,7 +184,7 @@
                                 <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_des USD</p>
                                 <p class='description'>$product_date_time_des</p>
                                 <div class='btn'>
-                                  <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
+                                  <a href='product_detail.php?product=$name_product_time_des&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                                 </div>
                               </div>
                             </div> ";
@@ -199,6 +200,8 @@
               $timeProduct_ase = $new_product_ase[$i];
               for ($j = 0; $j < 17; $j++){
                   if ($timeProduct_ase == $category[$j][3]){
+                    $name_product_time_ase_pic = str_replace("'","_",$category[$i][1]);
+                      $product_id = $category[$j][0];
                       $name_product_time_ase = $category[$j][1];
                       $price_product_time_ase = $category[$j][2];
                       $product_date_time_ase = $category[$j][3];
@@ -215,7 +218,7 @@
                                 <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_ase USD</p>
                                 <p class='description'>$product_date_time_ase</p>
                                 <div class='btn'>
-                                  <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
+                                  <a href='product_detail.php?product=$name_product_time_ase&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                                 </div>
                               </div>
                             </div> ";
@@ -230,8 +233,9 @@
         <?php 
         
         for ($i = $from; $i < $from + $productInPage; $i++) {
+          $product_id = $category[$i][0];
           $product_name = $category[$i][1];
-          $product_picture = str_replace("'","",$category[$i][1]);
+          $product_picture = str_replace("'","_",$category[$i][1]);
           $product_name_price = $category[$i][2];
           $product_date = $category[$i][3];
           if ($product_name !== null) {
@@ -249,7 +253,7 @@
                     <p style='margin-left: 40%; margin-bottom: 0;'>$product_name_price USD</p>
                     <p class='description'>$product_date</p>
                     <div class='btn'>
-                      <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
+                      <a href='product_detail.php?product=$product_picture&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                     </div>
                   </div>
                 </div> ";
