@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<?php
-
-?>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -210,7 +207,7 @@
         fwrite($fh, $stringData);
         echo "your Registration Information Successfully Inserted.";
         fclose($fh);
-        echo "<script>location.href='reg.php';</script>";
+        echo "<script>location.href='../login/myaccount.php';</script>";
     } elseif (strstr($file, "$phone") && !strstr($file, "$email")) {
         echo '<script type="text/JavaScript">
             alert("Your phone is not uinique");
