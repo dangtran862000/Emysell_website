@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,38 +20,41 @@
 </head>
 <body onload="check();">
      <!--Header Area-->
-<header>
-    <!--Navigation area-->
-    <nav class="navbar" id="myTopnav">
-        <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-        <a class="navbar-brand" href="index.html">
-            <div class="logo-image">
-                <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                <img src="..\image\logo123.png" class="img-fluid" alt="image_logo_website">
+     <header>
+        <!--Navigation area-->
+        <nav class="navbar" id="myTopnav">
+            <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
+            <a class="navbar-brand" href="index.php">
+                <div class="logo-image">
+                    <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
+                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
+                </div>
+            </a>
+
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="fee.php">Fees</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Browse
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="browsebycate.php">Browse by categories</a>
+                    <a href="browsebyname.php">Browse by name</a>
+                </div>
             </div>
-        </a>
-
-        <a href="../index.html">Home</a>
-        <a href="../aboutus.html">About us</a>
-        <a href="../fee.html">Fees</a>
-        <a href="../Myaccount/myaccount.html">My Account</a>
-        <div class="dropdown">
-            <button class="dropbtn">
-                Browse
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../browsebycate.php">Browse by categories</a>
-                <a href="../browsebyname.php">Browse by name</a>
-            </div>
-        </div>
-        <a href="../faq.html">FAQS</a>
-        <a href="../contact.html">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            <a href="faq.php">FAQS</a>
+            <a href="contact.php">Contact</a>
+            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+                <p class="button">Sign Up</p>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
-    </nav>
-  </header>
+        </nav>
+    </header>
 
       <div class="thankyou_container" style="text-align: center;">
         <i style="font-size:10vw; color: green; ;" class="fa">&#xf058;</i>
@@ -113,9 +119,20 @@
           </div>
 
           <div class="footer_col">
-              <a href=""><span>Terms of Service</span></a>
-              <a href=""><span>Privacy Policy</span></a>
-              <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
+            <a href="tos.php"><span>Terms of Service</span></a>
+            <a href="privacypolicy.php"><span>Privacy Policy</span></a>
+            <a>
+                <span> 
+                <?php 
+                 if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
+                    $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
+                        echo $_SESSION['cr'];
+                    } else {
+                    echo $_SESSION['cr'];
+                }
+                ?>
+                </span>
+            </a>
           </div>
 
       </footer>

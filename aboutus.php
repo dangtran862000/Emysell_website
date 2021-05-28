@@ -1,40 +1,43 @@
+<?php
+  session_start();
+?>
 
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EmySell</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="StyleSheet1.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
-    <!--FontList provided by Google Font-->
+    <!--FontList was getting from the Google Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
-<body style="background-color:black" onload="check();">
-    <!--Header Area-->
+<body onload="check(); HiddenSignup();">
+
+    <!--Navigation area-->
     <header>
         <!--Navigation area-->
         <nav class="navbar" id="myTopnav">
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.php">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                    <img src="image\logo123.png" class="img-fluid" alt="image_logo_website">
+                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
             </a>
 
-            <a href="index.html">Home</a>
-            <a href="aboutus.html">About us</a>
-            <a href="fee.html">Fees</a>
-            <a href="Myaccount/myaccount.html">My Account</a>
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="fee.php">Fees</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
@@ -45,42 +48,70 @@
                     <a href="browsebyname.php">Browse by name</a>
                 </div>
             </div>
-            <a href="faq.html">FAQS</a>
-            <a href="contact.html">Contact</a>
-            <a class="signup" href="../Myaccount/myaccount.html" style="padding:0;">
-
-
+            <a href="faq.php">FAQS</a>
+            <a href="contact.php">Contact</a>
+            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
                 <p class="button">Sign Up</p>
-
-
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
         </nav>
     </header>
-        <div class="login-page" style="padding-top: 20%;">
-            <div class="form">
-                <h1><b>Forgot Your Passwork ?</b></h1>
-                <form class="login-form">
-                <input type="text" placeholder="Email" />
-                <button style="background-color:black">Reset your passwork</button>
-                <p class="message"><a href="../Myaccount/myaccount.html">Back to sign in</a></p>
-                </form>
-            </div>
-        </div>
 
-        <div id="cookies">
-          <h3>I use cookies</h3>
-          <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
-          <button type="button" name="button" onclick="agree();">I understand</button>
-          <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
-        </div>
+<div>
+  <img src="image/aboutusbanner.jpg" class="banner" />
+</div>
+<h1 style="padding-top: 100px; text-align: center; font-family: cursive;">MEET OUR TEAM</h1>
+<h5 style="text-align: center; padding-left: 25%; padding-right: 25%; padding-bottom: 50px; font-family: monospace;">This is my our development team of this website. Our group aim to design a sustainable website for e-commerce in order to provide customers convenient for online shopping. Each member collaborate in developing website effectively which help the workload reduced significantly. It means that we can deliver the product faster for users to experience better, that will enable people to purchase product freely in a short of time, making things easier to experience. </h5>
+<section class="container_aboutus">
 
-<!--Footer Area-->
+
+  <!-- New 03 (Javascript)-->
+    <div id="overlay" onclick="off();"></div>
+  <!-- End New 03 (Javascript) -->
+
+
+<div class="row">
+  <div class="column">
+    <img src="./image/Dang.jpg" alt="The avatar of Hai Dang" class="ava_picture Dang" onclick="on('Dang');">
+    <h5>LA TRAN HAI DANG</h5>
+    <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-facebook-official"></a>
+    <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-google-plus"></a>
+  </div>
+  <div class="column">
+    <img src="./image/Van Anh.jpg" alt="The avatar of Van Anh" class="ava_picture VA" onclick="on('Anh');">
+    <h5>HUYNH VAN ANH</h5>
+
+    <a href="https://www.facebook.com/danidol/" target="_blank" class="fa fa-facebook-official"></a>
+    <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-google-plus"></a>
+  </div>
+  <div class="column">
+    <img src="./image/gianguyen.png" alt="The avatar of Gia Nguyen" class="ava_picture Nguyen" onclick="on('Nguyen');">
+    <h5>PHAM GIA NGUYEN</h5>
+    <a href="https://www.facebook.com/gianguyen.pham.98/" target="_blank" class="fa fa-facebook-official"></a>
+    <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-google-plus"></a>
+  </div>
+  <div class="column">
+    <img src="./image/quynh.png " alt="The avatar of My Quynh" class="ava_picture Quynh" onclick="on('Quynh');">
+    <h5>NGO MY QUYNH</h5>
+    <a href="https://www.facebook.com/profile.php?id=100041083941712" target="_blank" class="fa fa-facebook-official"></a>
+    <a href="https://www.facebook.com/dangla2000/" target="_blank" class="fa fa-google-plus"></a>
+  </div>
+</div>
+</section>
+
+<div id="cookies">
+  <h3>I use cookies</h3>
+  <p>My website uses cookies neccessary for its basic functioning. By continue browsing, you consent to my use of cookies and other technologies</p>
+  <button type="button" name="button" onclick="agree();">I understand</button>
+  <a href="https://gdpr-info.eu/" target="_blank">Learn more</a>
+</div>
+
+    <!--Footer Area-->
     <!-- Element that contains the client's contact email, phone and address details
         (these can be dummy data). Please put your student name(s) and student id(s) in the footer with a link to your GitHub repository.-->
-        <footer style="background-color: #131a22; color:white; padding-bottom:5%; margin-top: 30%;">
+        <footer style="background-color: #131a22; color:white; padding-bottom:5%;">
             <div class="flex">
                 <!--Zero Columns-->
                 <div class="footer_column0" style="flex: 2; margin: 1% 5% 0 5%">
@@ -114,26 +145,24 @@
             </div>
 
             <div class="footer_col">
-                <a href=""><span>Terms of Service</span></a>
-                <a href=""><span>Privacy Policy</span></a>
-                <a><span>© 2021, EmySell.com, Inc. or its affiliates</span></a>
+              <a href="tos.php"><span>Terms of Service</span></a>
+              <a href="privacypolicy.php"><span>Privacy Policy</span></a>
+              <a>
+                  <span> 
+                  <?php 
+                   if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
+                      $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
+                          echo $_SESSION['cr'];
+                      } else {
+                      echo $_SESSION['cr'];
+                  }
+                  ?>
+                  </span>
+              </a>
             </div>
 
         </footer>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
 
-    <script type="text/javascript">
-        $('.autoplay').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            dots: true,
-            arrows: true
-        });
-    </script>
 
     <script>
         function myFunction() {
@@ -146,5 +175,6 @@
         }
     </script>
     <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+    <script type="text/javascript" src="Myaccount/myaccount.js"></script>
 </body>
 </html>

@@ -126,7 +126,7 @@
 
         <ul class="main-nav">
           <li><a href="../shoppage_shopcontact_shopaboutus/shop-page.php">Home</a></li>
-          <li><a href="../shoppage_shopcontact_shopaboutus/aboutus-shop.html">About us</a></li>
+          <li><a href="../shoppage_shopcontact_shopaboutus/aboutus-shop.php">About us</a></li>
           <li><div class="dropdown">
             <button class="dropbtn">Product</button>
             <div class="dropdown-content">
@@ -134,7 +134,7 @@
             <a href="../productcategory_productdetail_productcreateTime/product_createTime.php?page=1">Browse by created time</a>
             </div>
           </div></li>
-          <li><a href="../shoppage_shopcontact_shopaboutus/contact_shop.html">Contact</a></li>
+          <li><a href="../shoppage_shopcontact_shopaboutus/contact_shop.php">Contact</a></li>
         </ul>
       </nav>
       <div class="hero">
@@ -173,8 +173,8 @@
                       echo " <div class='product'>
                               <div class='upper'>
                                 <div class='two-third'>
-                                  <h3><a href='product_detail.html'></a></h3>
-                                  <a href='product_detail.html'><img src='store/$name_product_time_des.png' alt=''></a>
+                                  <h3><a href='product_detail.php'></a></h3>
+                                  <a href='product_detail.php'><img src='store/$name_product_time_des.png' alt=''></a>
                                 </div>
                                 <div class='one-third'></div>
                               </div>
@@ -183,7 +183,7 @@
                                 <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_des USD</p>
                                 <p class='description'>$product_date_time_des</p>
                                 <div class='btn'>
-                                  <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                                  <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
                                 </div>
                               </div>
                             </div> ";
@@ -205,8 +205,8 @@
                       echo " <div class='product'>
                               <div class='upper'>
                                 <div class='two-third'>
-                                  <h3><a href='product_detail.html'></a></h3>
-                                  <a href='product_detail.html'><img src='store/$name_product_time_ase.png' alt=''></a>
+                                  <h3><a href='product_detail.php'></a></h3>
+                                  <a href='product_detail.php'><img src='store/$name_product_time_ase.png' alt=''></a>
                                 </div>
                                 <div class='one-third'></div>
                               </div>
@@ -215,7 +215,7 @@
                                 <p style='margin-left: 40%; margin-bottom: 0;'>$price_product_time_ase USD</p>
                                 <p class='description'>$product_date_time_ase</p>
                                 <div class='btn'>
-                                  <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                                  <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
                                 </div>
                               </div>
                             </div> ";
@@ -239,8 +239,8 @@
               echo " <div class='product' id='product_php'>
                   <div class='upper'>
                     <div class='two-third'>
-                      <h3><a href='product_detail.html'></a></h3>
-                      <a href='product_detail.html'><img src='store/$product_picture.png' alt=''></a>
+                      <h3><a href='product_detail.php'></a></h3>
+                      <a href='product_detail.php'><img src='store/$product_picture.png' alt=''></a>
                     </div>
                     <div class='one-third'></div>
                   </div>
@@ -249,7 +249,7 @@
                     <p style='margin-left: 40%; margin-bottom: 0;'>$product_name_price USD</p>
                     <p class='description'>$product_date</p>
                     <div class='btn'>
-                      <a href='product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                      <a href='product_detail.php' class='btn-1'>VIEW DETAIL</a>
                     </div>
                   </div>
                 </div> ";
@@ -323,9 +323,9 @@
       <div class="footer--right">
           <ul class="footer-nav">
               <li><a href="../shoppage_shopcontact_shopaboutus/shop-page.php">Home</a></li>
-              <li><a href="../shoppage_shopcontact_shopaboutus/aboutus-shop.html">About us</a></li>
+              <li><a href="../shoppage_shopcontact_shopaboutus/aboutus-shop.php">About us</a></li>
               <li><a href="../productcategory_productdetail_productcreateTime/product_category.html">Product</a></li>
-              <li><a href="../shoppage_shopcontact_shopaboutus/contact_shop.html">Contact</a></li>
+              <li><a href="../shoppage_shopcontact_shopaboutus/contact_shop.php">Contact</a></li>
           </ul>
       </div>
   </footer>
