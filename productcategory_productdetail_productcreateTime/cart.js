@@ -307,7 +307,7 @@ function orderButton() {
     localStorage.removeItem('productsInCart');
     localStorage.setItem('totalCost', 0);
     localStorage.setItem('cartNumbers', 0);
-    location.href='../OrderPlacement_thankyoupage/thankyou.html';
+    location.href='../OrderPlacement_thankyoupage/thankyou.php';
       } else {
           alert("PLEASE SIGN UP FIRST !!!");
           window.location.reload();

@@ -23,7 +23,7 @@
 
           <ul class="main-nav">
             <li><a href="shop-page.php">Home</a></li>
-            <li><a href="aboutus-shop.html">About us</a></li>
+            <li><a href="aboutus-shop.php">About us</a></li>
             <li><div class="dropdown">
               <button class="dropbtn">Product</button>
               <div class="dropdown-content">
@@ -31,7 +31,7 @@
               <a href="../productcategory_productdetail_productcreateTime/product_createTime.php?page=1">Browse by created time</a>
               </div>
             </div></li>
-            <li><a href="contact_shop.html">Contact</a></li>
+            <li><a href="contact_shop.php">Contact</a></li>
           </ul>
 
         </nav>
@@ -145,9 +145,9 @@
     <div class="footer--right">
         <ul class="footer-nav">
             <li><a href="shop-page.php">Home</a></li>
-            <li><a href="aboutus-shop.html">About us</a></li>
+            <li><a href="aboutus-shop.php">About us</a></li>
             <li><a href="../productcategory_productdetail_productcreateTime/product_category.html">Product</a></li>
-            <li><a href="contact_shop.html">Contact</a></li>
+            <li><a href="contact_shop.php">Contact</a></li>
         </ul>
     </div>
 </footer>

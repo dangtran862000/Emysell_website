@@ -93,7 +93,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
 
           <ul class="main-nav">
             <li><a href="shop-page.php">Home</a></li>
-            <li><a href="aboutus-shop.html">About us</a></li>
+            <li><a href="aboutus-shop.php">About us</a></li>
             <li><div class="dropdown">
               <button class="dropbtn">Product</button>
               <div class="dropdown-content">
@@ -101,7 +101,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <a href="../productcategory_productdetail_productcreateTime/product_createTime.php?page=1">Browse by created time</a>
               </div>
             </div></li>
-            <li><a href="./contact_shop.html">Contact</a></li>
+            <li><a href="./contact_shop.php">Contact</a></li>
           </ul>
         </nav>
         <div class="hero">
@@ -123,8 +123,8 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                 echo "<div class='product'>
                 <div class='upper'>
                 <div class='two-third'>
-                    <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
-                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$product_name.png' alt=''></a>
+                    <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.php'></a></h3>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php'><img src='../productcategory_productdetail_productcreateTime/store/$product_name.png' alt=''></a>
                   </div>
                 </div>
                 <div class='lower'>
@@ -132,7 +132,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                   <p style='margin-left: 50%; margin-bottom: 0;'> $product_price USD</p>
                   <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                   <div class='btn'>
-                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php' class='btn-1'>VIEW DETAIL</a>
                   </div>
                 </div>
               </div>";
@@ -144,8 +144,8 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
             <div class="upper">
                 <div class="one-third"></div>
             <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
+                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
               </div>
             </div>
             <div class="lower">
@@ -153,7 +153,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <p class='date'>9/4/2021</p>
               <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
               <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
           </div>
@@ -161,8 +161,8 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
             <div class="upper">
                 <div class="one-third"></div>
             <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-2.png" alt=""></a>
+                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-2.png" alt=""></a>
               </div>
             </div>
             <div class="lower">
@@ -170,7 +170,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <p class='date'>9/4/2021</p>
               <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
               <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
           </div>
@@ -179,8 +179,8 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
             <div class="upper">
                 <div class="one-third"></div>
             <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-3.png" alt=""></a>
+                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-3.png" alt=""></a>
               </div>
             </div>
             <div class="lower">
@@ -188,7 +188,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <p class='date'>9/4/2021</p>
               <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
               <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
+                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
               </div>
             </div>
           </div>
@@ -205,8 +205,8 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                           echo "<div class='product'>
                           <div class='upper'>
                           <div class='two-third'>
-                              <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
-                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
+                              <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.php'></a></h3>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
                             </div>
                           </div>
                           <div class='lower'>
@@ -214,7 +214,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                             <p style='margin-left: 50%; margin-bottom: 0;'> $price_product_time USD</p>
                             <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                             <div class='btn'>
-                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php' class='btn-1'>VIEW DETAIL</a>
                             </div>
                           </div>
                         </div>";
@@ -251,9 +251,9 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           <div class="footer--right">
               <ul class="footer-nav">
                   <li><a href="shop-page.php">Home</a></li>
-                  <li><a href="aboutus-shop.html">About us</a></li>
+                  <li><a href="aboutus-shop.php">About us</a></li>
                   <li><a href="../productcategory_productdetail_productcreateTime/product_category.html">Product</a></li>
-                  <li><a href="contact_shop.html">Contact</a></li>
+                  <li><a href="contact_shop.php">Contact</a></li>
               </ul>
           </div>
       </footer>
