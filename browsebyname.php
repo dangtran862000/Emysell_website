@@ -35,7 +35,7 @@
             <a href="index.php">Home</a>
             <a href="aboutus.php">About us</a>
             <a href="fee.php">Fees</a>
-            <a href="Myaccount/myaccount.php">My Account</a>
+            <a href="./login/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
@@ -48,7 +48,7 @@
             </div>
             <a href="faq.php">FAQS</a>
             <a href="contact.php">Contact</a>
-            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+            <a id='signup' class="signup" href="./login/myaccount.php" style="padding:0;">
                 <p class="button">Sign Up</p>
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>

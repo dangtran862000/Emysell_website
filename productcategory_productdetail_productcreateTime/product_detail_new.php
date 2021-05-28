@@ -35,31 +35,42 @@
             <a class="navbar-brand" href="index.php">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
+                    <img src="..\image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
             </a>
 
-            <a href="index.php">Home</a>
-            <a href="aboutus.php">About us</a>
-            <a href="fee.php">Fees</a>
-            <a href="Myaccount/myaccount.php">My Account</a>
+            <a href="..\index.php">Home</a>
+            <a href="..\aboutus.php">About us</a>
+            <a href="..\fee.php">Fees</a>
+            <a href="../login/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="browsebycate.php">Browse by categories</a>
-                    <a href="browsebyname.php">Browse by name</a>
+                    <a href="..\browsebycate.php">Browse by categories</a>
+                    <a href="..\browsebyname.php">Browse by name</a>
                 </div>
             </div>
-            <a href="faq.php">FAQS</a>
-            <a href="contact.php">Contact</a>
-            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+            <a href="..\faq.php">FAQS</a>
+            <a href="..\contact.php">Contact</a>
+            <a id='signup' class="signup" href="../login/myaccount.php" style="padding:0;">
                 <p class="button">Sign Up</p>
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-
+            <div class="cart">
+                <a href="../productcategory_productdetail_productcreateTime/cart.php?product=<?php echo $product_name?>&product_id=<?php echo $product_id?>" style="float: right;">
+                    <ion-icon name="basket"></ion-icon>Cart <span><?php
+                    if (count( $_SESSION['current_product']) == null) {
+                      echo 0;
+                    } else {
+                      $count = count( $_SESSION['current_product']);
+                    echo $count;
+                    }
+                    ?></span>
+                </a>
+            </div>
 
         </nav>
     </header>

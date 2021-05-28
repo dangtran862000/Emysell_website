@@ -311,7 +311,7 @@ function orderButton() {
       } else {
           alert("PLEASE SIGN UP FIRST !!!");
           window.location.reload();
-          location.href='../Myaccount/myaccount.html';
+          location.href='../login/myaccount.php';
       }
     
 }

@@ -58,7 +58,7 @@
             <a href="..\index.php">Home</a>
             <a href="..\aboutus.php">About us</a>
             <a href="..\fee.php">Fees</a>
-            <a href="..\Myaccount/myaccount.php">My Account</a>
+            <a href="../login/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
@@ -71,7 +71,7 @@
             </div>
             <a href="..\faq.php">FAQS</a>
             <a href="..\contact.php">Contact</a>
-            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+            <a id='signup' class="signup" href="./login/myaccount.php" style="padding:0;">
                 <p class="button">Sign Up</p>
             </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
@@ -174,21 +174,6 @@
         </form>
         <div class="row">
           <div class="column">
-            <h1 style="padding-bottom: 5%;">CUSTOMER INFORMATION</h1>
-            <hr style="margin-bottom: 5%; background-color:black; border-color: black;">
-            <h3 style="padding-top: 1%;"> Dinh Thi Khanh Linh</h3>
-            <div style="padding-top: 5%;">
-            <i class="material-icons" style="float: left;">&#xe8b4;</i>
-            <p style="padding-left: 10%;"> 702 Nguyen Van Linh, Tan Phong Ward, District 7, Ho Chi Minh City</p>
-            </div>
-            <div style="padding-top: 5%;">
-              <i class="material-icons" style="float: left;">&#xe0cd;</i>
-              <p style="padding-left: 10%;">0933716099</p>
-            </div>
-            <div style="padding-top: 5%;">
-              <i class="material-icons" style="float: left;">&#xe0be;</i>
-              <p style="padding-left: 10%;">dinhthi.khanhlinh@gmail.com</p>
-            </div>
           </div>
           <div class="column" id='cart_total'>
             <h1 style="padding-bottom: 5%;">CART TOTAL</h1>
@@ -228,11 +213,23 @@
             
 
             
-            
+            <form action="cart.php" method="post">
+            <button id="myP" type="submit" class="button_style_order" onclick="orderButton()" name="final_order">ORDER</button>
+            </form>
             <!-- <a href="../OrderPlacement_thankyoupage/thankyou.php"> -->
-            <button id="myP" type="button" class="button_style_order" onclick="orderButton()">ORDER</button>
+            
             <!-- </a> -->
             </div>
+
+                <?php 
+                
+                if (isset( $_POST['final_order'])) {
+                    session_destroy();
+                    header("Refresh:0");
+                    echo "<script> location.href='../OrderPlacement_thankyoupage/thankyou.php';</script>";
+                }
+                
+                ?>
         </div>
     </section>
 
