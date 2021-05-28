@@ -34,14 +34,15 @@
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
             <a class="navbar-brand" href="index.php">
                 <div class="logo-image">
-                    <img src="image\logo123.png" class="img-fluid" alt="image_logo_website">
+                    <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
+                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
             </a>
 
             <a href="index.php">Home</a>
             <a href="aboutus.php">About us</a>
             <a href="fee.php">Fees</a>
-            <a href="Myaccount/myaccount.html">My Account</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     Browse
