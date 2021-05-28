@@ -376,8 +376,8 @@
             img.src = slide[img_in];
 
             a1.href = "shoppage_shopcontact_shopaboutus/shop-page.php";
-            a2.href = "productcategory_productdetail_productcreateTime/product_detail.php";
-            a3.href = "productcategory_productdetail_productcreateTime/product_detail.php";
+            a2.href = "productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76";
+            a3.href = "productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76";
 
             div3.classList.add("upper");
             div4.classList.add("two-third-2");
@@ -405,7 +405,7 @@
             const a4 = document.createElement("A");
             const text1 = document.createTextNode("VIEW DETAIL");
 
-            a4.href = "productcategory_productdetail_productcreateTime/product_detail.php";
+            a4.href = "productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76?product=Soprole&product_id=76";
 
             div6.classList.add("lower");
             p1.classList.add("price");
@@ -725,8 +725,8 @@
                         <div class='upper'>
                             <div class='two-third-2'>
                                 <h3><a href='shoppage_shopcontact_shopaboutus/shop-page.php' target='_blank'>$feature[8]</a></h3>
-                                <h3><a href='productcategory_productdetail_productcreateTime/product_detail_new.php'>$feature[2]</a></h3>
-                                <a href='./productcategory_productdetail_productcreateTime/product_detail_new.php'><img src='./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg' alt=''></a>
+                                <h3><a href='productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76'>$feature[2]</a></h3>
+                                <a href='./productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76'><img src='./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg' alt=''></a>
                             </div>
                             <div class='one-thrid'>
                             </div>
@@ -736,7 +736,7 @@
                             <p class='date'>$feature[4]</p>
                             <p class='description'>T-shirt in premium cotton jersey.</p>
                             <div class='test'>
-                                <a href='productcategory_productdetail_productcreateTime/product_detail_new.php' class='btn-1'>VIEW DETAIL</a>
+                                <a href='productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76' class='btn-1'>VIEW DETAIL</a>
                             </div>
                         </div>
                     </div>";
