@@ -1,5 +1,5 @@
 <?php
-  session_start();
+session_start();
 ?>
 <!DOCTYPE html>
 
@@ -174,15 +174,15 @@
                     <input type="reset" value="CLEAR">
                 </div>
 
-                
+
 
                 <p class="message">Already registered? <a href="../Myaccount/myaccount.html">Sign In</a></p>
             </form>
         </div>
     </div>
-<!--User name and --> 
+<!--User name and -->
 <?php
-    if (isset($_POST['phone'])) {
+if (isset($_POST['phone'])) {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $fname = $_POST['fname'];
@@ -197,10 +197,10 @@
     $type = $_POST['type'];
     $businessName = $_POST['business_name'];
     $storeName = $_POST['store_name'];
-    $file = file_get_contents("data.txt");
+    $file = file_get_contents("../data.txt");
     $string = "$phone||$email";
     if (!strstr($file, "$phone") && !strstr($file, "$email")) {
-        $myFile = "data.txt";
+        $myFile = "../data.txt";
         $fh = fopen($myFile, 'a') or die("can't open file");
         $stringData = "$fname||$lname||$phone||$email||$address||$city||$zipcode||$s_adult||$hashed_password||$type||$businessName||$storeName\n";
         fwrite($fh, $stringData);
@@ -269,15 +269,15 @@
               <a href="tos.php"><span>Terms of Service</span></a>
               <a href="privacypolicy.php"><span>Privacy Policy</span></a>
               <a>
-                  <span> 
-                  <?php 
-                   if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
-                      $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
-                          echo $_SESSION['cr'];
-                      } else {
-                      echo $_SESSION['cr'];
-                  }
-                  ?>
+                  <span>
+                  <?php
+if (!isset($_SESSION['cr']) && empty($_SESSION['cr'])) {
+    $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
+    echo $_SESSION['cr'];
+} else {
+    echo $_SESSION['cr'];
+}
+?>
                   </span>
               </a>
             </div>
