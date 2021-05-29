@@ -1,5 +1,5 @@
 <?php
-  session_start();
+  session_start(); // start the session action
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,19 +23,23 @@
 </head>
 
 <?php
+            // get the name value
             $page = $_GET["product"];
             $product_id = $_GET["product_id"];
+
+            // check if the clear name submit and destroy the session
             if (isset($_POST['clear'])) {
               session_destroy();
-              header("Refresh:0");
+              header("Refresh:0"); // reloading the page
             }
 
+            // check if the cart name submit and create/adding the value to the array session
             if (isset( $_POST['cart'])) {
               $current_product = [
                 'name' =>  $product_name,
                 'duration' =>   $product_price,
               ];
-              $_SESSION['current_product'][] = $current_product;
+              $_SESSION['current_product'][] = $current_product; // store the data to the current_product session 
             }
 
             
@@ -95,23 +99,28 @@
         <div class="products">
             <?php
 
+        // display the product in cart by the array session
         $total_price = 0;
+        // check the current_product session
         if (isset($_SESSION['current_product'])) {
+            // check if the current_product session not null
             if($_SESSION['current_product'] != null){
                 for ($i = 0; $i < count($_SESSION['current_product']); $i++){
+                    // get the value in the session
                     $product_name = $_SESSION['current_product'][$i]['name'];
                     $duration_Value = $_SESSION['current_product'][$i]['duration'];
                     $quantity = $_SESSION['current_product'][$i]['quantity'];
-                    $product_name_pic = str_replace("'","_",$product_name);
+                    $product_name_pic = str_replace("'","_",$product_name); // replace the symbol ' at the string of the product name to prevent conflict for finding picture
                    
-                    
+                    // check the check submit button
                     if (isset( $_POST['Check'])) {
-                        
+                        // change the quantity at the cart
                         $quantity = $_POST['quantity'];
                         
                         
                     }
-                    $total = $duration_Value * $quantity;
+                    $total = $duration_Value * $quantity; // caculate the total price of each product
+                    // do html code
                     echo "
                             <div class='product'>
                             <img src='./store/$product_name_pic.png' />
@@ -130,34 +139,13 @@
                         </div>
                         <div class='total'>$total USD</div>
                             ";
-                            $total_price = $total_price +  $total;
-                        $_SESSION['current_product'][$i]['quantity'] = $quantity;
+                            $total_price = $total_price +  $total; // caculate the price of all the product in cart
+                        $_SESSION['current_product'][$i]['quantity'] = $quantity; // store the new quantity in session
                     }
                     
                     } 
             }
             
-            // if (isset($_SESSION['current_product'])) {
-            
-            //     $product_name = $_SESSION['current_product']['name'];
-            //     echo $product_name;
-            //     echo "
-            //     <div class='product'><ion-icon name='close-circle'></ion-icon><img src='./store/${item.tag}.jpg' />
-            //        <span class='sm-hide item-name-long'>$product_name</span>
-                  
-            //    </div>
-              
-            //    <div class='price sm-hide'>${item.price} VND</div>
-            //    <div class='quantity'>
-            //        <ion-icon class='decrease ' name='arrow-dropleft-circle'></ion-icon>
-            //        <form style='width:30%'><input type='number' style='width:100%;' placeholder=${item.inCart} value=${item.inCart} id='changeQuantity' class='iinputQuantity'><span></span></input></form>
-            //        <ion-icon class='increase' name='arrow-dropright-circle'></ion-icon>   
-            //    </div>
-            //    <div class='total'>${item.inCart * item.price} VND</div>`;
-            //     ";
-            //     print_r($_SESSION['current_product']['name']);
-                
-            //   }
             ?>
 
         </div>
@@ -191,23 +179,30 @@
                 </tr>
                 <tr>
                     <td style="width: 22%; text-align: center; background-color: white; padding-top: 5%; padding-bottom: 5%;">TOTAL</th>
-                    <th style="width: 25%; text-align: center"><?php 
+                    <th style="width: 25%; text-align: center">
+            <?php 
             
+            //caculate the coupon field
             $final_total = $total_price;
+            // check the name submit button
             if (isset( $_POST['name'])) {
                 $code = $_POST['coupon'];
+                // caculate discount 20% for COSC2430-HD coupon code and print the result
                 if($code == "COSC2430-HD") {
                     $final_total = $total_price - ($total_price*(20/100));
                     echo  $final_total ;
+                    // caculate discount 10% for COSC2430-DI coupon code and print the result
                 } else if ($code == "COSC2430-DI") {
                     $final_total = $total_price - ($total_price*(10/100));
                     echo  $final_total ;
+                    // warning the error messange for invalid coupon code and print the result
                 } else if ($code != "COSC2430-HD" or $code != "COSC2430-DI"){
                     $message = " Incorrect!! Please input again the coupon code";
                     echo "<script type='text/javascript'>alert('$message');</script>";
                     echo  $final_total;
                 } 
             } else {
+                // print the result
                 echo  $final_total;
             }
             ?> USD</th>
@@ -218,10 +213,9 @@
             
             <?php 
             
+            // check if the current_product session not null visible the order button by do javascript code
             if ($_SESSION['current_product'] != null) {
                 ?><button id='myP' class='button_style_order' onclick='orderButton()' name='final_order'>ORDER</button>
-                <!-- </form> -->
-                <!-- <a href='../OrderPlacement_thankyoupage/thankyou.php'> -->
                 <script>
                     
                     function orderButton() {

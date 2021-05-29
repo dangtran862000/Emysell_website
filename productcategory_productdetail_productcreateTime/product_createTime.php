@@ -30,7 +30,8 @@
 
   </script>
   <?php 
-  
+
+    // Create the the relevant array 
     $time = array();
     $items = array();
     $store = array();
@@ -40,38 +41,44 @@
     $count = 0;
     $count_store = 0;
 
-      
+    // read product csv file and add to array  
     if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
         while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
-            $count++;
-            $product_price[] = $data;
-            if ($count == 1) { continue; }
-            $items[] = $data;
+            $count++; // count line in data file
+            $product_price[] = $data; // add the data in product csv file to product_price array
+            if ($count == 1) { continue; } // delete the first line in product csv file
+            $items[] = $data; 
             $time[] = $data;
+            // check if the product has store id = 22 and feature in store = true
             if ($data[4] == 22 and $data[6] == "TRUE") {
                 $count_line++;
-                $product[] = $data[1];
-                $store[] = $data[4];
-                $product_price[] = $data[2];
+                $product[] = $data[1]; // add the name product csv file to product_price array
+                $store[] = $data[4]; // add the store id in product csv file to product_price array
+                $product_price[] = $data[2]; // add the price in product csv file to product_price array
             }
           
             
         }
     }
 
+    // finding and remove the unique value of the array
     if (($storecsv = fopen('stores.csv', 'r')) !== FALSE) { // Check the resource is valid
       while (($store_data = fgetcsv($storecsv, 1000, ",")) !== FALSE) { // Check opening the file is OK!
           $count_store++;
-          if ($count == 1) { continue; }
+          if ($count == 1) { continue; } // delete the first line in product csv file
+          // finding the name of the store by store id
           if ($store_data[0] == $store[0]) {
             $store_name = $store_data[1];
         }
       }
     }
 
-        $page = $_GET["page"];
-        $productInPage = 2;
-        $count_product = 0;
+    
+        $page = $_GET["page"]; // get the page number at url
+        $productInPage = 2; // the number want to display per page ( in this case 2 products)
+        $count_product = 0; // count the number of product
+
+        // adding data file to array by store id
         $category = [];
         $max_prob = 0;
         for ($row = 0; $row < 1000; $row++) {
@@ -80,13 +87,14 @@
             }
         }
         
+        // the numerical order of the product to display at the page
         $from = ($page - 1 ) * 2;
 
-        
+    // create 2 array, one for the oldest, one for the newest    
     $new_product_des = [];
     $new_product_ase = [];
     
-    
+    // adding the time of category array to 2 above array
     for ($i = 0; $i < count( $category); $i++) {
         
         $new_product_des[] = $category[$i][3];
@@ -94,6 +102,7 @@
     
     }
     
+    // sort the array one for the oldest, one for the newest
     rsort($new_product_des);
     sort($new_product_ase);
 
@@ -140,10 +149,6 @@
       <section class='block-product'>
       <section>
         <div class="select">
-          <!-- <select class="" name="">
-            <option value="" onchange="myFunctionVisiblity()">Newest First</option>
-            <option value="">Olderst First</option>
-          </select> -->
           <select id="selectBox" onchange="changeFunc();">
               <option value="1">Oldest First</option>
               <option value="2">Newest First</option>
@@ -152,6 +157,7 @@
       </section>
       <section id="myDIV1" style="display:none">
             <?php 
+            // display the information of the oldest product in array items by product csv file
             for ($i = 0; $i < 1; $i++) {
               $timeProduct_des = $new_product_des[$i];
               for ($j = 0; $j < 17; $j++){
@@ -184,12 +190,12 @@
       </section>
       <section id="myDIV2">
             <?php 
-            
+            // display the information of the newest product in array items by product csv file
             for ($i = 0; $i < 1; $i++) {
               $timeProduct_ase = $new_product_ase[$i];
               for ($j = 0; $j < 17; $j++){
                   if ($timeProduct_ase == $category[$j][3]){
-                    $name_product_time_ase_pic = str_replace("'","_",$category[$i][1]);
+                    $name_product_time_ase_pic = str_replace("'","_",$category[$i][1]); // replace the symbol ' at the string of the product name to prevent conflict for finding picture
                       $product_id = $category[$j][0];
                       $name_product_time_ase = $category[$j][1];
                       $price_product_time_ase = $category[$j][2];
@@ -220,15 +226,14 @@
             <h3>Products</h3>
       </div>
         <?php 
-        
+        // display the information of the 2 products in array items by product csv file at the page
         for ($i = $from; $i < $from + $productInPage; $i++) {
           $product_id = $category[$i][0];
           $product_name = $category[$i][1];
-          $product_picture = str_replace("'","_",$category[$i][1]);
+          $product_picture = str_replace("'","_",$category[$i][1]);  // replace the symbol ' at the string of the product name to prevent conflict for finding picture
           $product_name_price = $category[$i][2];
           $product_date = $category[$i][3];
           if ($product_name !== null) {
-      
               echo " <div class='product' id='product_php'>
                   <div class='upper'>
                     <div class='two-third'>
@@ -250,14 +255,13 @@
             
           }
   
-        
+        // caculate what is the product tio display at the page
         for ($i = 0; $i < count($category); $i++) {
-          // print_r($category[$i][1]);
-          $count_product = $count_product + 1;
+          $count_product = $count_product + 1; // count the product in category array
         }
-        $pageNumber = ceil($count_product / $productInPage);
+        $pageNumber = ceil($count_product / $productInPage); // count and round the page number
         
-        
+        // check and caculate when user change the number at the pagination with the page
         if ($page <= 1) {
           $previous_page = 1;
         } else {
@@ -268,12 +272,16 @@
         } else {
           $next_page = $page + 1;
         }
+
         echo '' . "<br />\n";
         echo '' . "<br />\n";
         echo '' . "<br />\n";
 
-        echo "<a href='product_createTime.php?page=$previous_page#product_php' class='button_pagination' style='margin-right:2%;'>Previous </a>";
+        // create the button at the pagination to link with the product_createTime.php url including the page id 
+        echo "<a href='product_createTime.php?page=$previous_page#product_php' class='button_pagination' style='margin-right:2%;'>Previous </a>"; // create the previous page button
         for ($t = 1; $t <= $pageNumber; $t++) {
+
+          // check the page id and the current ppage
           if ($t == $pageNumber) {
             if ($page == $t) {
               echo "<a href='product_createTime.php?page=$t#product_php' class='button_pagination_number_active' style='text-decoration: none;'> $t </a>";
@@ -289,8 +297,8 @@
             
           }
         }
-        echo "<a href='product_createTime.php?page=$next_page#product_php' class='button_pagination' style='margin-left:2%;'> Next </a>";
-        
+        echo "<a href='product_createTime.php?page=$next_page#product_php' class='button_pagination' style='margin-left:2%;'> Next </a>"; // create the next page button
+    
         ?>
 
       </section>

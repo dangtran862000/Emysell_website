@@ -1,9 +1,9 @@
 <?php
-  session_start();
+  session_start(); // start the session action
   
 ?>
 <?php 
-unset($_SESSION['current_product']);
+unset($_SESSION['current_product']); //unset the current_product session when the thankyou.php run
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,6 @@ unset($_SESSION['current_product']);
 
 </head>
 <style>
-
     .purchase{
 					text-align: center;
 					cursor: pointer;
