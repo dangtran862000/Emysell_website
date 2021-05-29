@@ -213,7 +213,7 @@
                <form method='post' action='product_detail.php?product=$page&product_id=$product_id'>   
                <div class='btn-1' style='display: float-left;'>
                 <input type='submit' name='cart' class='add-cart cart1 purchase' value='ADD TO CART'>
-                <a class='add-cart cart1' href='../productcategory_productdetail_productcreateTime/cart.php?product=$page&product_id=$product_id'><div class='purchase'>BUY NOW</div></a>
+                <button class='purchase' name='buynow' href='../productcategory_productdetail_productcreateTime/cart.php?product=$page&product_id=$product_id'><div >BUY NOW</div></button>
                 </div>
                 </form> 
               
@@ -251,6 +251,18 @@
               $_SESSION['current_product'][] = $current_product;
               // $_SESSION['current_product'] =  array_unique($_SESSION['current_product']);
               header("Refresh:0");
+            }
+
+            if (isset( $_POST['buynow'])) {
+              $quantity ++;
+              $current_product = [
+                'name' =>  $product_name,
+                'duration' =>   $product_price,
+                'quantity' =>   $quantity,
+              ];
+              $_SESSION['current_product'][] = $current_product;
+              echo "<script> location.href='./cart.php?product=$page&product_id=$product_id'; </script>";
+              
             }
               
         ?>

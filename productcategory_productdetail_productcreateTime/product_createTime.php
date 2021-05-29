@@ -82,17 +82,6 @@
         
         $from = ($page - 1 ) * 2;
 
-        // print_r($count_product);
-        // echo '' . "<br />\n";
-        // print_r($pageNumber);
-
-        // for ($i = $from; $i < $from + $productInPage; $i++) {
-        //   print_r($category[$i][1]);
-        //   echo ' ';
-        //   print_r($category[$i][2]);
-        //   echo '' . "<br />\n";
-        // }
-
         
     $new_product_des = [];
     $new_product_ase = [];

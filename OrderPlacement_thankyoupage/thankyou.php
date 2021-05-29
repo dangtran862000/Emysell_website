@@ -22,6 +22,21 @@ unset($_SESSION['current_product']);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
+<style>
+
+    .purchase{
+					text-align: center;
+					cursor: pointer;
+					transition: .4s ease;
+					color: white;
+					background-color: #17486a;
+
+					border-radius: 40px;
+				    margin: 20px 10px;
+					padding: 9px 15px;
+				}
+
+</style>
 <body onload="check();">
      <!--Header Area-->
      <header>
@@ -70,10 +85,9 @@ unset($_SESSION['current_product']);
         </div>
         <div style="padding-top: 1%;">
             <p style="display: inline-block; font-size: 15px">Payment method</p>
-            <p style="display: inline-block; font-size: 15px; padding-left: 12%;">Momo</p>
+            <p style="display: inline-block; font-size: 15px; padding-left: 12%; padding-bottom:5%">Momo</p>
         </div>
-
-        </div>
+        <a class='purchase' href='../shoppage_shopcontact_shopaboutus/shop-page.php' style="text-decoration: none;">BACK TO HOME</a>
       </div>
 
       <div id="cookies">
@@ -86,7 +100,7 @@ unset($_SESSION['current_product']);
       <!--Footer Area-->
     <!-- Element that contains the client's contact email, phone and address details
         (these can be dummy data). Please put your student name(s) and student id(s) in the footer with a link to your GitHub repository.-->
-        <footer style="background-color: #131a22; color:white; margin-top:10%">
+        <footer style="background-color: #131a22; color:white; margin-top:5%;  padding-bottom:5%;">
           <div class="flex">
               <!--Zero Columns-->
               <div class="footer_column0" style="flex: 2; margin: 1% 5% 0 5%">

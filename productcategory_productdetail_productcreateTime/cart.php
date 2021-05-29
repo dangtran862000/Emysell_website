@@ -193,6 +193,7 @@
                     <td style="width: 22%; text-align: center; background-color: white; padding-top: 5%; padding-bottom: 5%;">TOTAL</th>
                     <th style="width: 25%; text-align: center"><?php 
             
+            $final_total = $total_price;
             if (isset( $_POST['name'])) {
                 $code = $_POST['coupon'];
                 if($code == "COSC2430-HD") {
@@ -204,7 +205,10 @@
                 } else if ($code != "COSC2430-HD" or $code != "COSC2430-DI"){
                     $message = " Incorrect!! Please input again the coupon code";
                     echo "<script type='text/javascript'>alert('$message');</script>";
-                }
+                    echo  $final_total;
+                } 
+            } else {
+                echo  $final_total;
             }
             ?> USD</th>
                 </tr>

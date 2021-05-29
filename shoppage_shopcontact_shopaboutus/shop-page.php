@@ -141,59 +141,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         }
       
             ?>
-          <!-- <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-2.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-3.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-        </div>-->
 
         <div class="product-section">
             <h3>New Products</h3>
@@ -229,10 +176,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           </section>
         </div>
       </main>
-
-      <div class="btn">
-          <a href="test.php" class='btn-1'>VIEW DETAIL</a>
-        </div>
 
       <div id="cookies">
         <h3>I use cookies</h3>
