@@ -182,7 +182,7 @@
                         <li class="flex_1">
                             
                             <!--Icon-->
-                            <form action="myaccount.php" method="post">
+                            <form action="./logout_account.php" method="post">
                             <img class="icons" src="https://img.icons8.com/windows/32/000000/users-settings.png" alt="icon_setting"/>
                             <button type="submit" id="signout">SIGN OUT</button>
                             <!-- <a href="../login/myaccount.php" onclick = "session_destroy();" style="padding-left: 3%;"><span>SIGN OUT</span></a> -->   

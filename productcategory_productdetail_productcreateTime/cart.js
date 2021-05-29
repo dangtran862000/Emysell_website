@@ -302,16 +302,16 @@ function Alert() {
     window.location.reload();
   }
 
-function orderButton() {
-    if (sessionStorage.getItem('isLog')) {
-    localStorage.removeItem('productsInCart');
-    localStorage.setItem('totalCost', 0);
-    localStorage.setItem('cartNumbers', 0);
-    location.href='../OrderPlacement_thankyoupage/thankyou.php';
-      } else {
-          alert("PLEASE SIGN UP FIRST !!!");
-          window.location.reload();
-          location.href='../login/myaccount.php';
-      }
+// function orderButton() {
+//     if (sessionStorage.getItem('isLog')) {
+//     localStorage.removeItem('productsInCart');
+//     localStorage.setItem('totalCost', 0);
+//     localStorage.setItem('cartNumbers', 0);
+//     location.href='../OrderPlacement_thankyoupage/thankyou.php';
+//       } else {
+//           alert("PLEASE SIGN UP FIRST !!!");
+//           window.location.reload();
+//           location.href='../login/myaccount.php';
+//       }
     
-}
+// }

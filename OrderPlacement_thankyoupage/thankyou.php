@@ -1,5 +1,9 @@
 <?php
   session_start();
+  
+?>
+<?php 
+unset($_SESSION['current_product']);
 ?>
 <!DOCTYPE html>
 <html lang="en">

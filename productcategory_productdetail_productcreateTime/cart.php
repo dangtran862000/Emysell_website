@@ -159,6 +159,7 @@
                 
             //   }
             ?>
+
         </div>
         <form action="cart.php?product=<?php echo $product_name?>&product_id=<?php echo $product_id?>" method="post" style="display: float-right; margin-top: 5%">
         <input type="submit" value="CLEAR CART" name="clear" id="clear">
@@ -211,25 +212,32 @@
             </div>
             
             
-
+            <?php 
             
-            <form action="cart.php" method="post">
-            <button id="myP" type="submit" class="button_style_order" onclick="orderButton()" name="final_order">ORDER</button>
-            </form>
-            <!-- <a href="../OrderPlacement_thankyoupage/thankyou.php"> -->
-            
-            <!-- </a> -->
-            </div>
-
+            if ($_SESSION['current_product'] != null) {
+                ?><button id='myP' class='button_style_order' onclick='orderButton()' name='final_order'>ORDER</button>
+                <!-- </form> -->
+                <!-- <a href='../OrderPlacement_thankyoupage/thankyou.php'> -->
+                <script>
+                    
+                    function orderButton() {
+                        if (sessionStorage.getItem('isLog')) {
+                            
+                        location.href='../OrderPlacement_thankyoupage/thankyou.php';
+                        
+                        } else {
+                            alert('PLEASE SIGN UP FIRST !!!');
+                            window.location.reload();
+                            location.href='../login/myaccount.php';
+                        }
+                        
+                    }
+                </script>
                 <?php 
-                
-                if (isset( $_POST['final_order'])) {
-                    session_destroy();
-                    header("Refresh:0");
-                    echo "<script> location.href='../OrderPlacement_thankyoupage/thankyou.php';</script>";
-                }
-                
-                ?>
+            }
+            
+            ?>
+            </div>
         </div>
     </section>
 
