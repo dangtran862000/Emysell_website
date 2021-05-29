@@ -101,7 +101,7 @@
         $password_nothas_input = $_POST["password-login"];
 
         // Assign variable for file registration
-        $file_pointer = '../res/data.txt';
+        $file_pointer = '../data.txt';
         // Assign the variable for email input
         $searchfor_email = $email_input;
         // get the file contents
