@@ -223,6 +223,11 @@ for ($i = 0; $i < 1; $i++) {
             <h3>Products</h3>
       </div>
         <?php
+        // caculate what is the product tio display at the page
+for ($i = 0; $i < count($category); $i++) {
+  $count_product = $count_product + 1; // count the product in category array
+}
+$pageNumber = ceil($count_product / $productInPage); // count and round the page number
 $product_id_new = "";
 // display the information of the 2 products in array items by product csv file at the page
 
@@ -255,11 +260,7 @@ $product_id_new = "";
     }
 
 
-// caculate what is the product tio display at the page
-for ($i = 0; $i < count($category); $i++) {
-    $count_product = $count_product + 1; // count the product in category array
-}
-$pageNumber = ceil($count_product / $productInPage); // count and round the page number
+
 
 // check and caculate when user change the number at the pagination with the page
 if ($page <= 1) {
