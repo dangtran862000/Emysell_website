@@ -1,5 +1,6 @@
 <?php
   session_start(); // start the session action
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,6 +25,7 @@
 
 <?php
             // get the name value
+            
             $page = $_GET["product"];
             $product_id = $_GET["product_id"];
             $product_name = $_GET["product"];
@@ -216,7 +218,7 @@
             
             // check if the current_product session not null visible the order button by do javascript code
            
-            if (isset($_SESSION['current_product']) !== null) {
+            if (isset($_SESSION['current_product']) != null) {
                 ?><button id='myP' class='button_style_order' onclick='orderButton()' name='final_order'>ORDER</button>
                 <script>
                     
