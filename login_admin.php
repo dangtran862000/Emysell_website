@@ -20,11 +20,7 @@
   // Check if the log in information of the user is in the system, if yes redirect to the dashboard
   if (isset($_POST['act'])) {
     foreach ($user_record as $records){
-<<<<<<< HEAD
         if (isset($_POST['pass']) && $_POST['username'] == html_entity_decode($records[0]) && password_verify($_POST['pass'], $records[1])) {
-=======
-        if (isset($_POST['pass']) && $_POST['username'] == $records[0] && password_verify($_POST['pass'], $records[1])) {
->>>>>>> 016f4dfe0d05a8ba691d34b93f880175327b4f36
           // create a cookie that expires after 7 days
           setcookie('loggedin_name', htmlentities($_POST['username']), time() + 60 * 60 * 24 * 7);
           $_SESSION['username'] = htmlentities($_POST['username']);
@@ -60,6 +56,6 @@
             </form>
         </div>
     </div>
-   
+
 </body>
 </html>
