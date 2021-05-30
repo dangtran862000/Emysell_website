@@ -228,7 +228,7 @@
         <?php 
         // display the information of the 2 products in array items by product csv file at the page
         for ($i = $from; $i < $from + $productInPage; $i++) {
-          $product_id = $category[$i][0];
+          $product_id_new = $category[$i][0];
           $product_name = $category[$i][1];
           $product_picture = str_replace("'","_",$category[$i][1]);  // replace the symbol ' at the string of the product name to prevent conflict for finding picture
           $product_name_price = $category[$i][2];
@@ -247,7 +247,7 @@
                     <p style='margin-left: 40%; margin-bottom: 0;'>$product_name_price USD</p>
                     <p class='description'>$product_date</p>
                     <div class='btn'>
-                      <a href='product_detail.php?product=$product_picture&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
+                      <a href='product_detail.php?product=$product_picture&product_id=$product_id_new' class='btn-1'>VIEW DETAIL</a>
                     </div>
                   </div>
                 </div> ";
