@@ -200,12 +200,12 @@ if (isset($_POST['phone'])) {
     $storeName = $_POST['store_name'];
 
     // Select file in this link
-    $file = file_get_contents("../data.txt");
+    $file = file_get_contents("../../data.txt");
     // Check the unique of phone and email
     $string = "$phone||$email";
     //  If email and phone is unique
     if (!strstr($file, "$phone") && !strstr($file, "$email")) {
-        $myFile = "../data.txt";
+        $myFile = "../../data.txt";
         $fh = fopen($myFile, 'a') or die("can't open file");
         // Save data into file
         $stringData = "$fname||$lname||$phone||$email||$address||$city||$zipcode||$s_adult||$hashed_password||$type||$businessName||$storeName\n";
