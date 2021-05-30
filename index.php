@@ -405,7 +405,7 @@
             const a4 = document.createElement("A");
             const text1 = document.createTextNode("VIEW DETAIL");
 
-            a4.href = "productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76?product=Soprole&product_id=76";
+            a4.href = "productcategory_productdetail_productcreateTime/product_detail.php?product=Soprole&product_id=76";
 
             div6.classList.add("lower");
             p1.classList.add("price");

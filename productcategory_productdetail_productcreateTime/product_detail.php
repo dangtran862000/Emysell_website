@@ -30,7 +30,7 @@
   <?php
   $product_id = $_GET["product_id"];
 
-  $product_name = str_replace("_","'",$page);
+  
   
   $time = array();
   $items = array();
@@ -70,7 +70,7 @@
     }
   }
 
-      $page = $_GET["page"];
+      // $page = $_GET["page"];
       $productInPage = 2;
       $count_product = 0;
       $category = [];
@@ -121,14 +121,7 @@
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
             <div class="cart">
                 <a href="../productcategory_productdetail_productcreateTime/cart.php?product=<?php echo $product_name?>&product_id=<?php echo $product_id?>" style="float: right;">
-                    <ion-icon name="basket"></ion-icon>Cart <span><?php
-                    if (count( $_SESSION['current_product']) == null) {
-                      echo 0;
-                    } else {
-                      $count = count( $_SESSION['current_product']);
-                    echo $count;
-                    }
-                    ?></span>
+                 VIEW CART 
                 </a>
             </div>
 
@@ -210,10 +203,10 @@
                  <span class='size'>XL</span>
                </div>
                
-               <form method='post' action='product_detail.php?product=$page&product_id=$product_id'>   
+               <form method='post' action='product_detail.php?product=$product_name&product_id=$product_id'>   
                <div class='btn-1' style='display: float-left;'>
                 <input type='submit' name='cart' class='add-cart cart1 purchase' value='ADD TO CART'>
-                <button class='purchase' name='buynow' href='../productcategory_productdetail_productcreateTime/cart.php?product=$page&product_id=$product_id'><div >BUY NOW</div></button>
+                <button class='purchase' name='buynow' href='../productcategory_productdetail_productcreateTime/cart.php?product=$product_name&product_id=$product_id'><div >BUY NOW</div></button>
                 </div>
                 </form> 
               
@@ -234,13 +227,11 @@
         
         <?php
           
+          $quantity;
           $current_product = array();
             
 
-            if (isset($_POST['clear'])) {
-              session_destroy();
-              header("Refresh:0");
-            }
+  
 
             if (isset( $_POST['cart'])) {
               $quantity ++;
@@ -251,7 +242,7 @@
               ];
               $_SESSION['current_product'][] = $current_product;
               // $_SESSION['current_product'] =  array_unique($_SESSION['current_product']);
-              header("Refresh:0");
+              
             }
 
             if (isset( $_POST['buynow'])) {

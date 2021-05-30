@@ -29,8 +29,8 @@
 
             // check if the clear name submit and destroy the session
             if (isset($_POST['clear'])) {
-              session_destroy();
-              header("Refresh:0"); // reloading the page
+              unset($_SESSION['current_product']);
+        
             }
 
             // check if the cart name submit and create/adding the value to the array session
