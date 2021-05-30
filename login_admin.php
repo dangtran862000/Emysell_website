@@ -3,17 +3,19 @@
 
   function createArray($filename){
     $records = array();
-    $fp = fopen($filename, "r");
 
-    while ($aLineOfCells = fgetcsv($fp)) {
+    if(file_exists($filename)){
 
-          $records[] = $aLineOfCells;
-
+      $fp = fopen($filename, "r");
+      while ($aLineOfCells = fgetcsv($fp)) {
+            $records[] = $aLineOfCells;
+      }
+      
+      fclose($fp);
+      return $records;
     }
-    fclose($fp);
-
-    return $records;
   }
+
   $filename = "../admin.csv";
   $user_record = createArray($filename);
 
