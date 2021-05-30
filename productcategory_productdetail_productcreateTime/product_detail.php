@@ -29,9 +29,8 @@
 
   <?php
   $product_id = $_GET["product_id"];
+  $product_name = $_GET["product"];
 
-  
-  
   $time = array();
   $items = array();
   $store = array();
