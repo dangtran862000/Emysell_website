@@ -227,7 +227,7 @@ $product_id_new = "";
 // display the information of the 2 products in array items by product csv file at the page
 
     for ($i = $from; $i < $from + $productInPage; $i++) {
-        if ($i == $count_product) {break;}
+        if ($i == 17) {break;}
         if ($category[$i][1] !== null) {
             $product_picture = str_replace("'", "_", $category[$i][1]); // replace the symbol ' at the string of the product name to prevent conflict for finding picture
             $product_name_price = $category[$i][2];
