@@ -105,7 +105,7 @@
         // Assign the variable for email input
         $searchfor_email = $email_input;
         // get the file contents
-        if (isset($file_pointer)){
+        if (file_exists($file_pointer)){
         $contents = file_get_contents($file_pointer);
         // escape special characters in the query
         $pattern = preg_quote($searchfor_email, '/');
