@@ -87,7 +87,7 @@
             <p>
                 <?php 
                 // If the variable is not be set and it was empty, echo the default
-                    if (!isset($_SESSION['cookies'])  && empty($_SESSION['welcome_tos'])){
+                    if (!isset($_SESSION['cookies'])  && empty($_SESSION['cookies'])){
                         $_SESSION['cookies'] = 'We employ the use of cookies. By accessing EmySell, you agreed to use cookies in agreement with the EmySell\'s Privacy Policy.<br><br>
                         Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.<br>';
                         echo $_SESSION['cookies'];
