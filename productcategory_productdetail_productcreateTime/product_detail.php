@@ -154,6 +154,7 @@
            <?php 
               // $product_id = $_GET["product_id"];
               $page = $_GET["product"];
+            
               $product_name = str_replace("_","'",$page);
               $quantity = 0;
               for ($i = 0; $i < count($category); $i++) {
@@ -202,10 +203,10 @@
                  <span class='size'>XL</span>
                </div>
                
-               <form method='post' action='product_detail.php?product=$product_name&product_id=$product_id'>   
+               <form method='post' action='product_detail.php?product=$page&product_id=$product_id'>   
                <div class='btn-1' style='display: float-left;'>
                 <input type='submit' name='cart' class='add-cart cart1 purchase' value='ADD TO CART'>
-                <button class='purchase' name='buynow' href='../productcategory_productdetail_productcreateTime/cart.php?product=$product_name&product_id=$product_id'><div >BUY NOW</div></button>
+                <button class='purchase' name='buynow' href='../productcategory_productdetail_productcreateTime/cart.php?product=$page&product_id=$product_id'><div >BUY NOW</div></button>
                 </div>
                 </form> 
               
