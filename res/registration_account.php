@@ -180,8 +180,9 @@ session_start();
             </form>
         </div>
     </div>
-<!--User name and -->
+<!-- Validate and save data input into file -->
 <?php
+// Check the existing of phone
 if (isset($_POST['phone'])) {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
@@ -197,27 +198,38 @@ if (isset($_POST['phone'])) {
     $type = $_POST['type'];
     $businessName = $_POST['business_name'];
     $storeName = $_POST['store_name'];
+
+    // Select file in this link
     $file = file_get_contents("../data.txt");
+    // Check the unique of phone and email
     $string = "$phone||$email";
+    //  If email and phone is unique
     if (!strstr($file, "$phone") && !strstr($file, "$email")) {
         $myFile = "../data.txt";
         $fh = fopen($myFile, 'a') or die("can't open file");
+        // Save data into file
         $stringData = "$fname||$lname||$phone||$email||$address||$city||$zipcode||$s_adult||$hashed_password||$type||$businessName||$storeName\n";
         fwrite($fh, $stringData);
         echo "your Registration Information Successfully Inserted.";
         fclose($fh);
         echo "<script>location.href='../login/myaccount.php';</script>";
-    } elseif (strstr($file, "$phone") && !strstr($file, "$email")) {
+    } 
+    // If phone is not unique 
+    elseif (strstr($file, "$phone") && !strstr($file, "$email")) {
         echo '<script type="text/JavaScript">
             alert("Your phone is not uinique");
             </script>';
-    } elseif (!strstr($file, "$phone") && strstr($file, "$email")) {
+    } 
+    //  If email is not unique
+    elseif (!strstr($file, "$phone") && strstr($file, "$email")) {
         echo '<script type="text/JavaScript">
             alert("Your email is not uinique");
             </script>';
-    } else {
+    } 
+    //  Phone and Email is not unique
+    else {
         echo '<script type="text/JavaScript">
-            alert("Your phone is not uinique");
+            alert("Your phone and email is not uinique");
             </script>';
     }
 }
