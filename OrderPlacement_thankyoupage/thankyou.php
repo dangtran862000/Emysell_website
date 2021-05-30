@@ -42,7 +42,7 @@ unset($_SESSION['current_product']); //unset the current_product session when th
         <!--Navigation area-->
         <nav class="navbar" id="myTopnav">
             <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="..\index.php">
                 <div class="logo-image">
                     <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
                     <img src="..\image\logo123.png" class="img-fluid" alt="img_logo_website">

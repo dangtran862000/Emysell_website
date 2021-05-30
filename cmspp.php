@@ -126,9 +126,6 @@
             </div>
             <a href="faq.php">FAQS</a>
             <a href="contact.php">Contact</a>
-            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
-                <p class="button">Sign Up</p>
-            </a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
