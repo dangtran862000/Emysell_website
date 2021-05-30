@@ -113,7 +113,7 @@
               }
             }
 
-
+            // display all store when not select button or refresh page
             if('POST' != $_SERVER['REQUEST_METHOD'] ){
               for ($i=1; $i < count($data); $i++) {
                 $temp = $data[$i][1];
@@ -129,9 +129,11 @@
               }
             } else {
               foreach($_POST as $key=>$value) {
+                // Use regular expression of the name button in the form
                 $pattern = "#^$key#";
                 for ($i=1; $i < count($data); $i++) {
                   $temp = $data[$i][1];
+                  // Check whether it matches the name in the csv file
                   if(preg_match($pattern, $temp)){
                     echo "<div class='shop-item'>
                         <div class='shop-item__image'>
@@ -146,7 +148,7 @@
                 }
               }
             }
-
+            flock($file, LOCK_EX);
             fclose($file);
         ?>
         </div>

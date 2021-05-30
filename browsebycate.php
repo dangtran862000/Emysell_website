@@ -108,9 +108,12 @@
 
           if('POST' == $_SERVER['REQUEST_METHOD'] ){
             foreach ($_POST as $key1 => $value1) {
+              // Loop in categories
               for ($i=1; $i < count($categories); $i++) {
                 if($categories[$i][1] == $value1){
+                  // Loop in stores
                   for ($j = 1; $j < count($stores); $j++) {
+                    // if the id of product in categories array = id in store array
                     if($stores[$j][2] == $categories[$i][0]){
                       $temp = $stores[$j][1];
                       echo "<div class='shop-item'>
@@ -128,6 +131,7 @@
               }
             }
           } else {
+            // display all store when not select button or refresh page
             for ($i=1; $i < count($stores); $i++) {
               $temp = $stores[$i][1];
               echo "<div class='shop-item'>
@@ -142,7 +146,8 @@
             }
           }
 
-
+          flock($file1, LOCK_EX);
+          flock($file2, LOCK_EX);
           fclose($file1);
           fclose($file2);
       ?>

@@ -71,12 +71,12 @@
     <?php
 
       if(isset($_POST['Submit'])){
+        // Make sure two passwords are the same
         if($_POST['password1'] == $_POST['password2']){
-          $file = fopen('../admin.csv', 'w');
-          $username  = array(htmlentities($_POST['username']));
-          $password = array(password_hash($_POST['password1'], PASSWORD_BCRYPT));
-          fputcsv($file, $username);
-          fputcsv($file, $password);
+          $file = fopen('../admin.csv', 'a');
+          $account  = array(htmlentities($_POST['username']), password_hash($_POST['password1'], PASSWORD_BCRYPT));
+          fputcsv($file, $account);
+          flock($file, LOCK_EX);
           fclose($file);
         }
       }
