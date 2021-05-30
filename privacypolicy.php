@@ -69,6 +69,7 @@
 
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['welcome_pp'])  && empty($_SESSION['welcome_pp'])){
                         $_SESSION['welcome_pp'] = '<p>At EmySell, accessible from https://dangtran862000.github.io/Emysell_website/index.html, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by EmySell and how we use it.</p>
 
@@ -92,6 +93,7 @@
 
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['consent']) && empty($_SESSION['consent'])){
                         $_SESSION['consent'] = '<p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>';
                         echo $_SESSION['consent'];
@@ -107,6 +109,7 @@
             <h3>Information we collect</h3>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['collect']) && empty($_SESSION['collect'])){
                         $_SESSION['collect'] = '<p>The personal information that you are asked to provide, and the reasons why you are asked to provide it, will be made clear to you at the point we ask you to provide your personal information.</p>
                         <p>If you contact us directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send us, and any other information you may choose to provide.</p>
@@ -126,7 +129,8 @@
             <h3>How we use your information</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['info']) && empty($_SESSION['info'])){
                         $_SESSION['info'] = '<p>We use the information we collect in various ways, including to:</p>
 
@@ -163,6 +167,7 @@
 
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['log']) && empty($_SESSION['log'])){
                         $_SESSION['log'] = ' <p>EmySell follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services\' analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users\' movement on the website, and gathering demographic information.</p>';
                         echo $_SESSION['log'];
@@ -178,7 +183,8 @@
             <h3>Cookies and Web Beacons</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['beacons']) && empty($_SESSION['beacons'])){
                         $_SESSION['beacons'] = '<p>Like any other website, EmySell uses \'cookies\'. These cookies are used to store information including visitors\' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users\' experience by customizing our web page content based on visitors\' browser type and/or other information.</p>
 
@@ -200,7 +206,8 @@
             <h3>Advertising Partners Privacy Policies</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['adv']) && empty($_SESSION['adv'])){
                         $_SESSION['adv'] = '<p>You may consult this list to find the Privacy Policy for each of the advertising partners of EmySell.</p>
 
@@ -224,7 +231,8 @@
             <h3>Third Party Privacy Policies</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['party']) && empty($_SESSION['party'])){
                         $_SESSION['party'] = '<p>EmySell\'s Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. </p>
 
@@ -245,6 +253,7 @@
 
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['ccpa']) && empty($_SESSION['ccpa'])){
                         $_SESSION['ccpa'] = '<p>Under the CCPA, among other rights, California consumers have the right to:</p>
                         <p>Request that a business that collects a consumer\'s personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</p>
@@ -269,7 +278,8 @@
             <h3>GDPR Data Protection Rights</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['gdpr']) && empty($_SESSION['gdpr'])){
                         $_SESSION['gdpr'] = '<p>We would like to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
                         <p>The right to access – You have the right to request copies of your personal data. We may charge you a small fee for this service.</p>
@@ -300,7 +310,8 @@
             <h3>Children's Information</h3>
 
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['child']) && empty($_SESSION['child'])){
                         $_SESSION['child'] = '<p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
 
@@ -360,6 +371,7 @@
             <a>
                 <span> 
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                  if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                     $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
                         echo $_SESSION['cr'];

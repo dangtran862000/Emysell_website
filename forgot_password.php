@@ -116,7 +116,8 @@
                 <a href="privacypolicy.php"><span>Privacy Policy</span></a>
                 <a>
                     <span> 
-                    <?php 
+                    <?php
+                    // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                         $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
                             echo $_SESSION['cr'];

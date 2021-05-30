@@ -17,6 +17,7 @@
   $filename = "../admin.csv";
   $user_record = createArray($filename);
 
+  // Check if the log in information of the user is in the system, if yes redirect to the dashboard
   if (isset($_POST['act'])) {
     foreach ($user_record as $records){
         if (isset($_POST['pass']) && $_POST['username'] == $records[0] && password_verify($_POST['pass'], $records[1])) {
@@ -26,6 +27,7 @@
           header('location: dashboard.php');
         }
     }
+    // Inform admin
     $status = 'Invalid username/password';
 
   }
@@ -37,20 +39,6 @@
   <link rel="stylesheet" href="StyleSheet1.css">
 </head>
 <body style="background-color:black;">
-  <!-- <h2>Login Form For Admin</h2>
-  <form method="post" action="login_admin.php">
-    <div>
-      Username<br>
-      <input type="text" name="username">
-    </div>
-    <div>
-      Password<br>
-      <input type="password" name="pass">
-    </div>
-    <div>
-      <input type="submit" name="act" value="Login">
-    </div>
-  </form> -->
   <div class="login-page" style="padding-top: 20%; padding-bottom: 30%;">
         <div class="form">
             <h1><b>Admin Login</b></h1>
