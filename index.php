@@ -744,105 +744,6 @@
                     }
                 ?>
 
-                <!-- <div class="product">
-                    <div class="upper">
-                        <div class='two-third'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">ZARA</a></h3>
-                            <h3><a href="productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 1</a></h3>
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro1.jpg" alt=""></a>
-                        </div>
-                        <div class="one-third"></div>
-                    </div>
-                    <div class="lower">
-                        <p class='price'>₫ 299.000</p>
-                        <p class='date'>9/4/2021</p>
-                        <p class='description'>T-shirt in premium cotton jersey.</p>
-                        <div class="btn">
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="upper">
-                        <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">ZARA</a></h3>
-                            <h3><a href="productcategory_productdetail_productcreateTime/product_detail_new.php">T-shirt 2</a></h3>
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg" alt=""></a>
-                        </div>
-                        <div class="one-thrid">
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <p class='price'>₫ 399.000</p>
-                        <p class='date'>9/4/2021</p>
-                        <p class='description'>T-shirt in premium cotton jersey.</p>
-                        <div class="test">
-                            <a href="productcategory_productdetail_productcreateTime/product_detail_new.php" class='btn-1'>VIEW DETAIL</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="upper">
-                        <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
-                            <h3><a href="productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 3</a></h3>
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro1.jpg" alt=""></a>
-                        </div>
-                        <div class="one-thrid">
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <p class='price'>₫ 299.000</p>
-                        <p class='date'>9/4/2021</p>
-                        <p class='description'>T-shirt in premium cotton jersey.</p>
-                        <div class="test">
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="upper">
-                        <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
-                            <h3><a href="productcategory_productdetail_productcreateTime/product_detail_new.php">T-shirt 4</a></h3>
-                            <a href="./productcategory_productdetail_productcreateTime/product_detail_new.php"><img src="./shoppage_shopcontact_shopaboutus/images/zara-pro2.jpg" alt=""></a>
-                        </div>
-                        <div class="one-thrid">
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <p class='price'>₫ 399.000</p>
-                        <p class='date'>9/4/2021</p>
-                        <p class='description'>T-shirt in premium cotton jersey.</p>
-                        <div class="test">
-                            <a href="productcategory_productdetail_productcreateTime/product_detail_new.php" class='btn-1'>VIEW DETAIL</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product">
-                    <div class="upper">
-                        <div class='two-third-2'>
-                            <h3><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">H&M</a></h3>
-                            <h3><a href="productcategory_productdetail_productcreateTime/product_detail.php">T-shirt 5</a></h3>
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php"><img src="productcategory_productdetail_productcreateTime/store/t-shirt-5.png" alt=""></a>
-                        </div>
-                        <div class="one-thrid">
-                        </div>
-                    </div>
-                    <div class="lower">
-                        <p class='price'>₫ 250.000</p>
-                        <p class='date'>9/4/2021</p>
-                        <p class='description'>T-shirt in premium cotton jersey.</p>
-                        <div class="test">
-                            <a href="productcategory_productdetail_productcreateTime/product_detail.php" class='btn-1'>VIEW DETAIL</a>
-                        </div>
-                    </div>
-                </div> -->
-
             </section>
         </section>
 
@@ -861,6 +762,7 @@
         <section class="shop-container">
             <div class="shop-list">
             <?php
+            // Looping through the array list to display the features store
                 foreach ($feature_stores as $store){
                     echo"<div class='shop-item'>
                             <div class='shop-item__image'>
@@ -871,48 +773,6 @@
                     </div>";
                 }
             ?>
-                <!-- <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img src="shoppage_shopcontact_shopaboutus/images/logo1.jpg" class="shop-img" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Nike</a></h3>
-                </div>
-                <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo2.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Vans</a></h3>
-                </div>
-                <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo3.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Champion</a></h3>
-                </div>
-                <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo4.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Routine</a></h3>
-                </div>
-                <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/logo5.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">Aldo</a></h3>
-                </div>
-                <div class="shop-item">
-                    <div class="shop-item__image">
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank"><img class="shop-img" src="shoppage_shopcontact_shopaboutus/images/loho6.jpeg" alt="shop-img"></a>
-                        <a href="shoppage_shopcontact_shopaboutus/shop-page.php" class="shop-item__btn" target="_blank">Visit Shop</a>
-                    </div>
-                    <h3 class="shop-item__name"><a href="shoppage_shopcontact_shopaboutus/shop-page.php" target="_blank">G2000</a></h3>
-                </div> -->
             </div>
         </section>
     </section>
@@ -966,7 +826,8 @@
             <a href="privacypolicy.php"><span>Privacy Policy</span></a>
             <a>
                 <span> 
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                  if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                     $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
                         echo $_SESSION['cr'];

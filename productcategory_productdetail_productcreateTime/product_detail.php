@@ -233,7 +233,8 @@
        </section>
         
         <?php
-
+          
+          $current_product = array();
             
 
             if (isset($_POST['clear'])) {

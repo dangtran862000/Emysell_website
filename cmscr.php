@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    // Check if the admin has been log into the system
     if (!isset($_SESSION['username'])) {
         // check cookie
         if (isset($_COOKIE['loggedin_name'])) {
@@ -10,9 +11,10 @@
         }
     }
 
+    // Check if the admin has hit the sumbit button
     if(isset($_REQUEST['submit'])){
 
-        // If the admin does not change anything the variable will not be change
+        // // the variable is be set and it was not empty, get the variable that the admin has post
         if (isset($_POST['cr']) && !empty($_POST['cr'])){
             $_SESSION['cr'] = $_POST['cr'];
         }
