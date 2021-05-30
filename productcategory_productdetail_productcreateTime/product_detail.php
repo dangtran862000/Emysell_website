@@ -29,7 +29,7 @@
 
   <?php
   $product_id = $_GET["product_id"];
-  $page = $_GET["product"];
+
   $product_name = str_replace("_","'",$page);
   
   $time = array();
@@ -160,7 +160,7 @@
              
 
            <?php 
-              $product_id = $_GET["product_id"];
+              // $product_id = $_GET["product_id"];
               $page = $_GET["product"];
               $product_name = str_replace("_","'",$page);
               $quantity = 0;
