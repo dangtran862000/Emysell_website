@@ -26,6 +26,7 @@
             // get the name value
             $page = $_GET["product"];
             $product_id = $_GET["product_id"];
+            $product_name = $_GET["product"];
 
             // check if the clear name submit and destroy the session
             if (isset($_POST['clear'])) {

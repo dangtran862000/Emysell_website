@@ -12,7 +12,7 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="productcategory_productdetail_productcreateTime/cookies.css">
+    <link rel="stylesheet" href="../productcategory_productdetail_productcreateTime/cookies.css">
     <title></title>
     <!--FontList provided by Google Font-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -248,7 +248,7 @@ if (isset($_POST['phone'])) {
             <!--Zero Columns-->
             <div class="zero" style="flex: 2; margin: 1% 5% 0 5%">
                 <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                <img src="image\logo123.png" width="20%" alt="image_logo_website" />
+                <img src="..\image\logo123.png" width="20%" alt="image_logo_website" />
                 <p style="font-size:13px">EmySell is the lastest website for whom who are looking for the place to start their business. We provided the solution to help our potential custumers to achive the greatest outcome for their first start</p>
             </div>
             <!--First Columns-->
@@ -322,7 +322,7 @@ if (!isset($_SESSION['cr']) && empty($_SESSION['cr'])) {
             }
         }
     </script>
-    <script type="text/javascript" src="productcategory_productdetail_productcreateTime/javascript.js"></script>
+    <script type="text/javascript" src="../productcategory_productdetail_productcreateTime/javascript.js"></script>
     <script type="text/javascript" src="register_validation.js"></script>
 
 </body>
