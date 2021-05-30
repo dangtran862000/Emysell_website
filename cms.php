@@ -1,56 +1,68 @@
 <?php
     session_start();
 
+    // Check if the admin has log in
     if (!isset($_SESSION['username'])) {
         // check cookie
         if (isset($_COOKIE['loggedin_name'])) {
         $_SESSION['username'] = $_COOKIE['loggedin_name'];
+        // If not it will redirect the user go to the login page
         } else {
         header('location: login_admin.php');
         }
     }
 
    
-
+    // When the hit the submit button, all the variable that need to change will be change
     if(isset($_REQUEST['submit'])){
 
         // If the admin does not change anything the variable will not be change
+        // Check if the variable is be changed and not empty
         if (isset($_POST['welcome_tos']) && !empty($_POST['welcome_tos'])){
             $_SESSION['welcome_tos'] = $_POST['welcome_tos'];
         }
 
+        // Check if the variable is be changed and not empty
         if (isset($_POST['cookies']) && !empty($_POST['cookies'])){
             $_SESSION['cookies'] = $_POST['cookies'];
         }
 
+        // Check if the variable is be changed and not empty
         if (isset($_POST['license']) && !empty($_POST['license'])){
             $_SESSION['license'] = $_POST['license'];
         }
 
+        // Check if the variable is be changed and not empty
         if (isset($_POST['hyper']) && !empty($_POST['hyper'])){
             $_SESSION['hyper'] = $_POST['hyper'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['iframe']) && !empty($_POST['iframe'])){
             $_SESSION['iframe'] = $_POST['iframe'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['liability']) && !empty($_POST['liability'])){
             $_SESSION['liability'] = $_POST['liability'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['privacy']) && !empty($_POST['privacy'])){
             $_SESSION['privacy'] = $_POST['privacy'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['right']) && !empty($_POST['right'])){
             $_SESSION['right'] = $_POST['right'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['remove']) && !empty($_POST['remove'])){
             $_SESSION['remove'] = $_POST['remove'];
         }
 
+        // Check if the variable is not changed and not empty
         if (isset($_POST['disclaim']) && !empty($_POST['disclaim'])){
             $_SESSION['disclaim'] = $_POST['disclaim'];
         }
@@ -86,40 +98,40 @@
     <body>
         <!--Header Area-->
         <header>
-            <!--Navigation area-->
-            <nav class="navbar" id="myTopnav">
-                <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-                <a class="navbar-brand" href="index.html">
-                    <div class="logo-image">
-                        <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                        <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
-                    </div>
-                </a>
-
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About us</a>
-                <a href="fee.html">Fees</a>
-                <a href="Myaccount/myaccount.html">My Account</a>
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        Browse
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="browsebycate.php">Browse by categories</a>
-                        <a href="browsebyname.php">Browse by name</a>
-                    </div>
+        <!--Navigation area-->
+        <nav class="navbar" id="myTopnav">
+            <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
+            <a class="navbar-brand" href="index.php">
+                <div class="logo-image">
+                    <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
+                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
-                <a href="faq.html">FAQS</a>
-                <a href="contact.html">Contact</a>
-                <a id='signup' class="signup" href="./Myaccount/myaccount.html" style="padding:0;">
-                    <p class="button">Sign Up</p>
-                </a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </a>
+
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="fee.php">Fees</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Browse
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="browsebycate.php">Browse by categories</a>
+                    <a href="browsebyname.php">Browse by name</a>
+                </div>
+            </div>
+            <a href="faq.php">FAQS</a>
+            <a href="contact.php">Contact</a>
+            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+                <p class="button">Sign Up</p>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
-            </nav>
-        </header>
+        </nav>
+    </header>
         <main style="padding:5%">
         <h1 style="width:100%; text-align:center;">Welcome to the Dashboard <?= $_SESSION['username'] ?></h1>
       
@@ -131,9 +143,7 @@
             <h4>Edit for the opening</h4>
             <p>
                 <?php 
-                    // $_SESSION['welcome_tos'] = 'These terms and conditions outline the rules and regulations for the use of EmySell\'s Website, located at https://dangtran862000.github.io/Emysell_website/index.html.<br><br>
-                    //     By accessing this website we assume you accept these terms and conditions. Do not continue to use EmySell if you do not agree to take all of the terms and conditions stated on this page.<br><br>
-                    //     The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves", "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.';
+                   // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['welcome_tos'])  && empty($_SESSION['welcome_tos'])){
                         $_SESSION['welcome_tos'] = 'These terms and conditions outline the rules and regulations for the use of EmySell\'s Website, located at https://dangtran862000.github.io/Emysell_website/index.html.<br>
                             By accessing this website we assume you accept these terms and conditions. Do not continue to use EmySell if you do not agree to take all of the terms and conditions stated on this page.<br>
@@ -149,6 +159,7 @@
             <h4>Edit the cookies's part</h4>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['cookies']) && empty($_SESSION['cookies'])){
                         $_SESSION['cookies'] = 'We employ the use of cookies. By accessing EmySell, you agreed to use cookies in agreement with the EmySell\'s Privacy Policy.<br><br>
                         Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.<br>';
@@ -164,6 +175,7 @@
             <h4>Edit the license's part</h4>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['license']) && empty($_SESSION['license'])){
                         $_SESSION['license'] = '<p>Unless otherwise stated, EmySell and/or its licensors own the intellectual property rights for all material on EmySell. All intellectual property rights are reserved. You may access this from EmySell for your own personal use subjected to restrictions set in these terms and conditions.</p>
 
@@ -204,7 +216,8 @@
             <!--Edit for Hyperlinking to our Content-->
             <h4>Edit for Hyperlinking to our Contents</h4>
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['hyper']) && empty($_SESSION['hyper'])){
                         $_SESSION['hyper'] = '<p>The following organizations may link to our Website without prior written approval:</p>
 
@@ -258,6 +271,7 @@
             <h4>Edit for Iframe</h4>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['iframe']) && empty($_SESSION['iframe'])){
                         $_SESSION['iframe'] = 'Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
                         ';
@@ -274,6 +288,7 @@
             <h4>Edit for Content Liability</h4>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['liability']) && empty($_SESSION['liability'])){
                         $_SESSION['liability'] = 'We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
                         ';
@@ -289,7 +304,8 @@
             <!--Edit for Your Privacy-->
             <h4>Edit for Your Privacy</h4>
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['privacy']) && empty($_SESSION['privacy'])){
                         $_SESSION['privacy'] = 'Please read Privacy Policy';
                         echo $_SESSION['privacy'];
@@ -305,6 +321,7 @@
             <h4>Edit for Reservation of Rights</h4>
             <p>
                 <?php 
+                // If the variable is not be set and it was empty, echo the default
                     if (!isset($_SESSION['right']) && empty($_SESSION['right'])){
                         $_SESSION['right'] = 'We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.';
                         echo $_SESSION['right'];
@@ -319,7 +336,8 @@
             <!--Edit for Removal of links from our website-->
             <h4>Edit for Removal of links from our website</h4>
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['remove']) && empty($_SESSION['remove'])){
                         $_SESSION['remove'] = '<p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>
 
@@ -336,7 +354,8 @@
             <!--Edit for Disclaimer-->
             <h4>Edit for Disclaimer</h4>
             <p>
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                     if (!isset($_SESSION['disclaim']) && empty($_SESSION['disclaim'])){
                         $_SESSION['disclaim'] = '<p>To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:</p>
 
@@ -410,6 +429,8 @@
             <a>
                 <span> 
                 <?php 
+                // Check if the copyright is changing, 
+                // Check if the copyright is not set and is emprty -> echo the default one
                  if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                     $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
                         echo $_SESSION['cr'];

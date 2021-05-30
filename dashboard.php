@@ -1,6 +1,7 @@
 <?php
     session_start();
 
+    // check if the admin has been log in to the system
     if (!isset($_SESSION['username'])) {
         // check cookie
         if (isset($_COOKIE['loggedin_name'])) {
@@ -39,40 +40,40 @@
     <body>
         <!--Header Area-->
         <header>
-            <!--Navigation area-->
-            <nav class="navbar" id="myTopnav">
-                <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
-                <a class="navbar-brand" href="index.html">
-                    <div class="logo-image">
-                        <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
-                        <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
-                    </div>
-                </a>
-
-                <a href="index.html">Home</a>
-                <a href="aboutus.html">About us</a>
-                <a href="fee.html">Fees</a>
-                <a href="Myaccount/myaccount.html">My Account</a>
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        Browse
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="browsebycate.php">Browse by categories</a>
-                        <a href="browsebyname.php">Browse by name</a>
-                    </div>
+        <!--Navigation area-->
+        <nav class="navbar" id="myTopnav">
+            <!--Home (this page), About Us, Fees, My Account, Browse, FAQs, and Contact.-->
+            <a class="navbar-brand" href="index.php">
+                <div class="logo-image">
+                    <!--Source image: https://dribbble.com/shots/14624703-E-Commerce-Logo -->
+                    <img src="image\logo123.png" class="img-fluid" alt="img_logo_website">
                 </div>
-                <a href="faq.html">FAQS</a>
-                <a href="contact.html">Contact</a>
-                <a id='signup' class="signup" href="./Myaccount/myaccount.html" style="padding:0;">
-                    <p class="button">Sign Up</p>
-                </a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </a>
+
+            <a href="index.php">Home</a>
+            <a href="aboutus.php">About us</a>
+            <a href="fee.php">Fees</a>
+            <a href="Myaccount/myaccount.php">My Account</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Browse
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="browsebycate.php">Browse by categories</a>
+                    <a href="browsebyname.php">Browse by name</a>
+                </div>
+            </div>
+            <a href="faq.php">FAQS</a>
+            <a href="contact.php">Contact</a>
+            <a id='signup' class="signup" href="./Myaccount/myaccount.php" style="padding:0;">
+                <p class="button">Sign Up</p>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 
 
-            </nav>
-        </header>
+        </nav>
+    </header>
         <main style="padding:5%">
         <h1 style="width:100%; text-align:center;">Welcome to the Dashboard <?= $_SESSION['username'] ?></h1>
 
@@ -126,7 +127,8 @@
             <a href="privacypolicy.php"><span>Privacy Policy</span></a>
             <a>
                 <span> 
-                <?php 
+                <?php
+                // If the variable is not be set and it was empty, echo the default 
                  if (!isset($_SESSION['cr'])  && empty($_SESSION['cr'])){
                     $_SESSION['cr'] = '© 2021, EmySell.com, Inc. or its affiliates';
                         echo $_SESSION['cr'];

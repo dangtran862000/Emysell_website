@@ -11,6 +11,7 @@
 </head>
 <?php
 
+// Create the the relevant array 
 $time = array();
 $items = array();
 $store = array();
@@ -20,33 +21,35 @@ $count_line = 0;
 $count = 0;
 $count_store = 0;
 
-  
+// read product csv file and add to array  
 if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is valid
     while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) { // Check opening the file is OK!
-        $count++;
-        $product_price[] = $data;
-        if ($count == 1) { continue; }
+        $count++; // count line in data file
+        $product_price[] = $data; // add the data in product csv file to product_price array
+        if ($count == 1) { continue; } // delete the first line in product csv file
         $items[] = $data;
         $time[] = $data;
+        // check if the product has store id = 22 and feature in store = true
         if ($data[4] == 22 and $data[6] == "TRUE") {
             $count_line++;
-            $product[] = $data[1];
-            $store[] = $data[4];
-            $product_price[] = $data[2];
+            $product[] = $data[1]; // add the name product csv file to product_price array
+            $store[] = $data[4]; // add the store id in product csv file to product_price array
+            $product_price[] = $data[2]; // add the price in product csv file to product_price array
         }
       
         
     }
 }   
-  
+    // finding and remove the unique value of the array
     $product = array_unique($product);
-    // $product_price = array_unique($product);
     $store = array_unique($store);
 
+  // read store csv file and add to array  
     if (($storecsv = fopen('stores.csv', 'r')) !== FALSE) { // Check the resource is valid
       while (($store_data = fgetcsv($storecsv, 1000, ",")) !== FALSE) { // Check opening the file is OK!
           $count_store++;
-          if ($count == 1) { continue; }
+          if ($count == 1) { continue; } // delete the first line in product csv file
+          // finding the name of the store by store id
           if ($store_data[0] == $store[0]) {
             $store_name = $store_data[1];
         }
@@ -54,6 +57,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
     }
 
 
+    // adding data file to array by store id
     $category = [];
     $max_prob = 0;
     for ($row = 0; $row < 1000; $row++) {
@@ -63,6 +67,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         }
     }
     
+    // adding data to array
     $new_product = [];
     $flag = 0;
     
@@ -72,8 +77,10 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
     
     }
     
+    // sort the new_product array
     rsort($new_product);
 
+    // closing csv file
     fclose($handle);
     fclose($storecsv);
 ?>
@@ -93,7 +100,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
 
           <ul class="main-nav">
             <li><a href="shop-page.php">Home</a></li>
-            <li><a href="aboutus-shop.html">About us</a></li>
+            <li><a href="aboutus-shop.php">About us</a></li>
             <li><div class="dropdown">
               <button class="dropbtn">Product</button>
               <div class="dropdown-content">
@@ -101,11 +108,11 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
               <a href="../productcategory_productdetail_productcreateTime/product_createTime.php?page=1">Browse by created time</a>
               </div>
             </div></li>
-            <li><a href="./contact_shop.html">Contact</a></li>
+            <li><a href="./contact_shop.php">Contact</a></li>
           </ul>
         </nav>
         <div class="hero">
-          <h1>Welcome to <?echo $store_name ?></h1>
+          <h1>Welcome to <?echo $store_name ?></h1> 
           <p>Your style is our inspire</p>
         </div>
       </header>
@@ -113,18 +120,19 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         <section class='block-product'>
           <div class="product-section">
             <h3>Featured Products</h3>
-            <?php 
+            <?php
+            // display the information of the feature in store product in array items by product csv file
             for ($row = 0; $row < 1000; $row++) {
               if ($items[$row][4] == 22 and $items[$row][6] == "TRUE") {
-                // print_r($items[$row][1]);
+                $product_id = $items[$row][0];
                 $product_name = $items[$row][1];
                 $product_price = $items[$row][2];
-                // echo '' . "<br />\n";
+                // html code
                 echo "<div class='product'>
                 <div class='upper'>
                 <div class='two-third'>
-                    <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
-                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$product_name.png' alt=''></a>
+                    <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.php'></a></h3>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php'><img src='../productcategory_productdetail_productcreateTime/store/$product_name.png' alt=''></a>
                   </div>
                 </div>
                 <div class='lower'>
@@ -132,7 +140,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                   <p style='margin-left: 50%; margin-bottom: 0;'> $product_price USD</p>
                   <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                   <div class='btn'>
-                    <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                    <a href='../productcategory_productdetail_productcreateTime/product_detail.php?product=$product_name&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                   </div>
                 </div>
               </div>";
@@ -140,73 +148,23 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
         }
       
             ?>
-          <!-- <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-1.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-          <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-2.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="product">
-            <div class="upper">
-                <div class="one-third"></div>
-            <div class='two-third'>
-                <h3><a href="../productcategory_productdetail_productcreateTime/product_detail.html">T-shirt 1</a></h3>
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html"><img src="../productcategory_productdetail_productcreateTime/store/t-shirt-3.png" alt=""></a>
-              </div>
-            </div>
-            <div class="lower">
-              <p class='price'>₫ 250.000</p>
-              <p class='date'>9/4/2021</p>
-              <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
-              <div class="btn">
-                <a href="../productcategory_productdetail_productcreateTime/product_detail.html" class='btn-1'>VIEW DETAIL</a>
-              </div>
-            </div>
-          </div>
-        </div>-->
 
         <div class="product-section">
             <h3>New Products</h3>
-            <?php for ($i = 0; $i < 5; $i++) {
+            <?php 
+            // display the 5 of the recently added products in time array items by product csv file 
+            for ($i = 0; $i < 5; $i++) {
                   $timeProduct = $new_product[$i];
                   for ($j = 0; $j < 17; $j++){
                       if ($timeProduct == $category[$j][3]){
+                          $product_id = $category[$j][0];
                           $name_product_time = $category[$j][1];
                           $price_product_time = $category[$j][2];
                           echo "<div class='product'>
                           <div class='upper'>
                           <div class='two-third'>
-                              <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.html'></a></h3>
-                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
+                              <h3><a ' href='../productcategory_productdetail_productcreateTime/product_detail.php'></a></h3>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php'><img src='../productcategory_productdetail_productcreateTime/store/$name_product_time.png' alt=''></a>
                             </div>
                           </div>
                           <div class='lower'>
@@ -214,7 +172,7 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
                             <p style='margin-left: 50%; margin-bottom: 0;'> $price_product_time USD</p>
                             <p class='description'>Long, crew-neck T-shirt in soft jersey with a rounded hem.</p>
                             <div class='btn'>
-                              <a href='../productcategory_productdetail_productcreateTime/product_detail.html' class='btn-1'>VIEW DETAIL</a>
+                              <a href='../productcategory_productdetail_productcreateTime/product_detail.php?product=$name_product_time&product_id=$product_id' class='btn-1'>VIEW DETAIL</a>
                             </div>
                           </div>
                         </div>";
@@ -227,10 +185,6 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           </section>
         </div>
       </main>
-
-      <div class="btn">
-          <a href="test.php" class='btn-1'>VIEW DETAIL</a>
-        </div>
 
       <div id="cookies">
         <h3>I use cookies</h3>
@@ -251,9 +205,9 @@ if (($handle = fopen('products.csv', 'r')) !== FALSE) { // Check the resource is
           <div class="footer--right">
               <ul class="footer-nav">
                   <li><a href="shop-page.php">Home</a></li>
-                  <li><a href="aboutus-shop.html">About us</a></li>
+                  <li><a href="aboutus-shop.php">About us</a></li>
                   <li><a href="../productcategory_productdetail_productcreateTime/product_category.html">Product</a></li>
-                  <li><a href="contact_shop.html">Contact</a></li>
+                  <li><a href="contact_shop.php">Contact</a></li>
               </ul>
           </div>
       </footer>
